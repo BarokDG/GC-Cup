@@ -7,16 +7,21 @@ const matchesSchema = mongoose.Schema({
   teams: { type: [String], required: true },
   schedule: { type: Date, required: true },
   score: { type: String, required: true, default: null },
-  scorers: {
-    team1: { type: [goalsSchema], required: true, default: [] },
-    team2: { type: [goalsSchema], required: true, default: [] },
+  events: {
+    team1: { type: [eventsSchema], required: true, default: [] },
+    team2: { type: [eventsSchema], required: true, default: [] },
   },
 });
 
-const goalsSchema = mongoose.Schema({
+const eventsSchema = mongoose.Schema({
   name: { type: String, required: true },
-  type: { type: String, required: true },
+  type: {
+    type: String,
+    required: true,
+    enum: ["GS", "PS", "PM", "OG", "YC", "RC"], // Goal, Penalty, Penalty Missed, Own Goal, Yellow Card, Red Card
+  },
   assist: { type: String, required: true, default: null },
+  minute: { type: Date },
 });
 
 const Match = mongoose.model("Match", matchesSchema);

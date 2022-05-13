@@ -1,4 +1,4 @@
-import Table from "../components/table/index";
+import Table from "../components/table";
 
 export default function MobileView() {
   return (

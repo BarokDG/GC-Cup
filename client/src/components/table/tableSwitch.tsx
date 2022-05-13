@@ -7,13 +7,13 @@ export default function TableSwitch({ conference, setConference }) {
 
     switch (conference) {
       case 1:
-        conferenceSwitch?.style.setProperty("--start", "1.5%");
+        conferenceSwitch?.style.setProperty("--start", "8px");
         break;
       case 2:
-        conferenceSwitch?.style.setProperty("--start", "25%");
+        conferenceSwitch?.style.setProperty("--start", "122px");
         break;
       case 3:
-        conferenceSwitch?.style.setProperty("--start", "80%");
+        conferenceSwitch?.style.setProperty("--start", "calc(100% - 92px)");
         break;
     }
   }, [conference]);

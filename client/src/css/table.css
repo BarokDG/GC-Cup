@@ -3,13 +3,9 @@ th {
   @apply whitespace-nowrap py-4 pl-2 pr-6;
 }
 
-th:first-child {
-  @apply w-48 block;
-  @apply bg-white sticky left-0;
-}
-
-tbody tr {
-  @apply bg-slate-200 border-b-2 border-b-slate-300;
+tbody tr:first-child,
+tbody tr:nth-child(2) {
+  @apply bg-slate-600 text-slate-300;
 }
 
 td {
@@ -17,16 +13,14 @@ td {
   @apply whitespace-nowrap py-4 pl-2 pr-6;
 }
 
-td:first-child {
-  @apply tracking-wider sticky left-0 bg-slate-200;
+tbody tr:first-child td:first-child,
+tbody tr:nth-child(2) td:first-child {
+  @apply bg-slate-600;
 }
 
-.team-name {
-  @apply flex;
-}
-
-.team-name span:first-child {
-  @apply mr-4;
+tbody tr:first-child td,
+tbody tr:nth-child(2) td {
+  @apply text-slate-300;
 }
 
 .conference-switch button {
@@ -36,5 +30,6 @@ td:first-child {
 .conference-switch:after {
   @apply content-[''] block bg-slate-300 rounded-md w-24 absolute -z-10 top-1 bottom-1 my-auto;
   left: var(--start);
+
   transition: left 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }

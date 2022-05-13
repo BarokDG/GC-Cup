@@ -12,7 +12,8 @@ export default function Table() {
   return (
     <>
       <TableSwitch conference={conference} setConference={setConference} />
-      <LeagueTable conference={conference} />
+      {conference !== 3 && <LeagueTable conference={conference} />}
+      {conference === 3 && <PlayOffs />}
     </>
   );
 }

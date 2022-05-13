@@ -1,26 +1,8 @@
-import { useState, useEffect } from "react";
+import { teams } from "../utils/data-placeholder/team.data";
 
-import TableBody from "./tableBody";
-import "../css/table.css";
-
-export default function LeagueTable() {
-  const [conference, setConference] = useState(1);
-
-  useEffect(() => {
-    const conferenceSwitch: HTMLDivElement | null =
-      document.querySelector(".conference-switch");
-
-    conference === 2
-      ? conferenceSwitch?.style.setProperty("--start", "50%")
-      : conferenceSwitch?.style.setProperty("--start", "0");
-  }, [conference]);
-
+export default function LeagueTable({ conference }) {
   return (
     <>
-      <div className="conference-switch flex py-2 relative w-max">
-        <button onClick={() => setConference(1)}>Conference 1</button>
-        <button onClick={() => setConference(2)}>Conference 2</button>
-      </div>
       <div className="table-container max-w-full overflow-auto">
         <table className="border-collapse">
           <thead>
@@ -36,7 +18,49 @@ export default function LeagueTable() {
               <th>Form</th>
             </tr>
           </thead>
-          <TableBody Conference={conference} />
+          <tbody>
+            {teams
+              .filter((team) => team.conference === conference)
+              .map(
+                (
+                  {
+                    teamID,
+                    teamName,
+                    points,
+                    played,
+                    wins,
+                    draws,
+                    losses,
+                    goalsFor,
+                    goalsAgainst,
+                    goalDifference,
+                    lastFive,
+                  },
+                  index
+                ) => {
+                  return (
+                    <tr key={teamID}>
+                      <td>
+                        <div className="team-name">
+                          <span>{index + 1}</span>
+                          <span>{teamName}</span>
+                        </div>
+                      </td>
+                      <td>{played}</td>
+                      <td>{points}</td>
+                      <td>{wins}</td>
+                      <td>{draws}</td>
+                      <td>{losses}</td>
+                      <td>
+                        {goalsFor} : {goalsAgainst}
+                      </td>
+                      <td>{goalDifference}</td>
+                      <td>{lastFive}</td>
+                    </tr>
+                  );
+                }
+              )}
+          </tbody>
         </table>
       </div>
       <div className="table-info flex mt-6">

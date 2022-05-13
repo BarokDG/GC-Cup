@@ -30,15 +30,11 @@ td:first-child {
 }
 
 .conference-switch button {
-  @apply px-4 border-none cursor-default md:cursor-pointer focus-visible:outline-none;
-}
-
-.conference-switch {
-  --start: 0;
+  @apply px-4 border-none cursor-default text-sm md:cursor-pointer focus-visible:outline-none;
 }
 
 .conference-switch:after {
-  @apply content-[''] block bg-slate-300 rounded-md w-1/2 absolute -z-10 top-1 bottom-1 my-auto;
+  @apply content-[''] block bg-slate-300 rounded-md w-24 absolute -z-10 top-1 bottom-1 my-auto;
   left: var(--start);
   transition: left 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }

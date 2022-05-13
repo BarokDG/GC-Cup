@@ -21,4 +21,6 @@ const tableSlice = createSlice({
 
 export const tableActions = tableSlice.actions;
 
+export const conferenceState = (state: RootState) => state.table.conference;
+
 export default tableSlice.reducer;

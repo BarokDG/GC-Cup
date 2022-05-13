@@ -4,8 +4,8 @@ import "../css/table.css";
 
 export default function LeagueTable() {
   return (
-    <div className="table-container">
-      <table>
+    <div className="table-container max-w-full overflow-auto">
+      <table className="border-collapse">
         <thead>
           <tr>
             <th></th>
@@ -40,7 +40,7 @@ export default function LeagueTable() {
               return (
                 <tr key={teamID}>
                   <td>
-                    <div className="team__info">
+                    <div className="team-name">
                       <span>{index + 1}</span>
                       <span>{teamName}</span>
                     </div>

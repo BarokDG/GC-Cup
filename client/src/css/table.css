@@ -1,8 +1,30 @@
-.table-container {
-  max-width: 100%;
-  overflow: auto;
+th {
+  @apply text-gray-500 font-normal text-sm text-center;
+  @apply whitespace-nowrap py-4 pl-2 pr-6;
 }
 
-table {
-  border-collapse: collapse;
+th:first-child {
+  @apply w-48 block;
+  @apply bg-white sticky left-0;
+}
+
+tbody tr {
+  @apply bg-slate-200 border-b-2 border-b-slate-300;
+}
+
+td {
+  @apply text-gray-900 text-lg text-center;
+  @apply whitespace-nowrap py-4 pl-2 pr-6;
+}
+
+td:first-child {
+  @apply tracking-wider sticky left-0 bg-slate-200;
+}
+
+.team-name {
+  @apply flex;
+}
+
+.team-name span:first-child {
+  @apply mr-4;
 }

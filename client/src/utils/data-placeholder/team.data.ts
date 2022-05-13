@@ -1,17 +1,17 @@
 type Team = {
-  teamID: Number;
-  teamName: String;
-  teamCode: String;
-  played: Number;
-  points: Number;
-  wins: Number;
-  draws: Number;
-  losses: Number;
-  goalsFor: Number;
-  goalsAgainst: Number;
-  goalDifference: Number;
-  lastFive: String;
-  cleansheets: Number;
+  teamID: number;
+  teamName: string;
+  teamCode: string;
+  played: number;
+  points: number;
+  wins: number;
+  draws: number;
+  losses: number;
+  goalsFor: number;
+  goalsAgainst: number;
+  goalDifference: number;
+  lastFive: string;
+  cleansheets: number;
 };
 
 export const teams: Team[] = [

@@ -1,12 +1,19 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import type { RootState } from ".";
+
+type TableState = {
+  conference: number;
+};
+
+const initialState: TableState = {
+  conference: 1,
+};
 
 const tableSlice = createSlice({
   name: "Table",
-  initialState: {
-    conference: 1,
-  },
+  initialState,
   reducers: {
-    setConference(state, action) {
+    setConference(state, action: PayloadAction<number>) {
       state.conference = action.payload;
     },
   },
@@ -14,4 +21,4 @@ const tableSlice = createSlice({
 
 export const tableActions = tableSlice.actions;
 
-export default tableSlice;
+export default tableSlice.reducer;

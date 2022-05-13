@@ -1,6 +1,11 @@
 import { useEffect } from "react";
+import { useAppDispatch } from "../../store/storeHooks";
 
-export default function TableSwitch({ conference, setConference }) {
+import { tableActions } from "../../store/tableSlice";
+
+export default function TableSwitch({ conference }) {
+  const dispatch = useAppDispatch();
+
   useEffect(() => {
     const conferenceSwitch: HTMLDivElement | null =
       document.querySelector(".conference-switch");
@@ -20,9 +25,16 @@ export default function TableSwitch({ conference, setConference }) {
 
   return (
     <div className="conference-switch flex py-2 relative">
-      <button onClick={() => setConference(1)}>Conference 1</button>
-      <button onClick={() => setConference(2)}>Conference 2</button>
-      <button className="ml-auto" onClick={() => setConference(3)}>
+      <button onClick={() => dispatch(tableActions.setConference(1))}>
+        Conference 1
+      </button>
+      <button onClick={() => dispatch(tableActions.setConference(2))}>
+        Conference 2
+      </button>
+      <button
+        className="ml-auto"
+        onClick={() => dispatch(tableActions.setConference(3))}
+      >
         Play-offs
       </button>
     </div>

@@ -4,7 +4,7 @@ import LeagueTable from "./leagueTable";
 import TableSwitch from "./tableSwitch";
 import PlayOffs from "./playoffs";
 
-import "../css/table.css";
+import "../../css/table.css";
 
 export default function Table() {
   const [conference, setConference] = useState(1);

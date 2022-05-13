@@ -1,4 +1,4 @@
-import { teams } from "../utils/data-placeholder/team.data";
+import { teams } from "../../utils/data-placeholder/team.data";
 
 export default function LeagueTable({ conference }) {
   return (

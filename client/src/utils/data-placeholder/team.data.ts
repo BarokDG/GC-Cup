@@ -2,6 +2,7 @@ type Team = {
   teamID: number;
   teamName: string;
   teamCode: string;
+  previousRank: number; // *optional
   played: number;
   points: number;
   wins: number;
@@ -19,6 +20,7 @@ export const teams: Team[] = [
     teamID: 101,
     teamName: "Biomed",
     teamCode: "BIO",
+    previousRank: 0,
     played: 0,
     points: 0,
     wins: 0,
@@ -32,8 +34,9 @@ export const teams: Team[] = [
   },
   {
     teamID: 102,
-    teamName: "Civil 1",
-    teamCode: "CV1",
+    teamName: "Chemical",
+    teamCode: "CHE",
+    previousRank: 0,
     played: 0,
     points: 0,
     wins: 0,
@@ -47,8 +50,9 @@ export const teams: Team[] = [
   },
   {
     teamID: 103,
-    teamName: "Civil 2",
-    teamCode: "CV2",
+    teamName: "Civil 1",
+    teamCode: "CV1",
+    previousRank: 0,
     played: 0,
     points: 0,
     wins: 0,
@@ -62,8 +66,9 @@ export const teams: Team[] = [
   },
   {
     teamID: 104,
-    teamName: "Chemical",
-    teamCode: "CHE",
+    teamName: "Civil 2",
+    teamCode: "CV2",
+    previousRank: 0,
     played: 0,
     points: 0,
     wins: 0,
@@ -77,8 +82,9 @@ export const teams: Team[] = [
   },
   {
     teamID: 105,
-    teamName: "Electrical 1",
-    teamCode: "EL1",
+    teamName: "Electrical A",
+    teamCode: "ELA",
+    previousRank: 0,
     played: 0,
     points: 0,
     wins: 0,
@@ -92,8 +98,9 @@ export const teams: Team[] = [
   },
   {
     teamID: 106,
-    teamName: "Electrical 2",
-    teamCode: "EL2",
+    teamName: "Electrical B",
+    teamCode: "ELB",
+    previousRank: 0,
     played: 0,
     points: 0,
     wins: 0,
@@ -109,6 +116,7 @@ export const teams: Team[] = [
     teamID: 107,
     teamName: "IT",
     teamCode: "ITE",
+    previousRank: 0,
     played: 0,
     points: 0,
     wins: 0,
@@ -124,6 +132,7 @@ export const teams: Team[] = [
     teamID: 108,
     teamName: "Mechanical",
     teamCode: "MEC",
+    previousRank: 0,
     played: 0,
     points: 0,
     wins: 0,
@@ -139,6 +148,7 @@ export const teams: Team[] = [
     teamID: 109,
     teamName: "Software 1",
     teamCode: "SF1",
+    previousRank: 0,
     played: 0,
     points: 0,
     wins: 0,
@@ -154,6 +164,7 @@ export const teams: Team[] = [
     teamID: 110,
     teamName: "Software 2",
     teamCode: "SF2",
+    previousRank: 0,
     played: 0,
     points: 0,
     wins: 0,

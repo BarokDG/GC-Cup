@@ -15,7 +15,7 @@ export const players: Player[] = [
    * Chemical
    */
   {
-    playerID: 1021,
+    playerID: 1011,
     teamCode: "CHE",
     name: "Fasil",
     fname: "",
@@ -24,7 +24,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1022,
+    playerID: 1012,
     teamCode: "CHE",
     name: "Haile",
     fname: "",
@@ -33,7 +33,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1023,
+    playerID: 1013,
     teamCode: "CHE",
     name: "Sibhat",
     fname: "",
@@ -42,7 +42,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1024,
+    playerID: 1014,
     teamCode: "CHE",
     name: "Temesgen",
     fname: "Abay",
@@ -51,7 +51,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1025,
+    playerID: 1015,
     teamCode: "CHE",
     name: "Abdusemed",
     fname: "Seid",
@@ -60,7 +60,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1026,
+    playerID: 1016,
     teamCode: "CHE",
     name: "Yemesgen",
     fname: "Fantahun",
@@ -69,7 +69,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1027,
+    playerID: 1017,
     teamCode: "CHE",
     name: "Yonatan",
     fname: "Gashaw",
@@ -78,7 +78,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1028,
+    playerID: 1018,
     teamCode: "CHE",
     name: "Abel",
     fname: "",
@@ -87,7 +87,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1029,
+    playerID: 1019,
     teamCode: "CHE",
     name: "Amanuel",
     fname: "",
@@ -96,7 +96,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10210,
+    playerID: 10110,
     teamCode: "CHE",
     name: "Ewnetu",
     fname: "",
@@ -105,7 +105,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10211,
+    playerID: 10111,
     teamCode: "CHE",
     name: "Haftamu",
     fname: "",
@@ -114,7 +114,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10212,
+    playerID: 10112,
     teamCode: "CHE",
     name: "Olan",
     fname: "",
@@ -127,7 +127,7 @@ export const players: Player[] = [
    * Civil 1
    */
   {
-    playerID: 1031,
+    playerID: 1021,
     teamCode: "CV1",
     name: "Henock",
     fname: "Meseret",
@@ -136,7 +136,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1032,
+    playerID: 1022,
     teamCode: "CV1",
     name: "Abdulaziz",
     fname: "Ali",
@@ -145,7 +145,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1033,
+    playerID: 1023,
     teamCode: "CV1",
     name: "Biruk",
     fname: "Ayele",
@@ -154,7 +154,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1034,
+    playerID: 1024,
     teamCode: "CV1",
     name: "Sewnet",
     fname: "Ayele",
@@ -163,7 +163,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1035,
+    playerID: 1025,
     teamCode: "CV1",
     name: "Yonas",
     fname: "Esubalew",
@@ -172,7 +172,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1036,
+    playerID: 1026,
     teamCode: "CV1",
     name: "Yonas",
     fname: "Mekdes",
@@ -182,7 +182,7 @@ export const players: Player[] = [
     isCaptain: true,
   },
   {
-    playerID: 1037,
+    playerID: 1027,
     teamCode: "CV1",
     name: "Kibrom",
     fname: "Atnafu",
@@ -191,7 +191,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1038,
+    playerID: 1028,
     teamCode: "CV1",
     name: "Natnael",
     fname: "G/mariam",
@@ -200,7 +200,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1039,
+    playerID: 1029,
     teamCode: "CV1",
     name: "Natnael",
     fname: "Molla",
@@ -209,7 +209,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10310,
+    playerID: 10210,
     teamCode: "CV1",
     name: "Elias",
     fname: "Yemane",
@@ -218,7 +218,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10311,
+    playerID: 10211,
     teamCode: "CV1",
     name: "Kaleab",
     fname: "Mulat",
@@ -227,7 +227,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10312,
+    playerID: 10212,
     teamCode: "CV1",
     name: "Kaleab",
     fname: "Wendwesen",
@@ -236,7 +236,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10313,
+    playerID: 10213,
     teamCode: "CV1",
     name: "Robel",
     fname: "Yohannes",
@@ -249,7 +249,7 @@ export const players: Player[] = [
    * Civil 2
    */
   {
-    playerID: 1041,
+    playerID: 2021,
     teamCode: "CV2",
     name: "Abenezer",
     fname: "Muluneh",
@@ -258,7 +258,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1042,
+    playerID: 2022,
     teamCode: "CV2",
     name: "Amir",
     fname: "Kedir",
@@ -267,7 +267,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1043,
+    playerID: 2023,
     teamCode: "CV2",
     name: "Nebiyu",
     fname: "Samuel",
@@ -276,7 +276,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1044,
+    playerID: 2024,
     teamCode: "CV2",
     name: "Tewodros",
     fname: "Abebe",
@@ -285,7 +285,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1045,
+    playerID: 2025,
     teamCode: "CV2",
     name: "Tsigab",
     fname: "Kube",
@@ -294,7 +294,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1046,
+    playerID: 2026,
     teamCode: "CV2",
     name: "Dagimawi",
     fname: "Mekonen",
@@ -303,7 +303,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1047,
+    playerID: 2027,
     teamCode: "CV2",
     name: "Samuel",
     fname: "Bizuneh",
@@ -312,7 +312,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1048,
+    playerID: 2028,
     teamCode: "CV2",
     name: "Yeabsira",
     fname: "Tibebu",
@@ -321,7 +321,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1049,
+    playerID: 2029,
     teamCode: "CV2",
     name: "Yohannes",
     fname: "Debebe",
@@ -330,7 +330,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10410,
+    playerID: 20210,
     teamCode: "CV2",
     name: "Fkire",
     fname: "Abadi",
@@ -339,7 +339,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10411,
+    playerID: 20211,
     teamCode: "CV2",
     name: "Hachalu",
     fname: "Hailu",
@@ -348,7 +348,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10412,
+    playerID: 20212,
     teamCode: "CV2",
     name: "Robel",
     fname: "Argaw",
@@ -357,7 +357,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10413,
+    playerID: 20213,
     teamCode: "CV2",
     name: "Yeshitla",
     fname: "G/michael",
@@ -370,7 +370,7 @@ export const players: Player[] = [
    * Electrical A
    */
   {
-    playerID: 1051,
+    playerID: 2031,
     teamCode: "ELA",
     name: "Alemu",
     fname: "Molla",
@@ -379,7 +379,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1052,
+    playerID: 2032,
     teamCode: "ELA",
     name: "Dagmawi",
     fname: "G/weld",
@@ -388,7 +388,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1053,
+    playerID: 2033,
     teamCode: "ELA",
     name: "Beka",
     fname: "Biru",
@@ -397,7 +397,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1054,
+    playerID: 2034,
     teamCode: "ELA",
     name: "Firaol",
     fname: "",
@@ -406,7 +406,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1055,
+    playerID: 2035,
     teamCode: "ELA",
     name: "Gemechu",
     fname: "Birhanu",
@@ -415,7 +415,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1056,
+    playerID: 2036,
     teamCode: "ELA",
     name: "Natnael",
     fname: "Fitsum",
@@ -424,7 +424,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1057,
+    playerID: 2037,
     teamCode: "ELA",
     name: "Ababu",
     fname: "Alemu",
@@ -433,7 +433,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1058,
+    playerID: 2038,
     teamCode: "ELA",
     name: "Abebaw",
     fname: "Assefa",
@@ -442,7 +442,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1059,
+    playerID: 2039,
     teamCode: "ELA",
     name: "Bereket",
     fname: "Barma",
@@ -451,7 +451,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10510,
+    playerID: 20310,
     teamCode: "ELA",
     name: "Mohammed",
     fname: "Hussein",
@@ -460,7 +460,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10511,
+    playerID: 20311,
     teamCode: "ELA",
     name: "Nahom",
     fname: "Sileshi",
@@ -469,7 +469,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10512,
+    playerID: 20312,
     teamCode: "ELA",
     name: "Yeshiwas",
     fname: "Tikmu",
@@ -478,7 +478,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10513,
+    playerID: 20313,
     teamCode: "ELA",
     name: "Abraham",
     fname: "Mulat",
@@ -487,7 +487,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10514,
+    playerID: 20314,
     teamCode: "ELA",
     name: "Chala",
     fname: "Tadesse",
@@ -496,7 +496,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10515,
+    playerID: 20315,
     teamCode: "ELA",
     name: "Henok",
     fname: "Hailu",
@@ -505,7 +505,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10516,
+    playerID: 20316,
     teamCode: "ELA",
     name: "Natnael",
     fname: "Mersha",
@@ -518,7 +518,7 @@ export const players: Player[] = [
    * Electrical B
    */
   {
-    playerID: 1061,
+    playerID: 1031,
     teamCode: "ELB",
     name: "Sisay",
     fname: "Bekele",
@@ -527,7 +527,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1062,
+    playerID: 1032,
     teamCode: "ELB",
     name: "Fitsum",
     fname: "Getachew",
@@ -536,7 +536,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1063,
+    playerID: 1033,
     teamCode: "ELB",
     name: "Girmachew",
     fname: "Mengistu",
@@ -545,7 +545,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1064,
+    playerID: 1034,
     teamCode: "ELB",
     name: "Kassa",
     fname: "Birhanu",
@@ -554,7 +554,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1065,
+    playerID: 1035,
     teamCode: "ELB",
     name: "Mulugeta",
     fname: "Mekuanint",
@@ -563,7 +563,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1066,
+    playerID: 1036,
     teamCode: "ELB",
     name: "Nehemiah",
     fname: "Yishak",
@@ -572,7 +572,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1067,
+    playerID: 1037,
     teamCode: "ELB",
     name: "Bereket",
     fname: "Nigussie",
@@ -581,7 +581,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1068,
+    playerID: 1038,
     teamCode: "ELB",
     name: "Bultum",
     fname: "Guluma",
@@ -590,7 +590,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1069,
+    playerID: 1039,
     teamCode: "ELB",
     name: "Mohammed",
     fname: "",
@@ -599,7 +599,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10610,
+    playerID: 10310,
     teamCode: "ELB",
     name: "Nigatu",
     fname: "Paulos",
@@ -608,7 +608,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10611,
+    playerID: 10311,
     teamCode: "ELB",
     name: "Samuel",
     fname: "Negalign",
@@ -617,7 +617,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10612,
+    playerID: 10312,
     teamCode: "ELB",
     name: "Biniyam",
     fname: "Dagne",
@@ -626,7 +626,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10613,
+    playerID: 10313,
     teamCode: "ELB",
     name: "Birhanu",
     fname: "Adama",
@@ -635,7 +635,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10614,
+    playerID: 10314,
     teamCode: "ELB",
     name: "Kaleb",
     fname: "Tesfay",
@@ -648,7 +648,7 @@ export const players: Player[] = [
    * IT
    */
   {
-    playerID: 1071,
+    playerID: 2041,
     teamCode: "ITE",
     name: "Michael",
     fname: "Alemayehu",
@@ -657,7 +657,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1072,
+    playerID: 2042,
     teamCode: "ITE",
     name: "Barok",
     fname: "Dagim",
@@ -666,7 +666,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1073,
+    playerID: 2043,
     teamCode: "ITE",
     name: "Dawit",
     fname: "Bezabih",
@@ -675,7 +675,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1074,
+    playerID: 2044,
     teamCode: "ITE",
     name: "Ermias",
     fname: "Asmare",
@@ -684,7 +684,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1075,
+    playerID: 2045,
     teamCode: "ITE",
     name: "Haben",
     fname: "Tesfaye",
@@ -693,7 +693,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1076,
+    playerID: 2046,
     teamCode: "ITE",
     name: "Yeabsira",
     fname: "Mezgebu",
@@ -703,7 +703,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1077,
+    playerID: 2047,
     teamCode: "ITE",
     name: "Zekarias",
     fname: "Alemu",
@@ -712,7 +712,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1078,
+    playerID: 2048,
     teamCode: "ITE",
     name: "Ermias",
     fname: "Mulugeta",
@@ -721,7 +721,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1079,
+    playerID: 2049,
     teamCode: "ITE",
     name: "Kevin",
     fname: "Shitaye",
@@ -731,7 +731,7 @@ export const players: Player[] = [
     isCaptain: true,
   },
   {
-    playerID: 10710,
+    playerID: 20410,
     teamCode: "ITE",
     name: "Tekletsadik",
     fname: "Abebayehu",
@@ -741,7 +741,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10711,
+    playerID: 20411,
     teamCode: "ITE",
     name: "Yonathan",
     fname: "Awoke",
@@ -750,7 +750,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10712,
+    playerID: 20412,
     teamCode: "ITE",
     name: "Beken",
     fname: "Adugna",
@@ -763,7 +763,7 @@ export const players: Player[] = [
    * Software 1
    */
   {
-    playerID: 1091,
+    playerID: 2051,
     teamCode: "SF1",
     name: "Liben",
     fname: "Hailu",
@@ -772,7 +772,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1092,
+    playerID: 2052,
     teamCode: "SF1",
     name: "Alefew",
     fname: "Yimer",
@@ -781,7 +781,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1093,
+    playerID: 2053,
     teamCode: "SF1",
     name: "Derbachew",
     fname: "",
@@ -790,7 +790,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1094,
+    playerID: 2054,
     teamCode: "SF1",
     name: "Ebsa",
     fname: "",
@@ -799,7 +799,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1095,
+    playerID: 2055,
     teamCode: "SF1",
     name: "Solomon",
     fname: "Ermias",
@@ -808,7 +808,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1096,
+    playerID: 2056,
     teamCode: "SF1",
     name: "Temesgen",
     fname: "Talo",
@@ -817,7 +817,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1097,
+    playerID: 2057,
     teamCode: "SF1",
     name: "Betsegaw",
     fname: "",
@@ -826,7 +826,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1098,
+    playerID: 2058,
     teamCode: "SF1",
     name: "Daniel",
     fname: "",
@@ -835,7 +835,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1099,
+    playerID: 2059,
     teamCode: "SF1",
     name: "Natnael",
     fname: "Awel",
@@ -844,7 +844,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10910,
+    playerID: 20510,
     teamCode: "SF1",
     name: "Suraphel",
     fname: "Kindu",
@@ -853,7 +853,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10911,
+    playerID: 20511,
     teamCode: "SF1",
     name: "Nahom",
     fname: "Zerihun",
@@ -862,7 +862,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 10912,
+    playerID: 20512,
     teamCode: "SF1",
     name: "Yididya",
     fname: "",
@@ -875,7 +875,7 @@ export const players: Player[] = [
    * Software 2
    */
   {
-    playerID: 1101,
+    playerID: 1051,
     teamCode: "SF2",
     name: "Dagnachew",
     fname: "",
@@ -884,7 +884,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1102,
+    playerID: 1052,
     teamCode: "SF2",
     name: "Asegd",
     fname: "",
@@ -893,7 +893,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1103,
+    playerID: 1053,
     teamCode: "SF2",
     name: "Hawitu",
     fname: "",
@@ -902,7 +902,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1104,
+    playerID: 1054,
     teamCode: "SF2",
     name: "Zerihun",
     fname: "",
@@ -911,7 +911,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1105,
+    playerID: 1055,
     teamCode: "SF2",
     name: "Dawit",
     fname: "Teshager",
@@ -920,7 +920,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1106,
+    playerID: 1056,
     teamCode: "SF2",
     name: "Fantahun",
     fname: "Fekadu",
@@ -929,7 +929,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1107,
+    playerID: 1057,
     teamCode: "SF2",
     name: "Natnael",
     fname: "Bahiru",
@@ -938,7 +938,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1108,
+    playerID: 1058,
     teamCode: "SF2",
     name: "Natnael",
     fname: "Berhanu",
@@ -947,7 +947,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 1109,
+    playerID: 1059,
     teamCode: "SF2",
     name: "Robel",
     fname: "Azmeraw",
@@ -956,7 +956,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 11010,
+    playerID: 10510,
     teamCode: "SF2",
     name: "Yohannes",
     fname: "",
@@ -965,7 +965,7 @@ export const players: Player[] = [
     assists: 0,
   },
   {
-    playerID: 11011,
+    playerID: 10511,
     teamCode: "SF2",
     name: "Emnet",
     fname: "Yohannes",

@@ -28,3 +28,17 @@ td:first-child {
 .team-name span:first-child {
   @apply mr-4;
 }
+
+.conference-switch button {
+  @apply px-4 border-none cursor-default md:cursor-pointer focus-visible:outline-none;
+}
+
+.conference-switch {
+  --start: 0;
+}
+
+.conference-switch:after {
+  @apply content-[''] block bg-blue-200 rounded-sm w-1/2 absolute -z-10 top-1 bottom-1 my-auto;
+  left: var(--start);
+  transition: left 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}

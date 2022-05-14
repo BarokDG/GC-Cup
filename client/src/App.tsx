@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import DesktopView from "./pages/desktopView";
 import MobileView from "./pages/mobileView";
 
+import { BrowserRouter } from "react-router-dom";
+
 function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -15,7 +17,17 @@ function App() {
     };
   }, []);
 
-  return <>{windowWidth > 700 ? <DesktopView /> : <MobileView />}</>;
+  return (
+    <>
+      {windowWidth > 700 ? (
+        <DesktopView />
+      ) : (
+        <BrowserRouter>
+          <MobileView />
+        </BrowserRouter>
+      )}
+    </>
+  );
 }
 
 export default App;

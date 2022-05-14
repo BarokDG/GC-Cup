@@ -1,3 +1,9 @@
+import ConferenceSwitch from "../conferenceSwitch";
+
 export default function Fixtures() {
-  return <h1>Fixtures</h1>;
+  return (
+    <>
+      <ConferenceSwitch />
+    </>
+  );
 }

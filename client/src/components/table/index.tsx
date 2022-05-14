@@ -2,7 +2,7 @@ import { useAppSelector } from "../../store/storeHooks";
 import { conferenceState } from "../../store/tableSlice";
 
 import LeagueTable from "./leagueTable";
-import TableSwitch from "./tableSwitch";
+import ConferenceSwitch from "../conferenceSwitch";
 import PlayOffs from "./playoffs";
 
 import "../../css/table.css";
@@ -12,7 +12,7 @@ export default function Table() {
 
   return (
     <>
-      <TableSwitch conference={conference} />
+      <ConferenceSwitch />
       {conference !== 3 && <LeagueTable conference={conference} />}
       {conference === 3 && <PlayOffs />}
     </>

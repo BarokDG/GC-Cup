@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import DesktopView from "./pages/desktopView";
-import MobileView from "./pages/mobileView";
+import DesktopView from "./views/desktopView";
+import MobileView from "./views/mobileView";
 
 import { BrowserRouter } from "react-router-dom";
 

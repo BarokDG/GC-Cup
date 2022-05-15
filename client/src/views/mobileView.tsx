@@ -6,19 +6,20 @@ import Fixtures from "../components/fixtures";
 import Stats from "../components/stats";
 import Teams from "../components/teams";
 
-import { Routes, Route, Outlet } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 export default function MobileView() {
   return (
     <>
       <Header />
-      <Routes>
-        <Route index element={<Table />} />
-        <Route path="/fixtures" element={<Fixtures />} />
-        <Route path="/stats" element={<Stats />} />
-        <Route path="/teams" element={<Teams />} />
-      </Routes>
-      <Outlet />
+      <main className="px-2">
+        <Routes>
+          <Route index element={<Table />} />
+          <Route path="/fixtures" element={<Fixtures />} />
+          <Route path="/stats" element={<Stats />} />
+          <Route path="/teams" element={<Teams />} />
+        </Routes>
+      </main>
       <Navbar />
     </>
   );

@@ -5,8 +5,6 @@ import LeagueTable from "./leagueTable";
 import ConferenceSwitch from "../conferenceSwitch";
 import PlayOffs from "./playoffs";
 
-import "../../css/table.css";
-
 export default function Table() {
   const conference = useAppSelector(conferenceState);
 

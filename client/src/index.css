@@ -1,3 +1,63 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#root {
+  @apply absolute inset-0 flex flex-col;
+}
+
+nav a {
+  @apply flex flex-col cursor-default place-content-center no-underline text-slate-300;
+}
+
+.selected svg {
+  animation: rotate 300ms forwards;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(-180deg);
+  }
+  50% {
+    transform: scale(3) translateY(-8px);
+  }
+  100% {
+    transform: rotateZ(360deg) scale(2.5) translateY(-8px);
+  }
+}
+
+th {
+  @apply text-gray-500 font-normal text-sm text-center;
+  @apply whitespace-nowrap py-4 pl-2 pr-6;
+}
+
+tbody tr:first-child,
+tbody tr:nth-child(2) {
+  @apply bg-slate-600 text-slate-300;
+}
+
+td {
+  @apply text-gray-900 text-lg text-center;
+  @apply whitespace-nowrap py-4 pl-2 pr-6;
+}
+
+tbody tr:first-child td:first-child,
+tbody tr:nth-child(2) td:first-child {
+  @apply bg-slate-600;
+}
+
+tbody tr:first-child td,
+tbody tr:nth-child(2) td {
+  @apply text-slate-300;
+}
+
+.conference-switch button {
+  @apply relative z-10 px-4 border-none cursor-default text-sm md:cursor-pointer focus-visible:outline-none;
+}
+
+.conference-switch:after {
+  @apply content-[''] block bg-slate-300 rounded-md w-24 absolute top-1 bottom-1 my-auto;
+  left: var(--start);
+
+  transition: left 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}

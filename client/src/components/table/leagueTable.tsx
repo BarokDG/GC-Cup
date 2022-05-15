@@ -7,7 +7,7 @@ export default function LeagueTable({ conference }) {
         <table className="border-collapse">
           <thead>
             <tr>
-              <th className="w-48 block bg-white sticky left-0"></th>
+              <th className="w-48 block bg-slate-900 sticky left-0"></th>
               <th title="Matches Played">MP</th>
               <th title="Points">Pts</th>
               <th title="Wins">W</th>

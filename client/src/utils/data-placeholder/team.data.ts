@@ -1,5 +1,6 @@
 type Team = {
   conference: number;
+  inPlayoffs: boolean;
   teamID: number;
   teamName: string;
   teamCode: string;
@@ -22,6 +23,7 @@ export const teams: Team[] = [
    */
   {
     conference: 1,
+    inPlayoffs: false,
     teamID: 101,
     teamName: "Chemical",
     teamCode: "CHE",
@@ -39,6 +41,7 @@ export const teams: Team[] = [
   },
   {
     conference: 1,
+    inPlayoffs: false,
     teamID: 102,
     teamName: "Civil 1",
     teamCode: "CV1",
@@ -56,6 +59,7 @@ export const teams: Team[] = [
   },
   {
     conference: 1,
+    inPlayoffs: false,
     teamID: 103,
     teamName: "Electrical B",
     teamCode: "ELB",
@@ -73,6 +77,7 @@ export const teams: Team[] = [
   },
   {
     conference: 1,
+    inPlayoffs: false,
     teamID: 104,
     teamName: "Mechanical",
     teamCode: "MEC",
@@ -90,6 +95,7 @@ export const teams: Team[] = [
   },
   {
     conference: 1,
+    inPlayoffs: false,
     teamID: 105,
     teamName: "Software 2",
     teamCode: "SF2",
@@ -111,6 +117,7 @@ export const teams: Team[] = [
    */
   {
     conference: 2,
+    inPlayoffs: false,
     teamID: 201,
     teamName: "Biomed",
     teamCode: "BIO",
@@ -128,6 +135,7 @@ export const teams: Team[] = [
   },
   {
     conference: 2,
+    inPlayoffs: false,
     teamID: 202,
     teamName: "Civil 2",
     teamCode: "CV2",
@@ -145,6 +153,7 @@ export const teams: Team[] = [
   },
   {
     conference: 2,
+    inPlayoffs: false,
     teamID: 203,
     teamName: "Electrical A",
     teamCode: "ELA",
@@ -162,6 +171,7 @@ export const teams: Team[] = [
   },
   {
     conference: 2,
+    inPlayoffs: false,
     teamID: 204,
     teamName: "IT",
     teamCode: "ITE",
@@ -179,6 +189,7 @@ export const teams: Team[] = [
   },
   {
     conference: 2,
+    inPlayoffs: false,
     teamID: 205,
     teamName: "Software 1",
     teamCode: "SF1",

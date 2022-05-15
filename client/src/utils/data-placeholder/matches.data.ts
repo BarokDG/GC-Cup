@@ -1,15 +1,15 @@
 type Match = {
-  state: String;
-  GWID: Number;
-  matchID: String;
+  state: string;
+  GWID: number;
+  matchID: string;
   teams: {
-    team1: Number;
-    team2: Number;
+    team1: number;
+    team2: number;
   };
   schedule: Date;
   score: {
-    team1: Number;
-    team2: Number;
+    team1: number;
+    team2: number;
   };
   events: {
     team1: MatchEvent;
@@ -18,12 +18,12 @@ type Match = {
 };
 
 type MatchEvent = {
-  name: String;
+  name: string;
   event: {
-    eventType: String;
+    eventType: string;
   };
-  assist: String;
-  minute: Date;
+  assist: string;
+  minute?: Date;
 };
 
 export const matches: Match[] = [];

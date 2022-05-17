@@ -26,15 +26,21 @@ export default function ConferenceSwitch() {
   }, [conference]);
 
   return (
-    <div className="conference-switch flex py-2 relative">
-      <button onClick={() => dispatch(tableActions.setConference(1))}>
+    <div className="conference-switch flex py-2 relative mt-3">
+      <button
+        onClick={() => dispatch(tableActions.setConference(1))}
+        className={conference === 1 ? "" : "text-gray-200"}
+      >
         Conference 1
       </button>
-      <button onClick={() => dispatch(tableActions.setConference(2))}>
+      <button
+        onClick={() => dispatch(tableActions.setConference(2))}
+        className={conference === 2 ? "" : "text-gray-200"}
+      >
         Conference 2
       </button>
       <button
-        className="ml-auto"
+        className={conference === 3 ? "ml-auto" : "ml-auto text-gray-200"}
         onClick={() => dispatch(tableActions.setConference(3))}
       >
         Play-offs

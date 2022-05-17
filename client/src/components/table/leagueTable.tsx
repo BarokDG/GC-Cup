@@ -68,7 +68,7 @@ export default function LeagueTable({ conference }) {
       </div>
       <div className="table-info flex mt-6">
         <span className="w-6 h-6 bg-slate-600 mr-3"></span>
-        <p>Qualify to play-offs</p>
+        <p className="text-gray-300">Qualifying to play-offs</p>
       </div>
     </>
   );

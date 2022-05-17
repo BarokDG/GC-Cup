@@ -27,7 +27,7 @@ nav a {
 }
 
 th {
-  @apply text-gray-500 font-normal text-sm text-center;
+  @apply text-gray-400 font-normal text-sm text-center;
   @apply whitespace-nowrap py-4 pl-2 pr-6;
 }
 

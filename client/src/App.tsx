@@ -1,25 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import DesktopView from "./views/desktopView";
+import MobileView from "./views/mobileView";
+
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => setWindowWidth(window.innerWidth));
+
+    return function cleanup() {
+      window.removeEventListener("resize", () =>
+        setWindowWidth(window.innerWidth)
+      );
+    };
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {windowWidth > 700 ? (
+        <DesktopView />
+      ) : (
+        <BrowserRouter>
+          <MobileView />
+        </BrowserRouter>
+      )}
+    </>
   );
 }
 

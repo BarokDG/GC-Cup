@@ -1,3 +1,12 @@
+import StatCardSummary from "./statCardSummary";
+
+import { ReactComponent as StrikerIcon } from "../../assets/striker.svg";
+
 export default function Stats() {
-  return <h1 className="text-gray-200">Stats</h1>;
+  return (
+    <>
+      <StatCardSummary Stat="Goals" Icon={StrikerIcon} sortBy="goals" />
+      <StatCardSummary Stat="Assists" Icon={StrikerIcon} sortBy="assists" />
+    </>
+  );
 }

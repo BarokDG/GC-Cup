@@ -10,13 +10,11 @@ import {
 
 export default function Navbar() {
   return (
-    <nav className="bg-slate-900">
-      <div className="flex justify-between py-4 px-8 mb-4 bg-gray-800 rounded-full border-2 border-b-4 border-gray-500">
-        <CustomNavLink to="/" icon={faList} text="Table" />
-        <CustomNavLink to="/matches" icon={faDiceD6} text="Matches" />
-        <CustomNavLink to="/stats" icon={faRankingStar} text="Stats" />
-        <CustomNavLink to="/about" icon={faCircleInfo} text="About" />
-      </div>
+    <nav className="absolute bottom-3 w-full flex justify-between py-4 px-8 mb-4 bg-gray-800 rounded-full border-2 border-b-4 border-gray-500">
+      <CustomNavLink to="/" icon={faList} text="Table" />
+      <CustomNavLink to="/matches" icon={faDiceD6} text="Matches" />
+      <CustomNavLink to="/stats" icon={faRankingStar} text="Stats" />
+      <CustomNavLink to="/about" icon={faCircleInfo} text="About" />
     </nav>
   );
 }

@@ -5,8 +5,10 @@ import {
   conferenceState,
   teamsDataState,
   matchesDataState,
-  playersDataState,
+  // playersDataState,
 } from "../../store/centralStoreSlice";
+import { useEffect } from "react";
+import EmptyState from "../emptyState";
 
 export default function Matches() {
   const conference = useAppSelector(conferenceState);
@@ -28,6 +30,7 @@ export default function Matches() {
       {matchesData
         .filter((match) => match.conference === conference)
         .map((match) => {
+          // To ensure dates aren't displayed twice
           const dateString = match.schedule.toDateString();
           let shouldDisplayDate = false;
 
@@ -45,6 +48,8 @@ export default function Matches() {
             />
           );
         })}
+
+      {conference === 3 && <EmptyState />}
     </>
   );
 }
@@ -89,6 +94,22 @@ function MatchDetails({
     }
   });
 
+  useEffect(() => {
+    let detailElems = document.querySelectorAll("details");
+
+    detailElems.forEach((elem) => {
+      elem.addEventListener("toggle", handleClick);
+    });
+
+    function handleClick(e) {
+      if (e.target.open) {
+        detailElems.forEach((elem) => {
+          if (elem !== e.target) elem.open = false;
+        });
+      }
+    }
+  });
+
   return (
     <>
       {shouldDisplayDate && (
@@ -122,25 +143,29 @@ function MatchDetails({
           </div>
         </summary>
         {/* Dropdown */}
-        <h3 className="text-sm text-gray-300 text-center border-b border-b-slate-500 py-2">
-          Goals
-        </h3>
-        <div className="flex">
-          <div className="team1 flex-grow basis-0 text-right p-2">
-            {Object.keys(numberOfGoals.team1).map((name) => {
-              return (
-                <p className="text-gray-300">{`${name} x${numberOfGoals.team1[name]}`}</p>
-              );
-            })}
-          </div>
-          <div className="team2 flex-grow basis-0 p-2">
-            {Object.keys(numberOfGoals.team2).map((name) => {
-              return (
-                <p className="text-gray-300">{`${name} x${numberOfGoals.team2[name]}`}</p>
-              );
-            })}
-          </div>
-        </div>
+        {state !== "sc" && (
+          <>
+            <h3 className="text-sm text-gray-300 text-center border-b border-b-slate-500 py-2">
+              Goals
+            </h3>
+            <div className="flex">
+              <div className="team1 flex-grow basis-0 text-right p-2 pr-4">
+                {Object.keys(numberOfGoals.team1).map((name) => {
+                  return (
+                    <p className="text-gray-300">{`${name} x${numberOfGoals.team1[name]}`}</p>
+                  );
+                })}
+              </div>
+              <div className="team2 flex-grow basis-0 p-2 pl-4">
+                {Object.keys(numberOfGoals.team2).map((name) => {
+                  return (
+                    <p className="text-gray-300">{`${name} x${numberOfGoals.team2[name]}`}</p>
+                  );
+                })}
+              </div>
+            </div>
+          </>
+        )}
       </details>
     </>
   );

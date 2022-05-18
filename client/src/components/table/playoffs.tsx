@@ -1,3 +1,5 @@
+import EmptyState from "../emptyState";
+
 export default function PlayOffs() {
-  return <h1 className="text-gray-200">Playoffs</h1>;
+  return <EmptyState />;
 }

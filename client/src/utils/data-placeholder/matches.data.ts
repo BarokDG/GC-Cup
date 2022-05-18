@@ -1,5 +1,3 @@
-import { createNull } from "typescript";
-
 export type Match = {
   state: string;
   isPlayoffs: boolean;

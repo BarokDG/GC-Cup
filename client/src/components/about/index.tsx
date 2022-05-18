@@ -1,3 +1,3 @@
 export default function About() {
-  return <h1 className="text-gray-200"></h1>;
+  return <h1 className="text-gray-200">About</h1>;
 }

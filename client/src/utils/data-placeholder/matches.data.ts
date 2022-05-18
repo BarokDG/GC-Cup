@@ -1,3 +1,5 @@
+import { createNull } from "typescript";
+
 export type Match = {
   state: string;
   isPlayoffs: boolean;
@@ -20,10 +22,8 @@ export type Match = {
 
 type MatchEvent = {
   name: string;
-  event: {
-    eventType: string;
-  };
-  assist: string;
+  event: String;
+  assist?: string;
   minute?: Date;
 };
 
@@ -32,7 +32,7 @@ export const matches: Match[] = [
    * Conference 1
    */
   {
-    state: "sc",
+    state: "ft",
     isPlayoffs: false,
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
@@ -42,12 +42,82 @@ export const matches: Match[] = [
     },
     schedule: new Date("May 18, 2022 14:00"),
     score: {
-      team1: null,
-      team2: null,
+      team1: 2,
+      team2: 15,
     },
     events: {
-      team1: [],
-      team2: [],
+      team1: [
+        {
+          name: "Olana",
+          event: "goal",
+        },
+        {
+          name: "Haile",
+          event: "goal",
+        },
+      ],
+      team2: [
+        {
+          name: "Ermiyas",
+          event: "goal",
+        },
+        {
+          name: "Robel",
+          event: "goal",
+        },
+        {
+          name: "Robel",
+          event: "goal",
+        },
+        {
+          name: "Robel",
+          event: "goal",
+        },
+        {
+          name: "Nati G.",
+          event: "goal",
+        },
+        {
+          name: "Nati G.",
+          event: "goal",
+        },
+        {
+          name: "Nati G.",
+          event: "goal",
+        },
+        {
+          name: "Nati G.",
+          event: "goal",
+        },
+        {
+          name: "Nati G.",
+          event: "goal",
+        },
+        {
+          name: "Henock",
+          event: "goal",
+        },
+        {
+          name: "Sewnet",
+          event: "goal",
+        },
+        {
+          name: "Bruk",
+          event: "goal",
+        },
+        {
+          name: "Bruk",
+          event: "goal",
+        },
+        {
+          name: "Nati M.",
+          event: "goal",
+        },
+        {
+          name: "Nati M.",
+          event: "goal",
+        },
+      ],
     },
   },
   {
@@ -226,7 +296,7 @@ export const matches: Match[] = [
    * Conference 2
    */
   {
-    state: "sc",
+    state: "ft",
     isPlayoffs: false,
     conference: 2,
     matchID: Math.random().toString(36).slice(2),
@@ -236,12 +306,30 @@ export const matches: Match[] = [
     },
     schedule: new Date("May 18, 2022 16:00"),
     score: {
-      team1: null,
-      team2: null,
+      team1: 2,
+      team2: 2,
     },
     events: {
-      team1: [],
-      team2: [],
+      team1: [
+        {
+          name: "Ermisha",
+          event: "goal",
+        },
+        {
+          name: "Ermisha",
+          event: "goal",
+        },
+      ],
+      team2: [
+        {
+          name: "Robel",
+          event: "goal",
+        },
+        {
+          name: "Ali",
+          event: "goal",
+        },
+      ],
     },
   },
   {

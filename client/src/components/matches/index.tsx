@@ -1,5 +1,4 @@
 import ConferenceSwitch from "../conferenceSwitch";
-import { matches } from "../../utils/data-placeholder/matches.data";
 
 import { useAppSelector } from "../../store/storeHooks";
 import {
@@ -77,21 +76,21 @@ function MatchDetails({
       <details className="bg-gray-100 mb-2">
         <summary className="list-none">
           <div className="flex">
-            <p className="flex-grow text-center py-4 basis-0">
+            <p className="flex-grow text-center py-2 basis-0">
               {getTeamNameFromTeamId(teams.team1)}
             </p>
             {score.team1 && (
               <>
-                <p className="w-16 py-4">{score.team1}</p>
-                <p className="w-16 py-4">{score.team2}</p>
+                <p className="w-16 py-2 bg-gray-800">{score.team1}</p>
+                <p className="w-16 py-2 bg-gray-800">{score.team2}</p>
               </>
             )}
             {!score.team1 && (
-              <p className="w-max px-2 py-4 bg-gray-800 text-slate-200 text-lg font-bold">
+              <p className="w-max px-2 py-2 bg-gray-800 text-slate-200 text-lg font-bold">
                 {time}
               </p>
             )}
-            <p className="flex-grow text-center py-4 basis-0">
+            <p className="flex-grow text-center py-2 basis-0">
               {getTeamNameFromTeamId(teams.team2)}
             </p>
           </div>

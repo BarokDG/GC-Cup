@@ -5,7 +5,6 @@ import {
   faList,
   faDiceD6,
   faRankingStar,
-  faCircleInfo,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
@@ -14,7 +13,6 @@ export default function Navbar() {
       <CustomNavLink to="/" icon={faList} text="Table" />
       <CustomNavLink to="/matches" icon={faDiceD6} text="Matches" />
       <CustomNavLink to="/stats" icon={faRankingStar} text="Stats" />
-      <CustomNavLink to="/about" icon={faCircleInfo} text="About" />
     </nav>
   );
 }

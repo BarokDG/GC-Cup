@@ -8,8 +8,8 @@ export default function StatCardSummary({ data, stat, icon: Icon, sortBy }) {
         <Icon className="absolute right-8 top-2" />
       </div>
       <div className="flex flex-col">
-        {data
-          // .sort((a, b) => b[sortBy] - a[sortBy])
+        {[...data]
+          .sort((a, b) => b[sortBy] - a[sortBy])
           .slice(0, 5)
           .map(({ name, teamCode, position, teamName }, index: number) => {
             return (

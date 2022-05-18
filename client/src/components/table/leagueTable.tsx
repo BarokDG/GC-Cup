@@ -44,7 +44,7 @@ export default function LeagueTable({ conference }) {
                   return (
                     <tr
                       key={teamID}
-                      className="bg-slate-200 border-b-2 border-b-slate-300"
+                      className="bg-slate-200 border-b border-b-slate-300"
                     >
                       <td className="sticky left-0 bg-slate-200">
                         <div className="flex tracking-wider">

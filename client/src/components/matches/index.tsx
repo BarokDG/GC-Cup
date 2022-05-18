@@ -71,7 +71,9 @@ function MatchDetails({
   return (
     <>
       {shouldDisplayDate && (
-        <h3 className="text-gray-200 mt-6 mb-1">{schedule.toDateString()}</h3>
+        <h3 className="text-gray-300 text-sm mt-6 mb-1">
+          {schedule.toDateString()}
+        </h3>
       )}
       <details className="bg-gray-100 mb-2">
         <summary className="list-none">

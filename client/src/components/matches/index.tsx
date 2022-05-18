@@ -5,9 +5,10 @@ import {
   conferenceState,
   teamsDataState,
   matchesDataState,
-  playersDataState,
+  // playersDataState,
 } from "../../store/centralStoreSlice";
 import { useEffect } from "react";
+import EmptyState from "../emptyState";
 
 export default function Matches() {
   const conference = useAppSelector(conferenceState);
@@ -29,6 +30,7 @@ export default function Matches() {
       {matchesData
         .filter((match) => match.conference === conference)
         .map((match) => {
+          // To ensure dates aren't displayed twice
           const dateString = match.schedule.toDateString();
           let shouldDisplayDate = false;
 
@@ -46,6 +48,8 @@ export default function Matches() {
             />
           );
         })}
+
+      {conference === 3 && <EmptyState />}
     </>
   );
 }

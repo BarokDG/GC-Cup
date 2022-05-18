@@ -12,7 +12,7 @@ export default function MobileView() {
   return (
     <>
       <Header />
-      <main className="flex-grow bg-slate-900 px-2">
+      <main className="flex-grow bg-slate-900 px-2 overflow-x-hidden pb-36">
         <Routes>
           <Route index element={<Table />} />
           <Route path="/matches" element={<Matches />} />

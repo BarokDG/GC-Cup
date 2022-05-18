@@ -1,8 +1,7 @@
+import { conferenceState } from "../../store/centralStoreSlice";
 import { useAppSelector } from "../../store/storeHooks";
-import { conferenceState } from "../../store/tableSlice";
-
-import LeagueTable from "./leagueTable";
 import ConferenceSwitch from "../conferenceSwitch";
+import LeagueTable from "./leagueTable";
 import PlayOffs from "./playoffs";
 
 export default function Table() {

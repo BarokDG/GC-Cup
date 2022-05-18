@@ -1,4 +1,4 @@
-type Team = {
+export type Team = {
   conference: number;
   inPlayoffs: boolean;
   teamID: number;

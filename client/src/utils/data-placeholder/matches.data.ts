@@ -1,6 +1,7 @@
 type Match = {
   state: string;
   isPlayoffs: boolean;
+  conference: number;
   matchID: string;
   teams: {
     team1: number;
@@ -33,6 +34,7 @@ export const matches: Match[] = [
   {
     state: "sc",
     isPlayoffs: false,
+    conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
       team1: 101,
@@ -51,6 +53,7 @@ export const matches: Match[] = [
   {
     state: "sc",
     isPlayoffs: false,
+    conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
       team1: 103,
@@ -69,6 +72,7 @@ export const matches: Match[] = [
   {
     state: "sc",
     isPlayoffs: false,
+    conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
       team1: 101,
@@ -87,6 +91,7 @@ export const matches: Match[] = [
   {
     state: "sc",
     isPlayoffs: false,
+    conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
       team1: 102,
@@ -105,6 +110,7 @@ export const matches: Match[] = [
   {
     state: "sc",
     isPlayoffs: false,
+    conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
       team1: 103,
@@ -123,6 +129,7 @@ export const matches: Match[] = [
   {
     state: "sc",
     isPlayoffs: false,
+    conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
       team1: 102,
@@ -141,6 +148,7 @@ export const matches: Match[] = [
   {
     state: "sc",
     isPlayoffs: false,
+    conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
       team1: 102,
@@ -159,6 +167,7 @@ export const matches: Match[] = [
   {
     state: "sc",
     isPlayoffs: false,
+    conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
       team1: 101,
@@ -177,6 +186,7 @@ export const matches: Match[] = [
   {
     state: "sc",
     isPlayoffs: false,
+    conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
       team1: 104,
@@ -195,6 +205,7 @@ export const matches: Match[] = [
   {
     state: "sc",
     isPlayoffs: false,
+    conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
       team1: 101,
@@ -217,6 +228,7 @@ export const matches: Match[] = [
   {
     state: "sc",
     isPlayoffs: false,
+    conference: 2,
     matchID: Math.random().toString(36).slice(2),
     teams: {
       team1: 201,
@@ -235,6 +247,7 @@ export const matches: Match[] = [
   {
     state: "sc",
     isPlayoffs: false,
+    conference: 2,
     matchID: Math.random().toString(36).slice(2),
     teams: {
       team1: 203,
@@ -253,6 +266,7 @@ export const matches: Match[] = [
   {
     state: "sc",
     isPlayoffs: false,
+    conference: 2,
     matchID: Math.random().toString(36).slice(2),
     teams: {
       team1: 204,
@@ -271,6 +285,7 @@ export const matches: Match[] = [
   {
     state: "sc",
     isPlayoffs: false,
+    conference: 2,
     matchID: Math.random().toString(36).slice(2),
     teams: {
       team1: 201,
@@ -289,6 +304,7 @@ export const matches: Match[] = [
   {
     state: "sc",
     isPlayoffs: false,
+    conference: 2,
     matchID: Math.random().toString(36).slice(2),
     teams: {
       team1: 201,
@@ -307,6 +323,7 @@ export const matches: Match[] = [
   {
     state: "sc",
     isPlayoffs: false,
+    conference: 2,
     matchID: Math.random().toString(36).slice(2),
     teams: {
       team1: 202,
@@ -325,6 +342,7 @@ export const matches: Match[] = [
   {
     state: "sc",
     isPlayoffs: false,
+    conference: 2,
     matchID: Math.random().toString(36).slice(2),
     teams: {
       team1: 202,
@@ -343,6 +361,7 @@ export const matches: Match[] = [
   {
     state: "sc",
     isPlayoffs: false,
+    conference: 2,
     matchID: Math.random().toString(36).slice(2),
     teams: {
       team1: 201,
@@ -361,6 +380,7 @@ export const matches: Match[] = [
   {
     state: "sc",
     isPlayoffs: false,
+    conference: 2,
     matchID: Math.random().toString(36).slice(2),
     teams: {
       team1: 203,
@@ -379,6 +399,7 @@ export const matches: Match[] = [
   {
     state: "sc",
     isPlayoffs: false,
+    conference: 2,
     matchID: Math.random().toString(36).slice(2),
     teams: {
       team1: 202,

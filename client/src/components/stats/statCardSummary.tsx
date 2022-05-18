@@ -1,6 +1,6 @@
 export default function StatCardSummary({ data, stat, icon: Icon, sortBy }) {
   return (
-    <div className="mt-6 bg-gray-400 px-2 py-2 last:mb-36">
+    <div className="mt-6 bg-gray-400 px-2 py-2">
       <div className="relative mb-6 border-dashed border-4 bg-clip-padding border-gray-500 bg-slate-400 px-4 py-6">
         <h2 className="text-3xl font-black uppercase">
           Most <br /> {stat}

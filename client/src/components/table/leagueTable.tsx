@@ -1,8 +1,8 @@
 import { useAppSelector } from "../../store/storeHooks";
-import { teamDataState } from "../../store/centralStoreSlice";
+import { teamsDataState } from "../../store/centralStoreSlice";
 
 export default function LeagueTable({ conference }) {
-  const teamData = useAppSelector(teamDataState);
+  const teamData = useAppSelector(teamsDataState);
 
   return (
     <>

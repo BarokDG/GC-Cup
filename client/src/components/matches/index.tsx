@@ -2,23 +2,31 @@ import ConferenceSwitch from "../conferenceSwitch";
 import { matches } from "../../utils/data-placeholder/matches.data";
 
 import { useAppSelector } from "../../store/storeHooks";
-import { conferenceState, teamDataState } from "../../store/centralStoreSlice";
+import {
+  conferenceState,
+  teamsDataState,
+  matchesDataState,
+  playersDataState,
+} from "../../store/centralStoreSlice";
 
 export default function Matches() {
   const conference = useAppSelector(conferenceState);
-  const teamData = useAppSelector(teamDataState);
+  const teamsData = useAppSelector(teamsDataState);
+  const matchesData = useAppSelector(matchesDataState);
 
   // To ensure no duplicate dates are displayed
   const matchDates: Object = {};
 
   const getTeamNameFromTeamId = (queryTeamId: number): string => {
-    return teamData.find((team) => team.teamID === queryTeamId)?.teamName || "";
+    return (
+      teamsData.find((team) => team.teamID === queryTeamId)?.teamName || ""
+    );
   };
 
   return (
     <>
       <ConferenceSwitch />
-      {matches
+      {matchesData
         .filter((match) => match.conference === conference)
         .map((match) => {
           const dateString = match.schedule.toDateString();
@@ -88,6 +96,7 @@ function MatchDetails({
             </p>
           </div>
         </summary>
+        {/* Dropdown */}
       </details>
     </>
   );

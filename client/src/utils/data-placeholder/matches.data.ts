@@ -1,4 +1,4 @@
-type Match = {
+export type Match = {
   state: string;
   isPlayoffs: boolean;
   conference: number;

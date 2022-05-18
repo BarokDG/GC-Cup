@@ -1,13 +1,16 @@
 import StatCardSummary from "./statCardSummary";
 
+import { useAppSelector } from "../../store/storeHooks";
+import {
+  teamsDataState,
+  playersDataState,
+} from "../../store/centralStoreSlice";
+
 import { ReactComponent as StrikerIcon } from "../../assets/striker.svg";
 
-import { useAppSelector } from "../../store/storeHooks";
-import { teamDataState, playerDataState } from "../../store/centralStoreSlice";
-
 export default function Stats() {
-  const teamData = useAppSelector(teamDataState);
-  const playerData = useAppSelector(playerDataState);
+  const teamData = useAppSelector(teamsDataState);
+  const playerData = useAppSelector(playersDataState);
 
   return (
     <>

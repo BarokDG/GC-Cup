@@ -9,12 +9,12 @@ export default function StatCardSummary({ data, stat, icon: Icon, sortBy }) {
       </div>
       <div className="flex flex-col">
         {data
-          .sort((a, b) => b[sortBy] - a[sortBy])
+          // .sort((a, b) => b[sortBy] - a[sortBy])
           .slice(0, 5)
-          .map(({ playerID, name, teamCode, position, teamName }, index) => {
+          .map(({ name, teamCode, position, teamName }, index: number) => {
             return (
               <div
-                key={playerID}
+                key={index}
                 className="flex align-baseline bg-gray-200 pl-4 text-xl mb-0.5"
               >
                 {/* Display teamName instead for most cleansheets */}

@@ -2,26 +2,29 @@ import StatCardSummary from "./statCardSummary";
 
 import { ReactComponent as StrikerIcon } from "../../assets/striker.svg";
 
-import { players } from "../../utils/data-placeholder/players.data";
-import { teams } from "../../utils/data-placeholder/team.data";
+import { useAppSelector } from "../../store/storeHooks";
+import { teamDataState, playerDataState } from "../../store/centralStoreSlice";
 
 export default function Stats() {
+  const teamData = useAppSelector(teamDataState);
+  const playerData = useAppSelector(playerDataState);
+
   return (
     <>
       <StatCardSummary
-        data={players}
+        data={playerData}
         stat="Goals"
         icon={StrikerIcon}
         sortBy="goals"
       />
       <StatCardSummary
-        data={players}
+        data={playerData}
         stat="Assists"
         icon={StrikerIcon}
         sortBy="assists"
       />
       <StatCardSummary
-        data={teams}
+        data={teamData}
         stat="Cleansheets"
         icon={StrikerIcon}
         sortBy="cleansheets"

@@ -1,9 +1,15 @@
-import { teams } from "../../utils/data-placeholder/team.data";
+import { useAppSelector } from "../../store/storeHooks";
+import { teamDataState } from "../../store/centralStoreSlice";
 
 export default function LeagueTable({ conference }) {
+  const teamData = useAppSelector(teamDataState);
+
   return (
     <>
-      <div className="table-container max-w-full overflow-auto">
+      <h1 className="text-lg font-bold text-slate-300 mt-6">
+        Conference {conference}
+      </h1>
+      <div className="table-container max-w-full overflow-auto mb-12">
         <table className="border-collapse">
           <thead>
             <tr>
@@ -19,7 +25,7 @@ export default function LeagueTable({ conference }) {
             </tr>
           </thead>
           <tbody>
-            {teams
+            {teamData
               .filter((team) => team.conference === conference)
               .map(
                 (
@@ -65,10 +71,6 @@ export default function LeagueTable({ conference }) {
               )}
           </tbody>
         </table>
-      </div>
-      <div className="table-info flex mt-6">
-        <span className="w-6 h-6 bg-slate-600 mr-3"></span>
-        <p className="text-gray-300">Qualifying to play-offs</p>
       </div>
     </>
   );

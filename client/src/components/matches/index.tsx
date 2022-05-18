@@ -2,7 +2,7 @@ import ConferenceSwitch from "../conferenceSwitch";
 import { matches } from "../../utils/data-placeholder/matches.data";
 
 import { useAppSelector } from "../../store/storeHooks";
-import { conferenceState, teamDataState } from "../../store/tableSlice";
+import { conferenceState, teamDataState } from "../../store/centralStoreSlice";
 
 export default function Matches() {
   const conference = useAppSelector(conferenceState);

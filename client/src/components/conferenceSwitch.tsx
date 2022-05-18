@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useAppDispatch } from "../store/storeHooks";
 
 import { useSelector } from "react-redux";
-import { tableActions, conferenceState } from "../store/tableSlice";
+import { tableActions, conferenceState } from "../store/centralStoreSlice";
 
 export default function ConferenceSwitch() {
   const conference = useSelector(conferenceState);

@@ -1,8 +1,8 @@
-import { useState } from "react";
-import StatsModal from "./statsModal";
+// import { useState } from "react";
+// import StatsModal from "./statsModal";
 
 export default function StatCardSummary({ data, stat, icon: Icon, sortBy }) {
-  const [isStatsModalOpen, setIsStatsModalOpen] = useState(false);
+  // const [isStatsModalOpen, setIsStatsModalOpen] = useState(false);
 
   const sortedData = () => {
     return [...data]
@@ -49,17 +49,17 @@ export default function StatCardSummary({ data, stat, icon: Icon, sortBy }) {
               );
             })}
         </div>
-        <button
+        {/* <button
           className="cursor-default mt-4 w-full py-2 bg-slate-900 text-gray-200"
           onClick={() => setIsStatsModalOpen(true)}
         >
           More
-        </button>
+        </button> */}
       </div>
 
-      {isStatsModalOpen && (
+      {/* {isStatsModalOpen && (
         <StatsModal setIsStatsModalOpen={setIsStatsModalOpen} />
-      )}
+      )} */}
     </>
   );
 }

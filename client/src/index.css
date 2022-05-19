@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+*,
+*::before,
+*::after {
+  @apply select-none;
+}
+
 #root {
   @apply absolute inset-0 flex flex-col;
 }
@@ -37,7 +43,7 @@ tbody tr:nth-child(-n + 4) {
 
 td {
   @apply text-gray-900 text-lg text-center;
-  @apply whitespace-nowrap py-2 pl-2 pr-6;
+  @apply whitespace-nowrap py-4 pl-2 pr-6;
 }
 
 tbody tr:nth-child(-n + 4) td:first-child {

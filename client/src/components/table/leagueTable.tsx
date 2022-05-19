@@ -10,7 +10,7 @@ export default function LeagueTable({ conference }) {
         <table className="border-collapse">
           <thead>
             <tr>
-              <th className="w-48 block bg-slate-900 sticky left-0"></th>
+              <th className="bg-slate-900 sticky left-0"></th>
               <th title="Matches Played">MP</th>
               <th title="Points">Pts</th>
               <th title="Wins">W</th>
@@ -21,9 +21,11 @@ export default function LeagueTable({ conference }) {
               <th>Form</th>
             </tr>
           </thead>
+
           <tbody>
             {teamData
               .filter((team) => team.conference === conference)
+              .sort((a, b) => b.points - a.points)
               .map(
                 (
                   {
@@ -46,7 +48,7 @@ export default function LeagueTable({ conference }) {
                       key={teamID}
                       className="bg-slate-200 border-b border-b-slate-300"
                     >
-                      <td className="sticky left-0 bg-slate-200">
+                      <td className="sticky left-0 bg-slate-200 pr-16">
                         <div className="flex tracking-wider">
                           <span className="mr-4">{index + 1}</span>
                           <span>{teamName}</span>

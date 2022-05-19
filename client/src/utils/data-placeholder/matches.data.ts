@@ -100,7 +100,7 @@ export const matches: Match[] = [
           event: "goal",
         },
         {
-          name: "Bruk",
+          name: "Biruk",
           event: "goal",
         },
         {

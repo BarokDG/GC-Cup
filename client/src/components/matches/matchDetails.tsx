@@ -12,7 +12,7 @@ export default function MatchDetails({
   getTeamNameFromTeamId,
 }: Props) {
   const { state, teams, score, schedule, events } = match;
-  const time = new Date(Date.parse(schedule)).toLocaleTimeString([], {
+  const time = new Date(schedule).toLocaleTimeString([], {
     hour12: false,
     hourCycle: "h23",
     hour: "2-digit",
@@ -60,7 +60,7 @@ export default function MatchDetails({
     <div className="max-w-md mx-auto">
       {shouldDisplayDate && (
         <h3 className="text-gray-300 text-sm mt-6 mb-1">
-          {schedule.toDateString()}
+          {new Date(schedule).toDateString()}
         </h3>
       )}
       <details className="mb-2">

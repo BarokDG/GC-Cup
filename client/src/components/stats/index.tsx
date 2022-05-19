@@ -6,7 +6,7 @@ import {
   playersDataState,
 } from "../../store/centralStoreSlice";
 
-import { ReactComponent as StrikerIcon } from "../../assets/striker.svg";
+import { ReactComponent as StrikerIcon } from "../../assets/illustrations/striker.svg";
 
 export default function Stats() {
   const teamData = useAppSelector(teamsDataState);

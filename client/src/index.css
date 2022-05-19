@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Larken";
+  src: url("./assets/fonts/Larken Bold.ttf");
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -10,6 +16,10 @@
 
 #root {
   @apply absolute inset-0 flex flex-col;
+}
+
+header h1 {
+  font-family: "Larken", sans-serif;
 }
 
 nav a {
@@ -38,7 +48,7 @@ th {
 }
 
 tbody tr:nth-child(-n + 4) {
-  @apply bg-slate-600 text-slate-300;
+  @apply bg-slate-800 text-purple-100;
 }
 
 td {
@@ -47,7 +57,7 @@ td {
 }
 
 tbody tr:nth-child(-n + 4) td:first-child {
-  @apply bg-slate-600;
+  @apply bg-slate-800;
 }
 
 tbody tr:nth-child(-n + 4) td {

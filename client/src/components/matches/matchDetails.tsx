@@ -57,7 +57,7 @@ export default function MatchDetails({
   });
 
   return (
-    <>
+    <div className="max-w-md mx-auto">
       {shouldDisplayDate && (
         <h3 className="text-gray-300 text-sm mt-6 mb-1">
           {schedule.toDateString()}
@@ -119,6 +119,6 @@ export default function MatchDetails({
           </>
         )}
       </details>
-    </>
+    </div>
   );
 }

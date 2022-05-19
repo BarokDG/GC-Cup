@@ -23,7 +23,7 @@ export default function StatCardSummary({ data, stat, icon: Icon, sortBy }) {
           <h2 className="text-3xl font-black uppercase">
             Most <br /> {stat}
           </h2>
-          <Icon className="absolute right-8 top-2" />
+          <Icon className="absolute -right-4 -top-8 w-48 h-48" />
         </div>
         <div className="flex flex-col">
           {sortedData()

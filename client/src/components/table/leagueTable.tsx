@@ -38,7 +38,6 @@ export default function LeagueTable({ conference }) {
                     losses,
                     goalsFor,
                     goalsAgainst,
-                    goalDifference,
                     lastFive,
                   },
                   index
@@ -62,7 +61,7 @@ export default function LeagueTable({ conference }) {
                       <td>
                         {goalsFor} : {goalsAgainst}
                       </td>
-                      <td>{goalDifference}</td>
+                      <td>{goalsFor - goalsAgainst}</td>
                       <td>{lastFive}</td>
                     </tr>
                   );

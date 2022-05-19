@@ -48,78 +48,95 @@ export const matches: Match[] = [
         {
           name: "Olana",
           event: "goal",
+          assist: "Yoni",
         },
         {
           name: "Haile",
           event: "goal",
+          assist: "Olana",
         },
       ],
       team2: [
         {
           name: "Ermiyas",
           event: "goal",
+          assist: "Robel",
         },
         {
           name: "Robel",
           event: "goal",
+          assist: "Nati G",
         },
         {
           name: "Robel",
           event: "goal",
+          assist: "Nati G",
         },
         {
           name: "Robel",
           event: "goal",
+          assist: "Nati G",
         },
         {
           name: "Nati G.",
           event: "goal",
+          assist: "Robel",
         },
         {
           name: "Nati G.",
           event: "goal",
+          assist: "Robel",
         },
         {
           name: "Nati G.",
           event: "goal",
+          assist: "Robel",
         },
         {
           name: "Nati G.",
           event: "goal",
+          assist: "Biruk",
         },
         {
           name: "Nati G.",
           event: "goal",
+          assist: "Biruk",
         },
         {
           name: "Henock",
           event: "goal",
+          assist: "Nati G",
         },
         {
           name: "Sewnet",
           event: "goal",
+          assist: "Nati M",
         },
         {
           name: "Biruk",
           event: "goal",
+          assist: "Nati M.",
         },
         {
-          name: "Bruk",
+          name: "Biruk",
           event: "goal",
+          assist: "Nati M.",
         },
         {
           name: "Nati M.",
           event: "goal",
+          assist: "Yoni M.",
         },
         {
           name: "Nati M.",
           event: "goal",
+          assist: "Yoni E.",
         },
       ],
     },
   },
   {
-    state: "sc",
+    state: "ft",
     isPlayoffs: false,
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
@@ -129,12 +146,61 @@ export const matches: Match[] = [
     },
     schedule: new Date("May 19, 2022 16:00").toString(),
     score: {
-      team1: null,
-      team2: null,
+      team1: 7,
+      team2: 2,
     },
     events: {
-      team1: [],
-      team2: [],
+      team1: [
+        {
+          name: "Biniyam",
+          event: "goal",
+          assist: "Nigatu",
+        },
+        {
+          name: "Birhanu",
+          event: "goal",
+          assist: "Mame",
+        },
+        {
+          name: "Biniyam",
+          event: "goal",
+          assist: "Kassa",
+        },
+        {
+          name: "Gech",
+          event: "goal",
+          assist: "Bultum",
+        },
+        {
+          name: "Chacha",
+          event: "og",
+        },
+        {
+          name: "Bultum",
+          event: "goal",
+          assist: "Nigatu",
+        },
+        {
+          name: "Biniyam",
+          event: "pm",
+        },
+        {
+          name: "Biniyam",
+          event: "goal",
+          assist: "Mame",
+        },
+      ],
+      team2: [
+        {
+          name: "Josi",
+          event: "goal",
+          assist: "Chacha",
+        },
+        {
+          name: "Chacha",
+          event: "goal",
+        },
+      ],
     },
   },
   {
@@ -312,26 +378,30 @@ export const matches: Match[] = [
         {
           name: "Ermisha",
           event: "goal",
+          assist: "Naty",
         },
         {
           name: "Ermisha",
           event: "goal",
+          assist: "Seyfe",
         },
       ],
       team2: [
         {
           name: "Robel",
           event: "goal",
+          assist: "Ali",
         },
         {
           name: "Ali",
           event: "goal",
+          assist: "Yab T.",
         },
       ],
     },
   },
   {
-    state: "sc",
+    state: "ft",
     isPlayoffs: false,
     conference: 2,
     matchID: Math.random().toString(36).slice(2),
@@ -341,12 +411,37 @@ export const matches: Match[] = [
     },
     schedule: new Date("May 19, 2022 14:00").toString(),
     score: {
-      team1: null,
-      team2: null,
+      team1: 4,
+      team2: 4,
     },
     events: {
-      team1: [],
-      team2: [],
+      team1: [
+        {
+          name: "Abraham",
+          event: "goal",
+          assist: "Abebaw",
+        },
+        {
+          name: "Bereket",
+          event: "goal",
+        },
+        {
+          name: "Abraham",
+          event: "goal",
+          assist: "Gemechu",
+        },
+        {
+          name: "Bereket",
+          event: "goal",
+          assist: "Abraham",
+        },
+      ],
+      team2: [
+        { name: "Yonathan", event: "goal", assist: "Beken" },
+        { name: "Beken", event: "goal", assist: "Tekle" },
+        { name: "Haben", event: "goal", assist: "Zekarias" },
+        { name: "Kevin", event: "goal", assist: "Tekle" },
+      ],
     },
   },
   {

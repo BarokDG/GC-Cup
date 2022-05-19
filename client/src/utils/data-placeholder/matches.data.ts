@@ -7,7 +7,7 @@ export type Match = {
     team1: number;
     team2: number;
   };
-  schedule: Date;
+  schedule: string;
   score: {
     team1: number | null;
     team2: number | null;
@@ -38,7 +38,7 @@ export const matches: Match[] = [
       team1: 101,
       team2: 102,
     },
-    schedule: new Date("May 18, 2022 14:00"),
+    schedule: new Date("May 18, 2022 14:00").toString(),
     score: {
       team1: 2,
       team2: 15,
@@ -127,7 +127,7 @@ export const matches: Match[] = [
       team1: 103,
       team2: 104,
     },
-    schedule: new Date("May 19, 2022 16:00"),
+    schedule: new Date("May 19, 2022 16:00").toString(),
     score: {
       team1: null,
       team2: null,
@@ -146,7 +146,7 @@ export const matches: Match[] = [
       team1: 101,
       team2: 105,
     },
-    schedule: new Date("May 24, 2022 8:30"),
+    schedule: new Date("May 24, 2022 8:30").toString(),
     score: {
       team1: null,
       team2: null,
@@ -165,7 +165,7 @@ export const matches: Match[] = [
       team1: 102,
       team2: 103,
     },
-    schedule: new Date("May 24, 2022 10:00"),
+    schedule: new Date("May 24, 2022 10:00").toString(),
     score: {
       team1: null,
       team2: null,
@@ -184,7 +184,7 @@ export const matches: Match[] = [
       team1: 103,
       team2: 105,
     },
-    schedule: new Date("May 26, 2022 14:00"),
+    schedule: new Date("May 26, 2022 14:00").toString(),
     score: {
       team1: null,
       team2: null,
@@ -203,7 +203,7 @@ export const matches: Match[] = [
       team1: 102,
       team2: 104,
     },
-    schedule: new Date("May 26, 2022 16:00"),
+    schedule: new Date("May 26, 2022 16:00").toString(),
     score: {
       team1: null,
       team2: null,
@@ -222,7 +222,7 @@ export const matches: Match[] = [
       team1: 102,
       team2: 105,
     },
-    schedule: new Date("May 28, 2022 14:00"),
+    schedule: new Date("May 28, 2022 14:00").toString(),
     score: {
       team1: null,
       team2: null,
@@ -241,7 +241,7 @@ export const matches: Match[] = [
       team1: 101,
       team2: 104,
     },
-    schedule: new Date("May 28, 2022 16:00"),
+    schedule: new Date("May 28, 2022 16:00").toString(),
     score: {
       team1: null,
       team2: null,
@@ -260,7 +260,7 @@ export const matches: Match[] = [
       team1: 104,
       team2: 105,
     },
-    schedule: new Date("May 31, 2022 14:00"),
+    schedule: new Date("May 31, 2022 14:00").toString(),
     score: {
       team1: null,
       team2: null,
@@ -279,7 +279,7 @@ export const matches: Match[] = [
       team1: 101,
       team2: 104,
     },
-    schedule: new Date("May 31, 2022 16:00"),
+    schedule: new Date("May 31, 2022 16:00").toString(),
     score: {
       team1: null,
       team2: null,
@@ -302,7 +302,7 @@ export const matches: Match[] = [
       team1: 201,
       team2: 202,
     },
-    schedule: new Date("May 18, 2022 16:00"),
+    schedule: new Date("May 18, 2022 16:00").toString(),
     score: {
       team1: 2,
       team2: 2,
@@ -339,7 +339,7 @@ export const matches: Match[] = [
       team1: 203,
       team2: 204,
     },
-    schedule: new Date("May 19, 2022 14:00"),
+    schedule: new Date("May 19, 2022 14:00").toString(),
     score: {
       team1: null,
       team2: null,
@@ -358,7 +358,7 @@ export const matches: Match[] = [
       team1: 204,
       team2: 205,
     },
-    schedule: new Date("May 23, 2022 14:00"),
+    schedule: new Date("May 23, 2022 14:00").toString(),
     score: {
       team1: null,
       team2: null,
@@ -377,7 +377,7 @@ export const matches: Match[] = [
       team1: 201,
       team2: 203,
     },
-    schedule: new Date("May 23, 2022 16:00"),
+    schedule: new Date("May 23, 2022 16:00").toString(),
     score: {
       team1: null,
       team2: null,
@@ -396,7 +396,7 @@ export const matches: Match[] = [
       team1: 201,
       team2: 205,
     },
-    schedule: new Date("May 25, 2022 14:00"),
+    schedule: new Date("May 25, 2022 14:00").toString(),
     score: {
       team1: null,
       team2: null,
@@ -415,7 +415,7 @@ export const matches: Match[] = [
       team1: 202,
       team2: 203,
     },
-    schedule: new Date("May 25, 2022 16:00"),
+    schedule: new Date("May 25, 2022 16:00").toString(),
     score: {
       team1: null,
       team2: null,
@@ -434,7 +434,7 @@ export const matches: Match[] = [
       team1: 202,
       team2: 205,
     },
-    schedule: new Date("May 27, 2022 14:00"),
+    schedule: new Date("May 27, 2022 14:00").toString(),
     score: {
       team1: null,
       team2: null,
@@ -453,7 +453,7 @@ export const matches: Match[] = [
       team1: 201,
       team2: 203,
     },
-    schedule: new Date("May 27, 2022 16:00"),
+    schedule: new Date("May 27, 2022 16:00").toString(),
     score: {
       team1: null,
       team2: null,
@@ -472,7 +472,7 @@ export const matches: Match[] = [
       team1: 203,
       team2: 205,
     },
-    schedule: new Date("May 29, 2022 14:00"),
+    schedule: new Date("May 29, 2022 14:00").toString(),
     score: {
       team1: null,
       team2: null,
@@ -491,7 +491,7 @@ export const matches: Match[] = [
       team1: 202,
       team2: 204,
     },
-    schedule: new Date("May 29, 2022 16:00"),
+    schedule: new Date("May 29, 2022 16:00").toString(),
     score: {
       team1: null,
       team2: null,

@@ -30,7 +30,7 @@ export default function Matches() {
         .filter((match) => match.conference === conference)
         .map((match) => {
           // To ensure dates aren't displayed twice
-          const dateString = match.schedule.toDateString();
+          const dateString = new Date(match.schedule).toDateString();
           let shouldDisplayDate = false;
 
           if (!Object.keys(matchDates).includes(dateString)) {

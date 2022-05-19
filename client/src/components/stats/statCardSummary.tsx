@@ -28,26 +28,31 @@ export default function StatCardSummary({ data, stat, icon: Icon, sortBy }) {
         <div className="flex flex-col">
           {sortedData()
             .slice(0, 5)
-            .map(({ name, teamCode, position, teamName }, index: number) => {
-              return (
-                <div
-                  key={index}
-                  className="flex align-baseline bg-gray-200 pl-4 text-xl mb-0.5"
-                >
-                  {/* Display teamName instead for most cleansheets */}
-                  <p className="py-2">{name || teamName}</p>
-                  <div className="flex items-center ml-auto">
-                    {/* Don't display teamCode for most cleasheets */}
-                    <p className="mr-2 text-base">{!teamName && teamCode}</p>
+            .map(
+              (
+                { name, nickname, teamCode, position, teamName },
+                index: number
+              ) => {
+                return (
+                  <div
+                    key={index}
+                    className="flex align-baseline bg-gray-200 pl-4 text-xl mb-0.5"
+                  >
+                    {/* Display teamName instead for most cleansheets */}
+                    <p className="py-2">{nickname || name || teamName}</p>
+                    <div className="flex items-center ml-auto">
+                      {/* Don't display teamCode for most cleasheets */}
+                      <p className="mr-2 text-base">{!teamName && teamCode}</p>
 
-                    <p className="mr-2 text-lg font-mono">{position}</p>
-                    <p className="w-12 self-stretch flex justify-center items-center bg-gray-900 text-gray-100">
-                      {sortedData()[index][sortBy]}
-                    </p>
+                      <p className="mr-2 text-lg font-mono">{position}</p>
+                      <p className="w-12 self-stretch flex justify-center items-center bg-gray-900 text-gray-100">
+                        {sortedData()[index][sortBy]}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              }
+            )}
         </div>
         {/* <button
           className="cursor-default mt-4 w-full py-2 bg-slate-900 text-gray-200"

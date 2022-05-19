@@ -9,6 +9,13 @@ export default function StatCardSummary({ data, stat, icon: Icon, sortBy }) {
       </div>
       <div className="flex flex-col">
         {[...data]
+          .sort((a, b) => {
+            if (sortBy === "cleansheets") {
+              return a.teamName.localeCompare(b.teamName);
+            }
+
+            return a.name.localeCompare(b.name);
+          })
           .sort((a, b) => b[sortBy] - a[sortBy])
           .slice(0, 5)
           .map(({ name, teamCode, position, teamName }, index: number) => {

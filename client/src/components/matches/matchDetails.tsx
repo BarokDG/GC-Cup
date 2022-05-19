@@ -184,22 +184,22 @@ export default function MatchDetails({
                 </h3>
                 <div className="flex">
                   <div className="team1 flex-grow basis-0 text-right p-2 pr-4">
-                    {Object.keys(numberOfOwnGoals.team1).map((name) => {
-                      return (
-                        <p
-                          className="text-gray-300"
-                          key={name}
-                        >{`${name} x${numberOfOwnGoals.team1[name]}`}</p>
-                      );
-                    })}
-                  </div>
-                  <div className="team2 flex-grow basis-0 p-2 pl-4">
                     {Object.keys(numberOfOwnGoals.team2).map((name) => {
                       return (
                         <p
                           className="text-gray-300"
                           key={name}
                         >{`${name} x${numberOfOwnGoals.team2[name]}`}</p>
+                      );
+                    })}
+                  </div>
+                  <div className="team2 flex-grow basis-0 p-2 pl-4">
+                    {Object.keys(numberOfOwnGoals.team1).map((name) => {
+                      return (
+                        <p
+                          className="text-gray-300"
+                          key={name}
+                        >{`${name} x${numberOfOwnGoals.team1[name]}`}</p>
                       );
                     })}
                   </div>

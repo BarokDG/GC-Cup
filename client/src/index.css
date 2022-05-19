@@ -2,11 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Larken";
-  src: url("./assets/fonts/Larken Bold.ttf");
-  font-display: swap;
-}
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
 
 *,
 *::before,
@@ -19,7 +15,7 @@
 }
 
 header h1 {
-  font-family: "Larken", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 nav a {

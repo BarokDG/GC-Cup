@@ -270,10 +270,11 @@ export default function MatchDetails({
                   <div className="team2 flex-grow basis-0 p-2 pl-4">
                     {Object.keys(numberOfAssists.team2).map((assist) => {
                       return (
-                        <p
-                          className="text-gray-300"
-                          key={assist}
-                        >{`${assist} x${numberOfAssists.team2[assist]}`}</p>
+                        <p className="text-gray-300" key={assist}>{`${assist} ${
+                          numberOfAssists.team2[assist] > 1
+                            ? "x" + numberOfAssists.team2[assist]
+                            : ""
+                        }`}</p>
                       );
                     })}
                   </div>

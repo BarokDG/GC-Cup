@@ -12,7 +12,13 @@ export default function LeagueTable({ conference }) {
             <tr>
               <th className="bg-slate-900 sticky left-0"></th>
               <th title="Matches Played">MP</th>
-              <th title="Points">Pts</th>
+              <th
+                title="Points"
+                // eslint-disable-next-line no-octal-escape
+                className="after:content-['\25bc'] after:ml-1 after:text-[8px] after:text-purple-400"
+              >
+                Pts
+              </th>
               <th title="Wins">W</th>
               <th title="Draws">D</th>
               <th title="Losses">L</th>
@@ -26,6 +32,12 @@ export default function LeagueTable({ conference }) {
             {teamData
               .filter((team) => team.conference === conference)
               .sort((a, b) => b.points - a.points)
+              .sort((a, b) => {
+                let goalDifferenceA = a.goalsFor - a.goalsAgainst;
+                let goalDifferenceB = b.goalsFor - b.goalsAgainst;
+
+                return goalDifferenceB - goalDifferenceA;
+              })
               .map(
                 (
                   {
@@ -62,7 +74,18 @@ export default function LeagueTable({ conference }) {
                         {goalsFor} : {goalsAgainst}
                       </td>
                       <td>{goalsFor - goalsAgainst}</td>
-                      <td>{lastFive}</td>
+                      <td>
+                        {lastFive.split("").map((result, index) => {
+                          return (
+                            <span
+                              key={index}
+                              className={`text-sm font-bold inline-block w-6 h-6 leading-6 rounded-full ${result.toLowerCase()}`}
+                            >
+                              {result}
+                            </span>
+                          );
+                        })}
+                      </td>
                     </tr>
                   );
                 }

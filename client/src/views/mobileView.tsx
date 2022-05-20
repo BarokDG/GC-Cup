@@ -4,7 +4,6 @@ import Header from "../components/header";
 import Table from "../components/table";
 import Matches from "../components/matches";
 import Stats from "../components/stats";
-import About from "../components/about";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -17,7 +16,7 @@ export default function MobileView() {
           <Route index element={<Table />} />
           <Route path="/matches" element={<Matches />} />
           <Route path="/stats" element={<Stats />} />
-          <Route path="/about" element={<About />} />
+          <Route path="*" element={<Table />} />
         </Routes>
       </main>
       <Navbar />

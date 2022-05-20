@@ -79,3 +79,15 @@ details > summary::marker, /* Latest Chrome, Edge, Firefox */
 details > summary::-webkit-details-marker /* Safari */ {
   display: none;
 }
+
+span.w {
+  @apply bg-green-400 text-gray-900;
+}
+
+span.l {
+  @apply bg-red-600 text-gray-50;
+}
+
+span.d {
+  @apply bg-gray-700 text-gray-300;
+}

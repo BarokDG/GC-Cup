@@ -931,11 +931,11 @@ export const players: Player[] = [
   },
 
   /**
-   * Software 1
+   * Software
    */
   {
     playerID: 2051,
-    teamCode: "SF1",
+    teamCode: "SFT",
     name: "Liben",
     fname: "Hailu",
     position: "GK",
@@ -944,7 +944,7 @@ export const players: Player[] = [
   },
   {
     playerID: 2052,
-    teamCode: "SF1",
+    teamCode: "SFT",
     name: "Alefew",
     fname: "Yimer",
     position: "DF",
@@ -953,7 +953,7 @@ export const players: Player[] = [
   },
   {
     playerID: 2053,
-    teamCode: "SF1",
+    teamCode: "SFT",
     name: "Derbachew",
     fname: "",
     position: "DF",
@@ -962,7 +962,7 @@ export const players: Player[] = [
   },
   {
     playerID: 2054,
-    teamCode: "SF1",
+    teamCode: "SFT",
     name: "Ebsa",
     fname: "",
     position: "DF",
@@ -971,7 +971,7 @@ export const players: Player[] = [
   },
   {
     playerID: 2055,
-    teamCode: "SF1",
+    teamCode: "SFT",
     name: "Solomon",
     fname: "Ermias",
     position: "DF",
@@ -980,7 +980,7 @@ export const players: Player[] = [
   },
   {
     playerID: 2056,
-    teamCode: "SF1",
+    teamCode: "SFT",
     name: "Temesgen",
     fname: "Talo",
     position: "DF",
@@ -989,7 +989,7 @@ export const players: Player[] = [
   },
   {
     playerID: 2057,
-    teamCode: "SF1",
+    teamCode: "SFT",
     name: "Betsegaw",
     fname: "",
     position: "MD",
@@ -998,7 +998,7 @@ export const players: Player[] = [
   },
   {
     playerID: 2058,
-    teamCode: "SF1",
+    teamCode: "SFT",
     name: "Daniel",
     fname: "",
     position: "MD",
@@ -1007,7 +1007,7 @@ export const players: Player[] = [
   },
   {
     playerID: 2059,
-    teamCode: "SF1",
+    teamCode: "SFT",
     name: "Natnael",
     fname: "Awel",
     position: "MD",
@@ -1016,7 +1016,7 @@ export const players: Player[] = [
   },
   {
     playerID: 20510,
-    teamCode: "SF1",
+    teamCode: "SFT",
     name: "Suraphel",
     fname: "Kindu",
     position: "MD",
@@ -1025,7 +1025,7 @@ export const players: Player[] = [
   },
   {
     playerID: 20511,
-    teamCode: "SF1",
+    teamCode: "SFT",
     name: "Nahom",
     fname: "Zerihun",
     position: "ST",
@@ -1034,20 +1034,16 @@ export const players: Player[] = [
   },
   {
     playerID: 20512,
-    teamCode: "SF1",
+    teamCode: "SFT",
     name: "Yididya",
     fname: "",
     position: "ST",
     goals: 0,
     assists: 0,
   },
-
-  /**
-   * Software 2
-   */
   {
     playerID: 1051,
-    teamCode: "SF2",
+    teamCode: "SFT",
     name: "Dagnachew",
     fname: "",
     position: "GK",
@@ -1056,7 +1052,7 @@ export const players: Player[] = [
   },
   {
     playerID: 1052,
-    teamCode: "SF2",
+    teamCode: "SFT",
     name: "Asegd",
     fname: "",
     position: "DF",
@@ -1065,7 +1061,7 @@ export const players: Player[] = [
   },
   {
     playerID: 1053,
-    teamCode: "SF2",
+    teamCode: "SFT",
     name: "Hawitu",
     fname: "",
     position: "DF",
@@ -1074,7 +1070,7 @@ export const players: Player[] = [
   },
   {
     playerID: 1054,
-    teamCode: "SF2",
+    teamCode: "SFT",
     name: "Zerihun",
     fname: "",
     position: "DF",
@@ -1083,7 +1079,7 @@ export const players: Player[] = [
   },
   {
     playerID: 1055,
-    teamCode: "SF2",
+    teamCode: "SFT",
     name: "Dawit",
     fname: "Teshager",
     position: "MD",
@@ -1092,7 +1088,7 @@ export const players: Player[] = [
   },
   {
     playerID: 1056,
-    teamCode: "SF2",
+    teamCode: "SFT",
     name: "Fantahun",
     fname: "Fekadu",
     position: "MD",
@@ -1101,7 +1097,7 @@ export const players: Player[] = [
   },
   {
     playerID: 1057,
-    teamCode: "SF2",
+    teamCode: "SFT",
     name: "Natnael",
     fname: "Bahiru",
     position: "MD",
@@ -1110,7 +1106,7 @@ export const players: Player[] = [
   },
   {
     playerID: 1058,
-    teamCode: "SF2",
+    teamCode: "SFT",
     name: "Natnael",
     fname: "Berhanu",
     position: "MD",
@@ -1119,7 +1115,7 @@ export const players: Player[] = [
   },
   {
     playerID: 1059,
-    teamCode: "SF2",
+    teamCode: "SFT",
     name: "Robel",
     fname: "Azmeraw",
     position: "MD",
@@ -1128,7 +1124,7 @@ export const players: Player[] = [
   },
   {
     playerID: 10510,
-    teamCode: "SF2",
+    teamCode: "SFT",
     name: "Yohannes",
     fname: "",
     position: "MD",
@@ -1137,7 +1133,7 @@ export const players: Player[] = [
   },
   {
     playerID: 10511,
-    teamCode: "SF2",
+    teamCode: "SFT",
     name: "Emnet",
     fname: "Yohannes",
     position: "ST",

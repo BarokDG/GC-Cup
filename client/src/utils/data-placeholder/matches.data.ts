@@ -209,10 +209,29 @@ export const matches: Match[] = [
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
+      team1: 102,
+      team2: 103,
+    },
+    schedule: new Date("May 23, 2022 16:00").toString(),
+    score: {
+      team1: null,
+      team2: null,
+    },
+    events: {
+      team1: [],
+      team2: [],
+    },
+  },
+  {
+    state: "sc",
+    isPlayoffs: false,
+    conference: 1,
+    matchID: Math.random().toString(36).slice(2),
+    teams: {
       team1: 101,
       team2: 105,
     },
-    schedule: new Date("May 24, 2022 8:30").toString(),
+    schedule: new Date("May 24, 2022 16:30").toString(),
     score: {
       team1: null,
       team2: null,
@@ -229,9 +248,9 @@ export const matches: Match[] = [
     matchID: Math.random().toString(36).slice(2),
     teams: {
       team1: 102,
-      team2: 103,
+      team2: 104,
     },
-    schedule: new Date("May 24, 2022 10:00").toString(),
+    schedule: new Date("May 25, 2022 16:00").toString(),
     score: {
       team1: null,
       team2: null,
@@ -250,25 +269,6 @@ export const matches: Match[] = [
       team1: 103,
       team2: 105,
     },
-    schedule: new Date("May 26, 2022 14:00").toString(),
-    score: {
-      team1: null,
-      team2: null,
-    },
-    events: {
-      team1: [],
-      team2: [],
-    },
-  },
-  {
-    state: "sc",
-    isPlayoffs: false,
-    conference: 1,
-    matchID: Math.random().toString(36).slice(2),
-    teams: {
-      team1: 102,
-      team2: 104,
-    },
     schedule: new Date("May 26, 2022 16:00").toString(),
     score: {
       team1: null,
@@ -285,29 +285,10 @@ export const matches: Match[] = [
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
-      team1: 102,
-      team2: 105,
-    },
-    schedule: new Date("May 28, 2022 14:00").toString(),
-    score: {
-      team1: null,
-      team2: null,
-    },
-    events: {
-      team1: [],
-      team2: [],
-    },
-  },
-  {
-    state: "sc",
-    isPlayoffs: false,
-    conference: 1,
-    matchID: Math.random().toString(36).slice(2),
-    teams: {
       team1: 101,
-      team2: 104,
+      team2: 103,
     },
-    schedule: new Date("May 28, 2022 16:00").toString(),
+    schedule: new Date("May 28, 2022 15:00").toString(),
     score: {
       team1: null,
       team2: null,
@@ -326,7 +307,7 @@ export const matches: Match[] = [
       team1: 104,
       team2: 105,
     },
-    schedule: new Date("May 31, 2022 14:00").toString(),
+    schedule: new Date("May 28, 2022 16:30").toString(),
     score: {
       team1: null,
       team2: null,
@@ -345,7 +326,26 @@ export const matches: Match[] = [
       team1: 101,
       team2: 104,
     },
-    schedule: new Date("May 31, 2022 16:00").toString(),
+    schedule: new Date("May 30, 2022 14:00").toString(),
+    score: {
+      team1: null,
+      team2: null,
+    },
+    events: {
+      team1: [],
+      team2: [],
+    },
+  },
+  {
+    state: "sc",
+    isPlayoffs: false,
+    conference: 1,
+    matchID: Math.random().toString(36).slice(2),
+    teams: {
+      team1: 102,
+      team2: 105,
+    },
+    schedule: new Date("May 30, 2022 16:00").toString(),
     score: {
       team1: null,
       team2: null,
@@ -453,7 +453,7 @@ export const matches: Match[] = [
       team1: 201,
       team2: 203,
     },
-    schedule: new Date("May 23, 2022 16:00").toString(),
+    schedule: new Date("May 23, 2022 14:00").toString(),
     score: {
       team1: null,
       team2: null,
@@ -470,9 +470,9 @@ export const matches: Match[] = [
     matchID: Math.random().toString(36).slice(2),
     teams: {
       team1: 202,
-      team2: 203,
+      team2: 204,
     },
-    schedule: new Date("May 25, 2022 16:00").toString(),
+    schedule: new Date("May 25, 2022 14:00").toString(),
     score: {
       team1: null,
       team2: null,
@@ -508,9 +508,9 @@ export const matches: Match[] = [
     matchID: Math.random().toString(36).slice(2),
     teams: {
       team1: 202,
-      team2: 204,
+      team2: 203,
     },
-    schedule: new Date("May 29, 2022 16:00").toString(),
+    schedule: new Date("May 28, 2022 16:00").toString(),
     score: {
       team1: null,
       team2: null,

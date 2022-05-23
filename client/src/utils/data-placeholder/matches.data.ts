@@ -154,7 +154,7 @@ export const matches: Match[] = [
         {
           name: "Biniyam",
           event: "goal",
-          assist: "Nigatu",
+          assist: "Jano",
         },
         {
           name: "Birhanu",
@@ -178,7 +178,7 @@ export const matches: Match[] = [
         {
           name: "Bultum",
           event: "goal",
-          assist: "Nigatu",
+          assist: "Jano",
         },
         {
           name: "Biniyam",

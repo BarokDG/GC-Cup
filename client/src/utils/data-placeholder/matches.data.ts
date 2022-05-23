@@ -220,9 +220,9 @@ export const matches: Match[] = [
     events: {
       team1: [
         {
-          name: "Biruk",
+          name: "Robel",
           event: "goal",
-          assist: "Robel",
+          assist: "Biruk",
         },
         {
           name: "Nati G",

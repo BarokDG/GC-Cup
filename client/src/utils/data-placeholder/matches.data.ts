@@ -204,7 +204,7 @@ export const matches: Match[] = [
     },
   },
   {
-    state: "sc",
+    state: "ft",
     isPlayoffs: false,
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
@@ -214,12 +214,52 @@ export const matches: Match[] = [
     },
     schedule: new Date("May 23, 2022 16:00").toString(),
     score: {
-      team1: null,
-      team2: null,
+      team1: 6,
+      team2: 2,
     },
     events: {
-      team1: [],
-      team2: [],
+      team1: [
+        {
+          name: "Biruk",
+          event: "goal",
+          assist: "Robel",
+        },
+        {
+          name: "Nati G",
+          event: "goal",
+          assist: "Robel",
+        },
+        {
+          name: "Nati M",
+          event: "goal",
+        },
+        {
+          name: "Nati G",
+          event: "goal",
+          assist: "Robel",
+        },
+        {
+          name: "Nati G",
+          event: "goal",
+          assist: "Robel",
+        },
+        {
+          name: "Robel",
+          event: "goal",
+          assist: "Biruk",
+        },
+      ],
+      team2: [
+        {
+          name: "Jano",
+          event: "goal",
+          assist: "Bultum",
+        },
+        {
+          name: "Birhanu",
+          event: "goal",
+        },
+      ],
     },
   },
   {
@@ -378,7 +418,7 @@ export const matches: Match[] = [
         {
           name: "Ermisha",
           event: "goal",
-          assist: "Naty",
+          assist: "Nati",
         },
         {
           name: "Ermisha",
@@ -445,7 +485,7 @@ export const matches: Match[] = [
     },
   },
   {
-    state: "sc",
+    state: "ft",
     isPlayoffs: false,
     conference: 2,
     matchID: Math.random().toString(36).slice(2),
@@ -455,12 +495,39 @@ export const matches: Match[] = [
     },
     schedule: new Date("May 23, 2022 14:00").toString(),
     score: {
-      team1: null,
-      team2: null,
+      team1: 4,
+      team2: 1,
     },
     events: {
-      team1: [],
-      team2: [],
+      team1: [
+        {
+          name: "Ermisha",
+          event: "goal",
+          assist: "Kena",
+        },
+        {
+          name: "Nati",
+          event: "goal",
+          assist: "Ermisha",
+        },
+        {
+          name: "Ermisha",
+          event: "goal",
+          assist: "Kena",
+        },
+        {
+          name: "Ermisha",
+          event: "goal",
+          assist: "Kena",
+        },
+      ],
+      team2: [
+        {
+          name: "Henock",
+          event: "goal",
+          assist: "Chala",
+        },
+      ],
     },
   },
   {

@@ -1,4 +1,19 @@
-export default function MatchEvent({ statistic, team1, team2, heading }) {
+type Props = {
+  statistic: {
+    team1: Object;
+    team2: Object;
+  };
+  team1: string;
+  team2: string;
+  heading: string;
+};
+
+export default function MatchEvent({
+  statistic,
+  team1,
+  team2,
+  heading,
+}: Props) {
   return (
     <>
       {(Object.keys(statistic[team1]).length > 0 ||

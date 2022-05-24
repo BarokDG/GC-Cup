@@ -41,65 +41,38 @@ export default function MatchDetails({
     team2: {},
   };
 
-  events.team1.forEach(({ name, event, assist }) => {
-    if (event === "goal") {
-      if (numberOfGoals.team1[name]) {
-        numberOfGoals.team1[name] += 1;
-      } else {
-        numberOfGoals.team1[name] = 1;
+  // Aggregate stats
+  for (let team of ["team1", "team2"]) {
+    events[team].forEach(({ name, event, assist }) => {
+      if (event === "goal") {
+        if (numberOfGoals[team][name]) {
+          numberOfGoals[team][name] += 1;
+        } else {
+          numberOfGoals[team][name] = 1;
+        }
+      } else if (event === "og") {
+        if (numberOfOwnGoals[team][name]) {
+          numberOfOwnGoals[team][name] += 1;
+        } else {
+          numberOfOwnGoals[team][name] = 1;
+        }
+      } else if (event === "pm") {
+        if (numberOfPenaltiesMissed[team][name]) {
+          numberOfPenaltiesMissed[team][name] += 1;
+        } else {
+          numberOfPenaltiesMissed[team][name] = 1;
+        }
       }
-    } else if (event === "og") {
-      if (numberOfOwnGoals.team1[name]) {
-        numberOfOwnGoals.team1[name] += 1;
-      } else {
-        numberOfOwnGoals.team1[name] = 1;
-      }
-    } else if (event === "pm") {
-      if (numberOfPenaltiesMissed.team1[name]) {
-        numberOfPenaltiesMissed.team1[name] += 1;
-      } else {
-        numberOfPenaltiesMissed.team1[name] = 1;
-      }
-    }
 
-    if (assist) {
-      if (numberOfAssists.team1[assist]) {
-        numberOfAssists.team1[assist] += 1;
-      } else {
-        numberOfAssists.team1[assist] = 1;
+      if (assist) {
+        if (numberOfAssists[team][assist]) {
+          numberOfAssists[team][assist] += 1;
+        } else {
+          numberOfAssists[team][assist] = 1;
+        }
       }
-    }
-  });
-
-  events.team2.forEach(({ name, event, assist }) => {
-    if (event === "goal") {
-      if (numberOfGoals.team2[name]) {
-        numberOfGoals.team2[name] += 1;
-      } else {
-        numberOfGoals.team2[name] = 1;
-      }
-    } else if (event === "og") {
-      if (numberOfOwnGoals.team2[name]) {
-        numberOfOwnGoals.team2[name] += 1;
-      } else {
-        numberOfOwnGoals.team2[name] = 1;
-      }
-    } else if (event === "pm") {
-      if (numberOfPenaltiesMissed.team2[name]) {
-        numberOfPenaltiesMissed.team2[name] += 1;
-      } else {
-        numberOfPenaltiesMissed.team2[name] = 1;
-      }
-    }
-
-    if (assist) {
-      if (numberOfAssists.team2[assist]) {
-        numberOfAssists.team2[assist] += 1;
-      } else {
-        numberOfAssists.team2[assist] = 1;
-      }
-    }
-  });
+    });
+  }
 
   useEffect(() => {
     let detailElems = document.querySelectorAll("details");

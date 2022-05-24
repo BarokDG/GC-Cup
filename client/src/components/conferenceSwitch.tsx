@@ -26,7 +26,7 @@ export default function ConferenceSwitch() {
   }, [conference]);
 
   return (
-    <div className="conference-switch flex py-2 relative mt-3">
+    <div className="conference-switch flex py-2 relative mt-3 max-w-md mx-auto">
       <button
         onClick={() => dispatch(tableActions.setConference(1))}
         className={conference === 1 ? "" : "text-gray-200"}

@@ -7,7 +7,7 @@ export default function LeagueTable({ conference }) {
   return (
     <>
       <div className="table-container max-w-full overflow-auto">
-        <table className="border-collapse">
+        <table className="border-collapse max-w-md mx-auto">
           <thead>
             <tr>
               <th className="bg-slate-900 sticky left-0"></th>
@@ -93,7 +93,7 @@ export default function LeagueTable({ conference }) {
           </tbody>
         </table>
       </div>
-      <div className="table-info flex my-6">
+      <div className="table-info flex my-6 max-w-md mx-auto">
         <span className="w-6 h-6 bg-slate-800 border border-slate-400 mr-3"></span>
         <p className="text-gray-300">Qualifying to play-offs</p>
       </div>

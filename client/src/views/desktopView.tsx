@@ -2,7 +2,7 @@ import Meme from "../assets/images/meme.png";
 
 export default function DesktopView() {
   return (
-    <div className="h-screen grid place-items-center bg-slate-900">
+    <div className="h-screen overflow-auto grid place-items-center bg-slate-900">
       <div className="wrapper w-3/4">
         <img className="mx-auto" src={Meme} alt="" />
         <p className="text-slate-300 text-center mt-6 text-lg">

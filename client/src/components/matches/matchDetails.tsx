@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import MatchEvent from "./matchEvent";
 
 type Props = {
   match: any;
@@ -12,6 +13,7 @@ export default function MatchDetails({
   getTeamNameFromTeamId,
 }: Props) {
   const { state, teams, score, schedule, events } = match;
+
   const time = new Date(schedule).toLocaleTimeString([], {
     hour12: false,
     hourCycle: "h23",
@@ -39,65 +41,38 @@ export default function MatchDetails({
     team2: {},
   };
 
-  events.team1.forEach(({ name, event, assist }) => {
-    if (event === "goal") {
-      if (numberOfGoals.team1[name]) {
-        numberOfGoals.team1[name] += 1;
-      } else {
-        numberOfGoals.team1[name] = 1;
+  // Aggregate stats
+  for (let team of ["team1", "team2"]) {
+    events[team].forEach(({ name, event, assist }) => {
+      if (event === "goal") {
+        if (numberOfGoals[team][name]) {
+          numberOfGoals[team][name] += 1;
+        } else {
+          numberOfGoals[team][name] = 1;
+        }
+      } else if (event === "og") {
+        if (numberOfOwnGoals[team][name]) {
+          numberOfOwnGoals[team][name] += 1;
+        } else {
+          numberOfOwnGoals[team][name] = 1;
+        }
+      } else if (event === "pm") {
+        if (numberOfPenaltiesMissed[team][name]) {
+          numberOfPenaltiesMissed[team][name] += 1;
+        } else {
+          numberOfPenaltiesMissed[team][name] = 1;
+        }
       }
-    } else if (event === "og") {
-      if (numberOfOwnGoals.team1[name]) {
-        numberOfOwnGoals.team1[name] += 1;
-      } else {
-        numberOfOwnGoals.team1[name] = 1;
-      }
-    } else if (event === "pm") {
-      if (numberOfPenaltiesMissed.team1[name]) {
-        numberOfPenaltiesMissed.team1[name] += 1;
-      } else {
-        numberOfPenaltiesMissed.team1[name] = 1;
-      }
-    }
 
-    if (assist) {
-      if (numberOfAssists.team1[assist]) {
-        numberOfAssists.team1[assist] += 1;
-      } else {
-        numberOfAssists.team1[assist] = 1;
+      if (assist) {
+        if (numberOfAssists[team][assist]) {
+          numberOfAssists[team][assist] += 1;
+        } else {
+          numberOfAssists[team][assist] = 1;
+        }
       }
-    }
-  });
-
-  events.team2.forEach(({ name, event, assist }) => {
-    if (event === "goal") {
-      if (numberOfGoals.team2[name]) {
-        numberOfGoals.team2[name] += 1;
-      } else {
-        numberOfGoals.team2[name] = 1;
-      }
-    } else if (event === "og") {
-      if (numberOfOwnGoals.team2[name]) {
-        numberOfOwnGoals.team2[name] += 1;
-      } else {
-        numberOfOwnGoals.team2[name] = 1;
-      }
-    } else if (event === "pm") {
-      if (numberOfPenaltiesMissed.team2[name]) {
-        numberOfPenaltiesMissed.team2[name] += 1;
-      } else {
-        numberOfPenaltiesMissed.team2[name] = 1;
-      }
-    }
-
-    if (assist) {
-      if (numberOfAssists.team2[assist]) {
-        numberOfAssists.team2[assist] += 1;
-      } else {
-        numberOfAssists.team2[assist] = 1;
-      }
-    }
-  });
+    });
+  }
 
   useEffect(() => {
     let detailElems = document.querySelectorAll("details");
@@ -118,7 +93,10 @@ export default function MatchDetails({
   return (
     <div className="max-w-md mx-auto">
       {shouldDisplayDate && (
-        <h3 className="text-gray-300 text-sm mt-6 mb-1">
+        <h3
+          className="text-gray-300 text-sm mt-6 mb-1"
+          style={state === "ps" ? { textDecoration: "line-through" } : {}}
+        >
           {new Date(schedule).toDateString()}
         </h3>
       )}
@@ -128,162 +106,75 @@ export default function MatchDetails({
             <p className="flex-grow text-center py-2 basis-0">
               {getTeamNameFromTeamId(teams.team1)}
             </p>
-            {state === "sc" ? (
-              <p className="w-max px-2 py-2 bg-gray-800 text-slate-200 text-lg font-bold">
-                {time}
-              </p>
-            ) : (
-              <>
-                <p className="w-8 py-2 bg-gray-800 text-center text-gray-200 font-bold border-r border-r-gray-400">
-                  {score.team1}
-                </p>
-                <p className="w-8 py-2 bg-gray-800 text-center text-gray-200 font-bold">
-                  {score.team2}
-                </p>
-              </>
-            )}
+            <ScoreOrTime state={state} time={time} score={score} />
             <p className="flex-grow text-center py-2 basis-0">
               {getTeamNameFromTeamId(teams.team2)}
             </p>
           </div>
         </summary>
         {/* Dropdown */}
-        {state !== "sc" && (
+        {state === "ft" && (
           <>
-            {(Object.keys(numberOfGoals.team1).length > 0 ||
-              Object.keys(numberOfGoals.team2).length > 0) && (
-              <>
-                <h3 className="text-sm text-gray-400 text-center border-b border-b-slate-500 py-2">
-                  Goals
-                </h3>
-                <div className="flex">
-                  <div className="team1 flex-grow basis-0 text-right p-2 pr-4">
-                    {Object.keys(numberOfGoals.team1).map((name) => {
-                      return (
-                        <p className="text-gray-300" key={name}>{`${name} ${
-                          numberOfGoals.team1[name] > 1
-                            ? "x" + numberOfGoals.team1[name]
-                            : ""
-                        }`}</p>
-                      );
-                    })}
-                  </div>
-                  <div className="team2 flex-grow basis-0 p-2 pl-4">
-                    {Object.keys(numberOfGoals.team2).map((name) => {
-                      return (
-                        <p className="text-gray-300" key={name}>{`${name} ${
-                          numberOfGoals.team2[name] > 1
-                            ? "x" + numberOfGoals.team2[name]
-                            : ""
-                        }`}</p>
-                      );
-                    })}
-                  </div>
-                </div>
-              </>
-            )}
+            <MatchEvent
+              statistic={numberOfGoals}
+              team1="team1"
+              team2="team2"
+              heading="Goals"
+            />
 
-            {(Object.keys(numberOfOwnGoals.team1).length > 0 ||
-              Object.keys(numberOfOwnGoals.team2).length > 0) && (
-              <>
-                <h3 className="text-sm text-gray-400 text-center border-b border-b-slate-500 py-2 mt-4">
-                  Own goals
-                </h3>
-                <div className="flex">
-                  <div className="team1 flex-grow basis-0 text-right p-2 pr-4">
-                    {Object.keys(numberOfOwnGoals.team2).map((name) => {
-                      return (
-                        <p className="text-gray-300" key={name}>{`${name} ${
-                          numberOfOwnGoals.team2[name] > 1
-                            ? "x" + numberOfGoals.team2[name]
-                            : ""
-                        }`}</p>
-                      );
-                    })}
-                  </div>
-                  <div className="team2 flex-grow basis-0 p-2 pl-4">
-                    {Object.keys(numberOfOwnGoals.team1).map((name) => {
-                      return (
-                        <p className="text-gray-300" key={name}>{`${name} ${
-                          numberOfOwnGoals.team1[name] > 1
-                            ? "x" + numberOfGoals.team1[name]
-                            : ""
-                        }`}</p>
-                      );
-                    })}
-                  </div>
-                </div>
-              </>
-            )}
+            <MatchEvent
+              statistic={numberOfOwnGoals}
+              team1="team2"
+              team2="team1"
+              heading="Own goals"
+            />
 
-            {(Object.keys(numberOfPenaltiesMissed.team1).length > 0 ||
-              Object.keys(numberOfPenaltiesMissed.team2).length > 0) && (
-              <>
-                <h3 className="text-sm text-gray-400 text-center border-b border-b-slate-500 py-2 mt-4">
-                  Penalties missed
-                </h3>
-                <div className="flex">
-                  <div className="team1 flex-grow basis-0 text-right p-2 pr-4">
-                    {Object.keys(numberOfPenaltiesMissed.team1).map((name) => {
-                      return (
-                        <p className="text-gray-300" key={name}>{`${name} ${
-                          numberOfPenaltiesMissed.team1[name] > 1
-                            ? "x" + numberOfPenaltiesMissed.team1[name]
-                            : ""
-                        }`}</p>
-                      );
-                    })}
-                  </div>
-                  <div className="team2 flex-grow basis-0 p-2 pl-4">
-                    {Object.keys(numberOfPenaltiesMissed.team2).map((name) => {
-                      return (
-                        <p
-                          className="text-gray-300"
-                          key={name}
-                        >{`${name} x${numberOfPenaltiesMissed.team2[name]}`}</p>
-                      );
-                    })}
-                  </div>
-                </div>
-              </>
-            )}
+            <MatchEvent
+              statistic={numberOfPenaltiesMissed}
+              team1="team1"
+              team2="team2"
+              heading="Penalties missed"
+            />
 
-            {/* TODO: Refactor */}
-            {(Object.keys(numberOfAssists.team1).length > 0 ||
-              Object.keys(numberOfAssists.team2).length > 0) && (
-              <>
-                <h3 className="text-sm text-gray-400 text-center border-b border-b-slate-500 py-2 mt-4">
-                  Assists
-                </h3>
-                <div className="flex">
-                  <div className="team1 flex-grow basis-0 text-right p-2 pr-4">
-                    {Object.keys(numberOfAssists.team1).map((assist) => {
-                      return (
-                        <p className="text-gray-300" key={assist}>{`${assist} ${
-                          numberOfAssists.team1[assist] > 1
-                            ? "x" + numberOfAssists.team1[assist]
-                            : ""
-                        }`}</p>
-                      );
-                    })}
-                  </div>
-                  <div className="team2 flex-grow basis-0 p-2 pl-4">
-                    {Object.keys(numberOfAssists.team2).map((assist) => {
-                      return (
-                        <p className="text-gray-300" key={assist}>{`${assist} ${
-                          numberOfAssists.team2[assist] > 1
-                            ? "x" + numberOfAssists.team2[assist]
-                            : ""
-                        }`}</p>
-                      );
-                    })}
-                  </div>
-                </div>
-              </>
-            )}
+            <MatchEvent
+              statistic={numberOfAssists}
+              team1="team1"
+              team2="team2"
+              heading="Assists"
+            />
           </>
         )}
       </details>
     </div>
   );
+}
+
+function ScoreOrTime({ state, time, score }) {
+  if (state === "sc") {
+    // Scheduled
+    return (
+      <p className="w-max px-2 py-2 bg-gray-800 text-slate-200 text-lg font-bold">
+        {time}
+      </p>
+    );
+  } else if (state === "ps") {
+    // Postponed
+    return (
+      <p className="w-max px-2 py-2 bg-violet-300 text-violet-900 text-md font-bold">
+        Postponed
+      </p>
+    );
+  } else {
+    // Full-time
+    return (
+      <>
+        <p className="w-8 py-2 bg-gray-800 text-center text-gray-200 font-bold border-r border-r-gray-400">
+          {score.team1}
+        </p>
+        <p className="w-8 py-2 bg-gray-800 text-center text-gray-200 font-bold">
+          {score.team2}
+        </p>
+      </>
+    );
+  }
 }

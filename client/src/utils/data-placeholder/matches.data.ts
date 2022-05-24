@@ -110,7 +110,7 @@ export const matches: Match[] = [
         {
           name: "Sewnet",
           event: "goal",
-          assist: "Nati M",
+          assist: "Nati M.",
         },
         {
           name: "Biruk",
@@ -230,7 +230,7 @@ export const matches: Match[] = [
           assist: "Robel",
         },
         {
-          name: "Nati M",
+          name: "Nati M.",
           event: "goal",
         },
         {
@@ -263,7 +263,7 @@ export const matches: Match[] = [
     },
   },
   {
-    state: "sc",
+    state: "ps",
     isPlayoffs: false,
     conference: 1,
     matchID: Math.random().toString(36).slice(2),

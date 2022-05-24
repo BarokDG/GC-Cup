@@ -93,7 +93,10 @@ export default function MatchDetails({
   return (
     <div className="max-w-md mx-auto">
       {shouldDisplayDate && (
-        <h3 className="text-gray-300 text-sm mt-6 mb-1">
+        <h3
+          className="text-gray-300 text-sm mt-6 mb-1"
+          style={state === "ps" ? { textDecoration: "line-through" } : {}}
+        >
           {new Date(schedule).toDateString()}
         </h3>
       )}
@@ -103,20 +106,7 @@ export default function MatchDetails({
             <p className="flex-grow text-center py-2 basis-0">
               {getTeamNameFromTeamId(teams.team1)}
             </p>
-            {state === "sc" ? (
-              <p className="w-max px-2 py-2 bg-gray-800 text-slate-200 text-lg font-bold">
-                {time}
-              </p>
-            ) : (
-              <>
-                <p className="w-8 py-2 bg-gray-800 text-center text-gray-200 font-bold border-r border-r-gray-400">
-                  {score.team1}
-                </p>
-                <p className="w-8 py-2 bg-gray-800 text-center text-gray-200 font-bold">
-                  {score.team2}
-                </p>
-              </>
-            )}
+            <ScoreOrTime state={state} time={time} score={score} />
             <p className="flex-grow text-center py-2 basis-0">
               {getTeamNameFromTeamId(teams.team2)}
             </p>
@@ -157,4 +147,34 @@ export default function MatchDetails({
       </details>
     </div>
   );
+}
+
+function ScoreOrTime({ state, time, score }) {
+  if (state === "sc") {
+    // Scheduled
+    return (
+      <p className="w-max px-2 py-2 bg-gray-800 text-slate-200 text-lg font-bold">
+        {time}
+      </p>
+    );
+  } else if (state === "ps") {
+    // Postponed
+    return (
+      <p className="w-max px-2 py-2 bg-violet-300 text-violet-900 text-md font-bold">
+        Postponed
+      </p>
+    );
+  } else {
+    // Full-time
+    return (
+      <>
+        <p className="w-8 py-2 bg-gray-800 text-center text-gray-200 font-bold border-r border-r-gray-400">
+          {score.team1}
+        </p>
+        <p className="w-8 py-2 bg-gray-800 text-center text-gray-200 font-bold">
+          {score.team2}
+        </p>
+      </>
+    );
+  }
 }

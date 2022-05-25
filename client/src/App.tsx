@@ -7,7 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  const isLandscape = () => window.matchMedia("(min-width: 25cm)").matches;
+  const isDesktop = () => window.matchMedia("(min-width: 25cm)").matches;
 
   useEffect(() => {
     window.addEventListener("resize", () => setWindowWidth(window.innerWidth));
@@ -19,7 +19,7 @@ function App() {
     };
   }, []);
 
-  if (windowWidth > 700 && isLandscape()) {
+  if (windowWidth > 700 && isDesktop()) {
     return <DesktopView />;
   } else {
     return (

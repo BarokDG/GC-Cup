@@ -5,12 +5,14 @@ type Props = {
   match: any;
   shouldDisplayDate: boolean;
   getTeamNameFromTeamId: Function;
+  isOpen: boolean;
 };
 
 export default function MatchDetails({
   match,
   shouldDisplayDate,
   getTeamNameFromTeamId,
+  isOpen,
 }: Props) {
   const { state, teams, score, schedule, events } = match;
 
@@ -100,7 +102,7 @@ export default function MatchDetails({
           {new Date(schedule).toDateString()}
         </h3>
       )}
-      <details className="mb-2">
+      <details className="mb-2" open={isOpen}>
         <summary className="list-none bg-gray-100">
           <div className="flex">
             <p className="flex-grow text-center py-2 basis-0">

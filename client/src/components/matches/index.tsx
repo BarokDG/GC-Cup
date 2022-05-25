@@ -28,7 +28,7 @@ export default function Matches() {
       <ConferenceSwitch />
       {matchesData
         .filter((match) => match.conference === conference)
-        .map((match) => {
+        .map((match, index) => {
           // To ensure dates aren't displayed twice
           const dateString = new Date(match.schedule).toDateString();
           let shouldDisplayDate = false;
@@ -44,6 +44,7 @@ export default function Matches() {
               match={match}
               shouldDisplayDate={shouldDisplayDate}
               getTeamNameFromTeamId={getTeamNameFromTeamId}
+              isOpen={index === 0}
             />
           );
         })}

@@ -263,7 +263,7 @@ export const matches: Match[] = [
     },
   },
   {
-    state: "sc",
+    state: "ft",
     isPlayoffs: false,
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
@@ -273,16 +273,106 @@ export const matches: Match[] = [
     },
     schedule: new Date("May 26, 2022 14:00").toString(),
     score: {
-      team1: null,
-      team2: null,
+      team1: 17,
+      team2: 1,
     },
     events: {
-      team1: [],
-      team2: [],
+      team1: [
+        {
+          name: "Abdisa",
+          event: "og",
+        },
+        {
+          name: "Mesay",
+          event: "og",
+        },
+        {
+          name: "Nati G.",
+          event: "goal",
+          assist: "Nati M.",
+        },
+        {
+          name: "Nati G.",
+          event: "goal",
+          assist: "Nati M.",
+        },
+        {
+          name: "Nati G.",
+          event: "goal",
+          assist: "Nati M.",
+        },
+        {
+          name: "Nati G.",
+          event: "goal",
+          assist: "Yoni E.",
+        },
+        {
+          name: "Nati M.",
+          event: "goal",
+          assist: "Yoni E.",
+        },
+        {
+          name: "Nati M.",
+          event: "goal",
+          assist: "Nati G.",
+        },
+        {
+          name: "Nati M.",
+          event: "goal",
+          assist: "Nati G.",
+        },
+        {
+          name: "Yoni M.",
+          event: "goal",
+          assist: "Nati G.",
+        },
+        {
+          name: "Yoni M.",
+          event: "goal",
+          assist: "Nati G.",
+        },
+        {
+          name: "Henok",
+          event: "goal",
+          assist: "Biruk",
+        },
+        {
+          name: "Henok",
+          event: "goal",
+          assist: "Biruk",
+        },
+        {
+          name: "Biruk",
+          event: "goal",
+          assist: "Henok",
+        },
+        {
+          name: "Yoni E.",
+          event: "goal",
+          assist: "Nati G.",
+        },
+        {
+          name: "Sewnet",
+          event: "goal",
+          assist: "Yoni M.",
+        },
+        {
+          name: "Kibrom",
+          event: "goal",
+          assist: "Nati G.",
+        },
+      ],
+      team2: [
+        {
+          name: "Chacha",
+          event: "goal",
+          assist: "Kira",
+        },
+      ],
     },
   },
   {
-    state: "sc",
+    state: "ft",
     isPlayoffs: false,
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
@@ -292,12 +382,44 @@ export const matches: Match[] = [
     },
     schedule: new Date("May 26, 2022 16:00").toString(),
     score: {
-      team1: null,
-      team2: null,
+      team1: 5,
+      team2: 1,
     },
     events: {
-      team1: [],
-      team2: [],
+      team1: [
+        {
+          name: "Birhanu",
+          event: "goal",
+          assist: "Fitsum",
+        },
+        {
+          name: "Birhanu",
+          event: "goal",
+          assist: "Fitsum",
+        },
+        {
+          name: "Birhanu",
+          event: "goal",
+          assist: "Samuel",
+        },
+        {
+          name: "Bultum",
+          event: "goal",
+          assist: "Biniyam",
+        },
+        {
+          name: "Dawit",
+          event: "goal",
+          assist: "Girmachew",
+        },
+      ],
+      team2: [
+        {
+          name: "Yididya",
+          event: "goal",
+          assist: "Ewnet",
+        },
+      ],
     },
   },
   {

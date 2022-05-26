@@ -1,6 +1,6 @@
 export default function EmptyState() {
   return (
-    <div className="absolute inset-0 w-80 m-auto flex flex-col justify-center">
+    <div className="relative inset-1/2 -translate-x-1/2 -translate-y-1/2 w-80 my-12">
       <img
         src="https://i.imgur.com/AnMJIeO.gif"
         alt=""

@@ -423,7 +423,7 @@ export const matches: Match[] = [
     },
   },
   {
-    state: "sc",
+    state: "ft",
     isPlayoffs: false,
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
@@ -433,16 +433,68 @@ export const matches: Match[] = [
     },
     schedule: new Date("May 28, 2022 9:00").toString(),
     score: {
-      team1: null,
-      team2: null,
+      team1: 7,
+      team2: 3,
     },
     events: {
-      team1: [],
-      team2: [],
+      team1: [
+        {
+          name: "Raji",
+          event: "goal",
+          assist: "Chacha",
+        },
+        {
+          name: "Jossi",
+          event: "goal",
+          assist: "Kira",
+        },
+        {
+          name: "Chacha",
+          event: "goal",
+          assist: "Kira",
+        },
+        {
+          name: "Chacha",
+          event: "goal",
+          assist: "Jossi",
+        },
+        {
+          name: "Yisak",
+          event: "goal",
+          assist: "Jossi",
+        },
+        {
+          name: "Kira",
+          event: "goal",
+          assist: "Chacha",
+        },
+        {
+          name: "Chacha",
+          event: "goal",
+          assist: "Kira",
+        },
+      ],
+      team2: [
+        {
+          name: "Nati Alem",
+          event: "goal",
+          assist: "Emnet",
+        },
+        {
+          name: "Nati Awel",
+          event: "goal",
+          assist: "Sura",
+        },
+        {
+          name: "Nati Alem",
+          event: "goal",
+          assist: "Hawltu",
+        },
+      ],
     },
   },
   {
-    state: "sc",
+    state: "ps",
     isPlayoffs: false,
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
@@ -653,7 +705,7 @@ export const matches: Match[] = [
     },
   },
   {
-    state: "sc",
+    state: "ft",
     isPlayoffs: false,
     conference: 2,
     matchID: Math.random().toString(36).slice(2),
@@ -661,18 +713,51 @@ export const matches: Match[] = [
       team1: 202,
       team2: 203,
     },
-    schedule: new Date("May 27, 2022 14:00").toString(),
+    schedule: new Date("May 28, 2022 14:00").toString(),
     score: {
-      team1: null,
-      team2: null,
+      team1: 3,
+      team2: 4,
     },
     events: {
-      team1: [],
-      team2: [],
+      team1: [
+        {
+          name: "Robel",
+          event: "goal",
+          assist: "Kalo",
+        },
+        {
+          name: "Robel",
+          event: "ps",
+        },
+        {
+          name: "Josh",
+          event: "goal",
+          assist: "Dagi",
+        },
+      ],
+      team2: [
+        {
+          name: "Abraham",
+          event: "goal",
+          assist: "Beka",
+        },
+        {
+          name: "Abraham",
+          event: "ps",
+        },
+        {
+          name: "Abraham",
+          event: "goal",
+        },
+        {
+          name: "Abraham",
+          event: "goal",
+        },
+      ],
     },
   },
   {
-    state: "sc",
+    state: "ps",
     isPlayoffs: false,
     conference: 2,
     matchID: Math.random().toString(36).slice(2),

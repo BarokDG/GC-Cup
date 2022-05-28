@@ -470,7 +470,7 @@ export const players: Player[] = [
     fname: "Mekonen",
     position: "MD",
     goals: 0,
-    assists: 0,
+    assists: 1,
   },
   {
     playerID: 2027,
@@ -523,7 +523,7 @@ export const players: Player[] = [
     name: "Robel",
     fname: "Argaw",
     position: "ST",
-    goals: 1,
+    goals: 3,
     assists: 0,
   },
   {
@@ -564,7 +564,7 @@ export const players: Player[] = [
     fname: "Biru",
     position: "DF",
     goals: 0,
-    assists: 0,
+    assists: 1,
   },
   {
     playerID: 2034,
@@ -653,7 +653,7 @@ export const players: Player[] = [
     name: "Abraham",
     fname: "Mulat",
     position: "ST",
-    goals: 0,
+    goals: 4,
     assists: 1,
   },
   {
@@ -1062,7 +1062,7 @@ export const players: Player[] = [
   {
     playerID: 1053,
     teamCode: "SFT",
-    name: "Hawitu",
+    name: "Hawltu",
     fname: "",
     position: "DF",
     goals: 0,

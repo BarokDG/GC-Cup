@@ -4,7 +4,7 @@ import ConferenceSwitch from "../conferenceSwitch";
 import LeagueTable from "./leagueTable";
 import PlayOffs from "./playoffs";
 
-import MatchesFromToday from "../matches/showMatcesFromToday";
+import MatchesFromToday from "../matches/showMatchesFromToday";
 
 export default function Table() {
   const conference = useAppSelector(conferenceState);

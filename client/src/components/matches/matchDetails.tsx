@@ -181,7 +181,7 @@ function ScoreOrTime({ state, time, score }) {
   } else if (state === "ps") {
     // Postponed
     return (
-      <p className="w-max px-2 py-2 bg-violet-300 text-violet-900 text-md font-bold">
+      <p className="w-max px-2 py-2 bg-violet-200 text-violet-900 text-md font-bold">
         Postponed
       </p>
     );

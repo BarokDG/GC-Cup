@@ -4,14 +4,18 @@ import ConferenceSwitch from "../conferenceSwitch";
 import LeagueTable from "./leagueTable";
 import PlayOffs from "./playoffs";
 
+import MatchesFromToday from "../matches/showMatcesFromToday";
+
 export default function Table() {
   const conference = useAppSelector(conferenceState);
 
   return (
     <>
       <ConferenceSwitch />
-      {conference !== 3 && <LeagueTable conference={conference} />}
-      {conference === 3 && <PlayOffs />}
+      <MatchesFromToday conference={conference} />
+      <LeagueTable conference={conference} />
+
+      <PlayOffs conference={conference} />
     </>
   );
 }

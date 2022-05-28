@@ -17,6 +17,7 @@ export default function Matches() {
 
   const matchDates: Object = {};
 
+  // TODO: Refactor, also declared in matches/showMatchesFromToday.tsx
   const getTeamNameFromTeamId = (queryTeamId: number): string =>
     teamsData.find((team) => team.teamID === queryTeamId)?.teamName || "";
 
@@ -25,7 +26,7 @@ export default function Matches() {
       <ConferenceSwitch />
       {matchesData
         .filter((match) => match.conference === conference)
-        .map((match, index) => {
+        .map((match) => {
           // To ensure dates aren't displayed twice
           const dateString = new Date(match.schedule).toDateString();
           let shouldDisplayDate = false;

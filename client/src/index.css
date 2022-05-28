@@ -73,6 +73,10 @@ tbody tr:nth-child(-n + 4) td {
 
 details > summary {
   list-style: none;
+
+  /* Samsung Internet */
+  display: block;
+  outline: none;
 }
 
 details > summary::marker, /* Latest Chrome, Edge, Firefox */ 

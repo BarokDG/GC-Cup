@@ -4,7 +4,6 @@ import {
 } from "../../store/centralStoreSlice";
 import { useAppSelector } from "../../store/storeHooks";
 
-import { isMatchDay } from "../../utils/isMatchDay";
 import MatchDetails from "./matchDetails";
 
 export default function MatchesFromToday({ conference }) {
@@ -26,10 +25,10 @@ export default function MatchesFromToday({ conference }) {
   const getTeamNameFromTeamId = (queryTeamId: number): string =>
     teamsData.find((team) => team.teamID === queryTeamId)?.teamName || "";
 
-  if (isMatchDay(matchesData) && conference !== 3) {
+  if (filterMatchesData().length) {
     return (
-      <div className="mt-3 mb-6">
-        <h3 className="text-slate-400 mb-2">Today's Matches</h3>
+      <div className="mt-3 mb-6 py-2 px-4 border-dashed border-2 border-indigo-500">
+        <h3 className="text-slate-400 mb-2 text-center">Today's Matches</h3>
         {filterMatchesData().map((match) => {
           return (
             <MatchDetails

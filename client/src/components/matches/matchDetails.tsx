@@ -116,7 +116,7 @@ export default function MatchDetails({
         </summary>
         {/* Dropdown */}
         {state === "ft" && (
-          <>
+          <div className="mb-6">
             <MatchEvent
               statistic={numberOfGoals}
               team1="team1"
@@ -144,7 +144,7 @@ export default function MatchDetails({
               team2="team2"
               heading="Assists"
             />
-          </>
+          </div>
         )}
       </details>
     </div>

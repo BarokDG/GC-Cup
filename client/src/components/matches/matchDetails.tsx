@@ -5,12 +5,14 @@ type Props = {
   match: any;
   shouldDisplayDate: boolean;
   getTeamNameFromTeamId: Function;
+  shouldDisplayMatchEvents?: boolean;
 };
 
 export default function MatchDetails({
   match,
   shouldDisplayDate,
   getTeamNameFromTeamId,
+  shouldDisplayMatchEvents = true,
 }: Props) {
   const { state, teams, score, schedule, events } = match;
 
@@ -124,7 +126,8 @@ export default function MatchDetails({
           </div>
         </summary>
         {/* Dropdown */}
-        {state === "ft" && (
+
+        {shouldDisplayMatchEvents && state === "ft" && (
           <div className="mb-6">
             <MatchEvent
               statistic={numberOfGoals}

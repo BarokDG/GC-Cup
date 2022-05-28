@@ -79,7 +79,7 @@ export const teams: Team[] = [
     teamCode: "MEC",
     previousRank: 0,
     played: 3,
-    points: 0,
+    points: 3,
     wins: 1,
     draws: 0,
     losses: 2,

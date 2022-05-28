@@ -1,5 +1,3 @@
-import { useEffect, useRef } from "react";
-
 import ConferenceSwitch from "../conferenceSwitch";
 import MatchDetails from "./matchDetails";
 import EmptyState from "../emptyState";
@@ -17,19 +15,10 @@ export default function Matches() {
   const teamsData = useAppSelector(teamsDataState);
   const matchesData = useAppSelector(matchesDataState);
 
-  const isFirstRender = useRef(true);
-
   const matchDates: Object = {};
 
   const getTeamNameFromTeamId = (queryTeamId: number): string =>
     teamsData.find((team) => team.teamID === queryTeamId)?.teamName || "";
-
-  useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-      return;
-    }
-  }, []);
 
   return (
     <>
@@ -52,7 +41,6 @@ export default function Matches() {
               match={match}
               shouldDisplayDate={shouldDisplayDate}
               getTeamNameFromTeamId={getTeamNameFromTeamId}
-              isOpen={index === 0 && isFirstRender.current}
             />
           );
         })}

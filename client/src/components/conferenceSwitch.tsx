@@ -2,7 +2,10 @@ import { useEffect } from "react";
 import { useAppDispatch } from "../store/storeHooks";
 
 import { useSelector } from "react-redux";
-import { tableActions, conferenceState } from "../store/centralStoreSlice";
+import {
+  centralStoreActions,
+  conferenceState,
+} from "../store/centralStoreSlice";
 
 export default function ConferenceSwitch() {
   const conference = useSelector(conferenceState);
@@ -28,20 +31,20 @@ export default function ConferenceSwitch() {
   return (
     <div className="conference-switch flex py-2 relative mt-3 max-w-md mx-auto">
       <button
-        onClick={() => dispatch(tableActions.setConference(1))}
+        onClick={() => dispatch(centralStoreActions.setConference(1))}
         className={conference === 1 ? "" : "text-gray-200"}
       >
         Conference 1
       </button>
       <button
-        onClick={() => dispatch(tableActions.setConference(2))}
+        onClick={() => dispatch(centralStoreActions.setConference(2))}
         className={conference === 2 ? "" : "text-gray-200"}
       >
         Conference 2
       </button>
       <button
         className={conference === 3 ? "ml-auto" : "ml-auto text-gray-200"}
-        onClick={() => dispatch(tableActions.setConference(3))}
+        onClick={() => dispatch(centralStoreActions.setConference(3))}
       >
         Play-offs
       </button>

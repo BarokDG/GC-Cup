@@ -31,7 +31,8 @@ export default function StatCardSummary({ data, stat, icon: Icon, sortBy }) {
             .map(
               (
                 { name, nickname, teamCode, position, teamName },
-                index: number
+                index: number,
+                array
               ) => {
                 return (
                   <div
@@ -44,9 +45,11 @@ export default function StatCardSummary({ data, stat, icon: Icon, sortBy }) {
                       {/* Don't display teamCode for most cleasheets */}
                       <p className="mr-2 text-base">{!teamName && teamCode}</p>
 
-                      <p className="mr-2 text-lg font-mono">{position}</p>
+                      <p className="mr-2 text-base leading-none pt-0.5 font-mono">
+                        {position}
+                      </p>
                       <p className="w-12 self-stretch flex justify-center items-center bg-gray-900 text-gray-100">
-                        {sortedData()[index][sortBy]}
+                        {array[index][sortBy]}
                       </p>
                     </div>
                   </div>

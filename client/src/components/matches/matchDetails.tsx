@@ -5,14 +5,12 @@ type Props = {
   match: any;
   shouldDisplayDate: boolean;
   getTeamNameFromTeamId: Function;
-  isOpen: boolean;
 };
 
 export default function MatchDetails({
   match,
   shouldDisplayDate,
   getTeamNameFromTeamId,
-  isOpen,
 }: Props) {
   const { state, teams, score, schedule, events } = match;
 
@@ -38,6 +36,11 @@ export default function MatchDetails({
     team2: {},
   };
 
+  const numberOfPenaltiesScored: { team1: Object; team2: Object } = {
+    team1: {},
+    team2: {},
+  };
+
   const numberOfPenaltiesMissed: { team1: Object; team2: Object } = {
     team1: {},
     team2: {},
@@ -57,6 +60,12 @@ export default function MatchDetails({
           numberOfOwnGoals[team][name] += 1;
         } else {
           numberOfOwnGoals[team][name] = 1;
+        }
+      } else if (event === "ps") {
+        if (numberOfPenaltiesScored[team][name]) {
+          numberOfPenaltiesScored[team][name] += 1;
+        } else {
+          numberOfPenaltiesScored[team][name] = 1;
         }
       } else if (event === "pm") {
         if (numberOfPenaltiesMissed[team][name]) {
@@ -102,7 +111,7 @@ export default function MatchDetails({
           {new Date(schedule).toDateString()}
         </h3>
       )}
-      <details className="mb-2" open={isOpen}>
+      <details className="mb-2">
         <summary className="list-none bg-gray-100">
           <div className="flex">
             <p className="flex-grow text-center py-2 basis-0">
@@ -116,7 +125,7 @@ export default function MatchDetails({
         </summary>
         {/* Dropdown */}
         {state === "ft" && (
-          <>
+          <div className="mb-6">
             <MatchEvent
               statistic={numberOfGoals}
               team1="team1"
@@ -132,6 +141,13 @@ export default function MatchDetails({
             />
 
             <MatchEvent
+              statistic={numberOfPenaltiesScored}
+              team1="team1"
+              team2="team2"
+              heading="Penalties scored"
+            />
+
+            <MatchEvent
               statistic={numberOfPenaltiesMissed}
               team1="team1"
               team2="team2"
@@ -144,7 +160,7 @@ export default function MatchDetails({
               team2="team2"
               heading="Assists"
             />
-          </>
+          </div>
         )}
       </details>
     </div>

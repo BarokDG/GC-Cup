@@ -29,7 +29,7 @@ const CentralStoreSlice = createSlice({
   },
 });
 
-export const tableActions = CentralStoreSlice.actions;
+export const centralStoreActions = CentralStoreSlice.actions;
 
 export const conferenceState = (state: RootState) => state.central.conference;
 export const teamsDataState = (state: RootState) => state.central.teamData;

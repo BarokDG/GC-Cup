@@ -48,41 +48,35 @@ export default function MatchDetails({
     team2: {},
   };
 
+  const assignEventCountForPlayer = (
+    accumulator: Object,
+    team: string,
+    name: string
+  ) => {
+    if (accumulator[team][name]) {
+      accumulator[team][name] += 1;
+    } else {
+      accumulator[team][name] = 1;
+    }
+  };
+
   // Aggregate stats
   for (let team of ["team1", "team2"]) {
     events[team].forEach(({ name, event, assist }) => {
-      if (event === "goal") {
-        if (numberOfGoals[team][name]) {
-          numberOfGoals[team][name] += 1;
-        } else {
-          numberOfGoals[team][name] = 1;
+      if (event === "goal" || event === "ps") {
+        assignEventCountForPlayer(numberOfGoals, team, name);
+
+        if (event === "ps") {
+          assignEventCountForPlayer(numberOfPenaltiesScored, team, name);
         }
       } else if (event === "og") {
-        if (numberOfOwnGoals[team][name]) {
-          numberOfOwnGoals[team][name] += 1;
-        } else {
-          numberOfOwnGoals[team][name] = 1;
-        }
-      } else if (event === "ps") {
-        if (numberOfPenaltiesScored[team][name]) {
-          numberOfPenaltiesScored[team][name] += 1;
-        } else {
-          numberOfPenaltiesScored[team][name] = 1;
-        }
+        assignEventCountForPlayer(numberOfOwnGoals, team, name);
       } else if (event === "pm") {
-        if (numberOfPenaltiesMissed[team][name]) {
-          numberOfPenaltiesMissed[team][name] += 1;
-        } else {
-          numberOfPenaltiesMissed[team][name] = 1;
-        }
+        assignEventCountForPlayer(numberOfPenaltiesMissed, team, name);
       }
 
       if (assist) {
-        if (numberOfAssists[team][assist]) {
-          numberOfAssists[team][assist] += 1;
-        } else {
-          numberOfAssists[team][assist] = 1;
-        }
+        assignEventCountForPlayer(numberOfAssists, team, assist);
       }
     });
   }

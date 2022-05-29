@@ -518,8 +518,8 @@ export const matches: Match[] = [
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
-      team1: 101,
-      team2: 104,
+      team1: 102,
+      team2: 105,
     },
     schedule: new Date("May 30, 2022 14:00").toString(),
     score: {
@@ -537,8 +537,8 @@ export const matches: Match[] = [
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
-      team1: 102,
-      team2: 105,
+      team1: 101,
+      team2: 104,
     },
     schedule: new Date("May 30, 2022 16:00").toString(),
     score: {
@@ -762,10 +762,10 @@ export const matches: Match[] = [
     conference: 2,
     matchID: Math.random().toString(36).slice(2),
     teams: {
-      team1: 201,
+      team1: 202,
       team2: 204,
     },
-    schedule: new Date("May 27, 2022 16:00").toString(),
+    schedule: new Date("May 29, 2022 16:00").toString(),
     score: {
       team1: null,
       team2: null,
@@ -776,15 +776,15 @@ export const matches: Match[] = [
     },
   },
   {
-    state: "ps",
+    state: "sc",
     isPlayoffs: false,
     conference: 2,
     matchID: Math.random().toString(36).slice(2),
     teams: {
-      team1: 202,
+      team1: 201,
       team2: 204,
     },
-    schedule: new Date("May 29, 2022 16:00").toString(),
+    schedule: new Date("May 31, 2022 16:00").toString(),
     score: {
       team1: null,
       team2: null,

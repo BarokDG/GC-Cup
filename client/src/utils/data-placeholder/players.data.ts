@@ -653,7 +653,7 @@ export const players: Player[] = [
     name: "Abraham",
     fname: "Mulat",
     position: "ST",
-    goals: 4,
+    goals: 6,
     assists: 1,
   },
   {

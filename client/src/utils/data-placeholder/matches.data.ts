@@ -513,7 +513,7 @@ export const matches: Match[] = [
     },
   },
   {
-    state: "sc",
+    state: "ft",
     isPlayoffs: false,
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
@@ -523,16 +523,52 @@ export const matches: Match[] = [
     },
     schedule: new Date("May 30, 2022 14:00").toString(),
     score: {
-      team1: null,
-      team2: null,
+      team1: 5,
+      team2: 2,
     },
     events: {
-      team1: [],
-      team2: [],
+      team1: [
+        {
+          name: "Yoni E.",
+          event: "goal",
+          assist: "Nati G.",
+        },
+        {
+          name: "Nati G.",
+          event: "goal",
+          assist: "Biruk",
+        },
+        {
+          name: "Biruk",
+          event: "goal",
+          assist: "Yoni E.",
+        },
+        {
+          name: "Nati G.",
+          event: "goal",
+          assist: "Yoni E.",
+        },
+        {
+          name: "Nati B.",
+          event: "og",
+        },
+      ],
+      team2: [
+        {
+          name: "Emnet",
+          event: "goal",
+          assist: "Yidiya",
+        },
+        {
+          name: "Nati B.",
+          event: "goal",
+          assist: "Yidiya",
+        },
+      ],
     },
   },
   {
-    state: "sc",
+    state: "ft",
     isPlayoffs: false,
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
@@ -542,12 +578,93 @@ export const matches: Match[] = [
     },
     schedule: new Date("May 30, 2022 16:00").toString(),
     score: {
-      team1: null,
-      team2: null,
+      team1: 4,
+      team2: 13,
     },
     events: {
-      team1: [],
-      team2: [],
+      team1: [
+        {
+          name: "Ewnetu",
+          event: "goal",
+        },
+        {
+          name: "Olana",
+          event: "goal",
+          assist: "Temu",
+        },
+        {
+          name: "Olana",
+          event: "goal",
+        },
+        {
+          name: "Temu",
+          event: "goal",
+        },
+      ],
+      team2: [
+        {
+          name: "Chacha",
+          event: "goal",
+          assist: "Josi",
+        },
+        {
+          name: "Dereje",
+          event: "goal",
+        },
+        {
+          name: "Chacha",
+          event: "goal",
+          assist: "Josi",
+        },
+        {
+          name: "Kira",
+          event: "goal",
+          assist: "Chacha",
+        },
+        {
+          name: "Kira",
+          event: "goal",
+          assist: "Chacha",
+        },
+        {
+          name: "Josi",
+          event: "goal",
+          assist: "Chacha",
+        },
+        {
+          name: "Chacha",
+          event: "goal",
+        },
+        {
+          name: "Josi",
+          event: "goal",
+          assist: "Kira",
+        },
+        {
+          name: "Kira",
+          event: "goal",
+          assist: "Chacha",
+        },
+        {
+          name: "Josi",
+          event: "goal",
+        },
+        {
+          name: "Abdisa",
+          event: "goal",
+          assist: "Dereje",
+        },
+        {
+          name: "Yishak",
+          event: "goal",
+          assist: "Chacha",
+        },
+        {
+          name: "Chacha",
+          event: "goal",
+          assist: "Josi",
+        },
+      ],
     },
   },
   {

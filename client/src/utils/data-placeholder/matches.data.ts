@@ -893,7 +893,7 @@ export const matches: Match[] = [
     },
   },
   {
-    state: "sc",
+    state: "ft",
     isPlayoffs: false,
     conference: 2,
     matchID: Math.random().toString(36).slice(2),
@@ -903,12 +903,41 @@ export const matches: Match[] = [
     },
     schedule: new Date("May 31, 2022 16:00").toString(),
     score: {
-      team1: null,
-      team2: null,
+      team1: 2,
+      team2: 4,
     },
     events: {
-      team1: [],
-      team2: [],
+      team1: [
+        {
+          name: "Ermisha",
+          event: "goal",
+          assist: "Kena",
+        },
+        {
+          name: "Ermisha",
+          event: "ps",
+        },
+      ],
+      team2: [
+        {
+          name: "Tekle",
+          event: "ps",
+        },
+        {
+          name: "Beken",
+          event: "goal",
+          assist: "Zekarias",
+        },
+        {
+          name: "Beken",
+          event: "goal",
+        },
+        {
+          name: "Kevin",
+          event: "goal",
+          assist: "Tekle",
+        },
+      ],
     },
   },
 ];

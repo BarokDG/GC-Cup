@@ -120,7 +120,7 @@ export const players: Player[] = [
     fname: "",
     position: "MD",
     goals: 0,
-    assists: 3,
+    assists: 4,
   },
   {
     playerID: 20113,
@@ -137,7 +137,7 @@ export const players: Player[] = [
     name: "Ermisha",
     fname: "",
     position: "ST",
-    goals: 5,
+    goals: 7,
     assists: 1,
   },
   {
@@ -897,7 +897,7 @@ export const players: Player[] = [
     name: "Kevin",
     fname: "Shitaye",
     position: "MD",
-    goals: 1,
+    goals: 2,
     assists: 0,
     isCaptain: true,
   },
@@ -908,8 +908,8 @@ export const players: Player[] = [
     fname: "Abebayehu",
     nickname: "Tekle",
     position: "MD",
-    goals: 0,
-    assists: 2,
+    goals: 1,
+    assists: 3,
   },
   {
     playerID: 20411,
@@ -926,7 +926,7 @@ export const players: Player[] = [
     name: "Beken",
     fname: "Adugna",
     position: "ST",
-    goals: 1,
+    goals: 3,
     assists: 1,
   },
 

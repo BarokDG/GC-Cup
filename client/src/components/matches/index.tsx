@@ -25,7 +25,7 @@ export default function Matches() {
   return (
     <>
       <ConferenceSwitch />
-      <MatchDetailsInteractionInfo />
+      <MatchDetailsInteractionInfo conference={conference} />
       {matchesData
         .filter((match) => match.conference === conference)
         .map((match) => {

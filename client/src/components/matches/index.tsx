@@ -1,6 +1,7 @@
 import ConferenceSwitch from "../conferenceSwitch";
 import MatchDetails from "./matchDetails";
 import EmptyState from "../emptyState";
+import MatchDetailsInteractionInfo from "./matchDetailsInteractionInfo";
 
 import { useAppSelector } from "../../store/storeHooks";
 import {
@@ -24,6 +25,7 @@ export default function Matches() {
   return (
     <>
       <ConferenceSwitch />
+      <MatchDetailsInteractionInfo />
       {matchesData
         .filter((match) => match.conference === conference)
         .map((match) => {

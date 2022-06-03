@@ -285,8 +285,8 @@ export const players: Player[] = [
     name: "Olana",
     fname: "",
     position: "ST",
-    goals: 3,
-    assists: 1,
+    goals: 4,
+    assists: 2,
   },
 
   /**
@@ -451,7 +451,7 @@ export const players: Player[] = [
     name: "Tewodros",
     fname: "Abebe",
     position: "DF",
-    goals: 0,
+    goals: 1,
     assists: 0,
   },
   {
@@ -487,8 +487,8 @@ export const players: Player[] = [
     name: "Yeabsira",
     fname: "Tibebu",
     position: "MD",
-    goals: 0,
-    assists: 0,
+    goals: 1,
+    assists: 1,
   },
   {
     playerID: 2029,
@@ -523,7 +523,7 @@ export const players: Player[] = [
     name: "Robel",
     fname: "Argaw",
     position: "ST",
-    goals: 3,
+    goals: 6,
     assists: 0,
   },
   {
@@ -711,8 +711,8 @@ export const players: Player[] = [
     name: "Girmachew",
     fname: "Mengistu",
     position: "DF",
-    goals: 0,
-    assists: 1,
+    goals: 2,
+    assists: 3,
   },
   {
     playerID: 1034,
@@ -720,8 +720,8 @@ export const players: Player[] = [
     name: "Kassa",
     fname: "Birhanu",
     position: "DF",
-    goals: 0,
-    assists: 1,
+    goals: 1,
+    assists: 2,
   },
   {
     playerID: 1035,
@@ -756,8 +756,8 @@ export const players: Player[] = [
     name: "Bultum",
     fname: "Guluma",
     position: "MD",
-    goals: 2,
-    assists: 2,
+    goals: 4,
+    assists: 4,
   },
   {
     playerID: 1039,
@@ -775,8 +775,8 @@ export const players: Player[] = [
     nickname: "Jano",
     fname: "Paulos",
     position: "MD",
-    goals: 1,
-    assists: 2,
+    goals: 3,
+    assists: 4,
   },
   {
     playerID: 10311,
@@ -793,7 +793,7 @@ export const players: Player[] = [
     name: "Biniyam",
     fname: "Dagne",
     position: "ST",
-    goals: 3,
+    goals: 5,
     assists: 1,
   },
   {
@@ -880,7 +880,7 @@ export const players: Player[] = [
     fname: "Alemu",
     position: "DF",
     goals: 0,
-    assists: 1,
+    assists: 4,
   },
   {
     playerID: 2048,
@@ -897,7 +897,7 @@ export const players: Player[] = [
     name: "Kevin",
     fname: "Shitaye",
     position: "MD",
-    goals: 2,
+    goals: 3,
     assists: 0,
     isCaptain: true,
   },
@@ -908,8 +908,8 @@ export const players: Player[] = [
     fname: "Abebayehu",
     nickname: "Tekle",
     position: "MD",
-    goals: 1,
-    assists: 3,
+    goals: 2,
+    assists: 4,
   },
   {
     playerID: 20411,
@@ -917,7 +917,7 @@ export const players: Player[] = [
     name: "Yonathan",
     fname: "Awoke",
     position: "MD",
-    goals: 1,
+    goals: 2,
     assists: 0,
   },
   {
@@ -926,8 +926,8 @@ export const players: Player[] = [
     name: "Beken",
     fname: "Adugna",
     position: "ST",
-    goals: 3,
-    assists: 1,
+    goals: 6,
+    assists: 2,
   },
 
   /**

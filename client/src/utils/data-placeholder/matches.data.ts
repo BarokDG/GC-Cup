@@ -668,7 +668,7 @@ export const matches: Match[] = [
     },
   },
   {
-    state: "sc",
+    state: "ft",
     isPlayoffs: false,
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
@@ -678,12 +678,91 @@ export const matches: Match[] = [
     },
     schedule: new Date("June 03, 2022 16:00").toString(),
     score: {
-      team1: null,
-      team2: null,
+      team1: 5,
+      team2: 11,
     },
     events: {
-      team1: [],
-      team2: [],
+      team1: [
+        {
+          name: "Yared",
+          event: "goal",
+        },
+        {
+          name: "Yared",
+          event: "goal",
+          assist: "Yisak",
+        },
+        {
+          name: "Yared",
+          event: "goal",
+          assist: "Olana",
+        },
+        {
+          name: "Yared",
+          event: "goal",
+          assist: "Amani",
+        },
+        {
+          name: "Olana",
+          event: "goal",
+        },
+      ],
+      team2: [
+        {
+          name: "Jano",
+          event: "goal",
+          assist: "Girmachew",
+        },
+        {
+          name: "Biniyam",
+          event: "goal",
+          assist: "Jano",
+        },
+        {
+          name: "Dawit",
+          event: "goal",
+          assist: "Bultum",
+        },
+        {
+          name: "Jano",
+          event: "goal",
+          assist: "Bultum",
+        },
+        {
+          name: "Biniyam",
+          event: "goal",
+          assist: "Jano",
+        },
+        {
+          name: "Girmachew",
+          event: "goal",
+          assist: "Dawit",
+        },
+        {
+          name: "Girmachew",
+          event: "goal",
+          assist: "Dawit",
+        },
+        {
+          name: "Kassa",
+          event: "goal",
+          assist: "Dawit",
+        },
+        {
+          name: "Temu",
+          event: "og",
+        },
+        {
+          name: "Bultum",
+          event: "goal",
+          assist: "Girmachew",
+        },
+        {
+          name: "Bultum",
+          event: "goal",
+          assist: "Kassa",
+        },
+      ],
     },
   },
 
@@ -922,7 +1001,7 @@ export const matches: Match[] = [
     },
   },
   {
-    state: "sc",
+    state: "ft",
     isPlayoffs: false,
     conference: 2,
     matchID: Math.random().toString(36).slice(2),
@@ -932,12 +1011,72 @@ export const matches: Match[] = [
     },
     schedule: new Date("June 3, 2022 14:00").toString(),
     score: {
-      team1: null,
-      team2: null,
+      team1: 6,
+      team2: 6,
     },
     events: {
-      team1: [],
-      team2: [],
+      team1: [
+        {
+          name: "Yeabsira",
+          event: "goal",
+          assist: "Kalo",
+        },
+        {
+          name: "Kalo",
+          event: "goal",
+          assist: "Josh",
+        },
+        {
+          name: "Roba",
+          event: "goal",
+          assist: "Teda",
+        },
+        {
+          name: "Roba",
+          event: "goal",
+          assist: "Yeabsira",
+        },
+        {
+          name: "Roba",
+          event: "goal",
+          assist: "Kalo",
+        },
+        {
+          name: "Josh",
+          event: "goal",
+        },
+      ],
+      team2: [
+        {
+          name: "Beken",
+          event: "goal",
+          assist: "Zekarias",
+        },
+        {
+          name: "Beken",
+          event: "goal",
+          assist: "Tekle",
+        },
+        {
+          name: "Tekle",
+          event: "goal",
+          assist: "Beken",
+        },
+        {
+          name: "Beken",
+          event: "goal",
+        },
+        {
+          name: "Kevin",
+          event: "goal",
+          assist: "Zekarias",
+        },
+        {
+          name: "Yonathan",
+          event: "goal",
+          assist: "Zekarias",
+        },
+      ],
     },
   },
 ];

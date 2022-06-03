@@ -37,21 +37,22 @@ export default function StatCardSummary({ data, stat, icon: Icon, sortBy }) {
                 return (
                   <div
                     key={index}
-                    className="flex align-baseline bg-gray-200 pl-4 text-xl mb-0.5"
+                    className="flex items-center bg-gray-200 pl-4 text-xl mb-0.5"
                   >
                     {/* Display teamName instead for most cleansheets */}
                     <p className="py-2">{nickname || name || teamName}</p>
-                    <div className="flex items-center ml-auto">
-                      {/* Don't display teamCode for most cleasheets */}
-                      <p className="mr-2 text-base">{!teamName && teamCode}</p>
-
-                      <p className="mr-2 text-base leading-none pt-0.5 font-mono">
+                    <div className="ml-auto">
+                      {/* Don't display teamCode for most cleansheets */}
+                      <p className="mr-2 text-base inline-block">
+                        {!teamName && teamCode}
+                      </p>
+                      <p className="mr-2 text-base font-mono inline-block">
                         {position}
                       </p>
-                      <p className="w-12 self-stretch flex justify-center items-center bg-gray-900 text-gray-100">
-                        {array[index][sortBy]}
-                      </p>
                     </div>
+                    <p className="w-12 self-stretch flex justify-center items-center bg-gray-900 text-gray-100">
+                      {array[index][sortBy]}
+                    </p>
                   </div>
                 );
               }

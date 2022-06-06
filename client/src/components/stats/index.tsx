@@ -30,9 +30,9 @@ export default function Stats() {
       />
       <StatCardSummary
         data={teamData}
-        stat="Cleansheets"
+        stat="Goals Conceded"
         icon={GoalKeeperIcon}
-        sortBy="cleansheets"
+        sortBy="goalsAgainst"
       />
     </>
   );

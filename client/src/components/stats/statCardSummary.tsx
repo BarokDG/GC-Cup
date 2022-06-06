@@ -7,13 +7,19 @@ export default function StatCardSummary({ data, stat, icon: Icon, sortBy }) {
   const sortedData = () => {
     return [...data]
       .sort((a, b) => {
-        if (sortBy === "cleansheets") {
+        if (sortBy === "goalsAgainst") {
           return a.teamName.localeCompare(b.teamName);
         }
 
         return a.name.localeCompare(b.name);
       })
-      .sort((a, b) => b[sortBy] - a[sortBy]);
+      .sort((a, b) => {
+        if (sortBy === "goalsAgainst") {
+          return a[sortBy] - b[sortBy];
+        }
+
+        return b[sortBy] - a[sortBy];
+      });
   };
 
   return (
@@ -21,7 +27,7 @@ export default function StatCardSummary({ data, stat, icon: Icon, sortBy }) {
       <div className="mt-6 bg-gray-400 px-2 py-2 max-w-md mx-auto">
         <div className="relative isolate mb-6 border-dashed border-4 bg-clip-padding border-gray-500 bg-slate-400 px-4 py-6">
           <h2 className="text-3xl font-black uppercase">
-            Most <br /> {stat}
+            {sortBy === "goalsAgainst" ? "Least" : "Most"} <br /> {stat}
           </h2>
           <Icon className="absolute -right-4 -top-8 w-48 h-48 -z-10" />
         </div>

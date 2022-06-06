@@ -1,6 +1,5 @@
 import ConferenceSwitch from "../conferenceSwitch";
 import MatchDetails from "./matchDetails";
-import EmptyState from "../emptyState";
 import MatchDetailsInteractionInfo from "./matchDetailsInteractionInfo";
 
 import { useAppSelector } from "../../store/storeHooks";
@@ -17,10 +16,11 @@ export default function Matches() {
   const matchesData = useAppSelector(matchesDataState);
 
   const matchDates: Object = {};
+  const stateTitles: Object = {};
 
   // TODO: Refactor, also declared in matches/showMatchesFromToday.tsx
   const getTeamNameFromTeamId = (queryTeamId: number): string =>
-    teamsData.find((team) => team.teamID === queryTeamId)?.teamName || "";
+    teamsData.find((team) => team.teamID === queryTeamId)?.teamName || "TBD";
 
   return (
     <>
@@ -28,28 +28,40 @@ export default function Matches() {
       <MatchDetailsInteractionInfo conference={conference} />
       {matchesData
         .filter((match) => match.conference === conference)
+        .sort(
+          (a, b) =>
+            new Date(a.schedule).getTime() - new Date(b.schedule).getTime()
+        )
         .map((match) => {
           // To ensure dates aren't displayed twice
           const dateString = new Date(match.schedule).toDateString();
           let shouldDisplayDate = false;
+
+          let shouldDisplayStage = false;
 
           if (!Object.keys(matchDates).includes(dateString)) {
             shouldDisplayDate = true;
             matchDates[dateString] = 0;
           }
 
+          if (
+            match.playOffStage &&
+            !Object.keys(stateTitles).includes(match.playOffStage)
+          ) {
+            shouldDisplayStage = true;
+            stateTitles[match.playOffStage] = 0;
+          }
+
           return (
             <MatchDetails
               key={match.matchID}
               match={match}
+              shouldDisplayStage={shouldDisplayStage}
               shouldDisplayDate={shouldDisplayDate}
               getTeamNameFromTeamId={getTeamNameFromTeamId}
             />
           );
         })}
-
-      {/* TODO: Update once playoffs start */}
-      {conference === 3 && <EmptyState />}
     </>
   );
 }

@@ -1,6 +1,6 @@
 export type Match = {
   state: string;
-  isPlayoffs: boolean;
+  playOffStage?: string;
   conference: number;
   matchID: string;
   teams: {
@@ -31,7 +31,6 @@ export const matches: Match[] = [
    */
   {
     state: "ft",
-    isPlayoffs: false,
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
@@ -137,7 +136,6 @@ export const matches: Match[] = [
   },
   {
     state: "ft",
-    isPlayoffs: false,
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
@@ -205,7 +203,6 @@ export const matches: Match[] = [
   },
   {
     state: "ft",
-    isPlayoffs: false,
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
@@ -264,7 +261,6 @@ export const matches: Match[] = [
   },
   {
     state: "ft",
-    isPlayoffs: false,
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
@@ -373,7 +369,6 @@ export const matches: Match[] = [
   },
   {
     state: "ft",
-    isPlayoffs: false,
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
@@ -424,7 +419,6 @@ export const matches: Match[] = [
   },
   {
     state: "ft",
-    isPlayoffs: false,
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
@@ -495,7 +489,6 @@ export const matches: Match[] = [
   },
   {
     state: "ft",
-    isPlayoffs: false,
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
@@ -550,7 +543,6 @@ export const matches: Match[] = [
   },
   {
     state: "ft",
-    isPlayoffs: false,
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
@@ -650,7 +642,6 @@ export const matches: Match[] = [
   },
   {
     state: "ps",
-    isPlayoffs: false,
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
@@ -669,7 +660,6 @@ export const matches: Match[] = [
   },
   {
     state: "ft",
-    isPlayoffs: false,
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {
@@ -771,7 +761,6 @@ export const matches: Match[] = [
    */
   {
     state: "ft",
-    isPlayoffs: false,
     conference: 2,
     matchID: Math.random().toString(36).slice(2),
     teams: {
@@ -812,7 +801,6 @@ export const matches: Match[] = [
   },
   {
     state: "ft",
-    isPlayoffs: false,
     conference: 2,
     matchID: Math.random().toString(36).slice(2),
     teams: {
@@ -856,7 +844,6 @@ export const matches: Match[] = [
   },
   {
     state: "ft",
-    isPlayoffs: false,
     conference: 2,
     matchID: Math.random().toString(36).slice(2),
     teams: {
@@ -902,7 +889,6 @@ export const matches: Match[] = [
   },
   {
     state: "ft",
-    isPlayoffs: false,
     conference: 2,
     matchID: Math.random().toString(36).slice(2),
     teams: {
@@ -954,7 +940,6 @@ export const matches: Match[] = [
   },
   {
     state: "ft",
-    isPlayoffs: false,
     conference: 2,
     matchID: Math.random().toString(36).slice(2),
     teams: {
@@ -1002,7 +987,6 @@ export const matches: Match[] = [
   },
   {
     state: "ft",
-    isPlayoffs: false,
     conference: 2,
     matchID: Math.random().toString(36).slice(2),
     teams: {
@@ -1077,6 +1061,143 @@ export const matches: Match[] = [
           assist: "Zekarias",
         },
       ],
+    },
+  },
+
+  /**
+   * Play-offs
+   */
+  {
+    state: "sc",
+    playOffStage: "QF",
+    conference: 3,
+    matchID: Math.random().toString(36).slice(2),
+    schedule: new Date("June 7, 2022 14:00").toString(),
+    teams: {
+      team1: 202,
+      team2: 103,
+    },
+    score: {
+      team1: null,
+      team2: null,
+    },
+    events: {
+      team1: [],
+      team2: [],
+    },
+  },
+  {
+    state: "sc",
+    playOffStage: "QF",
+    conference: 3,
+    matchID: Math.random().toString(36).slice(2),
+    schedule: new Date("June 7, 2022 16:00").toString(),
+    teams: {
+      team1: 102,
+      team2: 203,
+    },
+    score: {
+      team1: null,
+      team2: null,
+    },
+    events: {
+      team1: [],
+      team2: [],
+    },
+  },
+  {
+    state: "sc",
+    playOffStage: "QF",
+    conference: 3,
+    matchID: Math.random().toString(36).slice(2),
+    schedule: new Date("June 11, 2022 16:00").toString(),
+    teams: {
+      team1: 201,
+      team2: 104,
+    },
+    score: {
+      team1: null,
+      team2: null,
+    },
+    events: {
+      team1: [],
+      team2: [],
+    },
+  },
+  {
+    state: "tba",
+    playOffStage: "QF",
+    conference: 3,
+    matchID: Math.random().toString(36).slice(2),
+    schedule: new Date("June 9, 2023 14:00").toString(),
+    teams: {
+      team1: 204,
+      team2: 0,
+    },
+    score: {
+      team1: null,
+      team2: null,
+    },
+    events: {
+      team1: [],
+      team2: [],
+    },
+  },
+  {
+    state: "tba",
+    playOffStage: "SF",
+    conference: 3,
+    matchID: Math.random().toString(36).slice(2),
+    schedule: new Date("June 15, 2023 14:00").toString(),
+    teams: {
+      team1: 0,
+      team2: 0,
+    },
+    score: {
+      team1: null,
+      team2: null,
+    },
+    events: {
+      team1: [],
+      team2: [],
+    },
+  },
+  {
+    state: "tba",
+    playOffStage: "SF",
+    conference: 3,
+    matchID: Math.random().toString(36).slice(2),
+    schedule: new Date("June 15, 2023 14:00").toString(),
+    teams: {
+      team1: 0,
+      team2: 0,
+    },
+    score: {
+      team1: null,
+      team2: null,
+    },
+    events: {
+      team1: [],
+      team2: [],
+    },
+  },
+  {
+    state: "tba",
+    playOffStage: "F",
+    conference: 3,
+    matchID: Math.random().toString(36).slice(2),
+    schedule: new Date("June 22, 2023 14:00").toString(),
+    teams: {
+      team1: 0,
+      team2: 0,
+    },
+    score: {
+      team1: null,
+      team2: null,
+    },
+    events: {
+      team1: [],
+      team2: [],
     },
   },
 ];

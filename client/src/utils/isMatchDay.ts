@@ -3,7 +3,7 @@ export const isMatchDay = (matches) => {
     let matchDateString = new Date(match.schedule).toDateString();
 
     if (new Date().toDateString() === matchDateString) {
-      return true;
+      return match.conference;
     }
   }
 

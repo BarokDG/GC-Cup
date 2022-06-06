@@ -6,6 +6,7 @@ type Props = {
   shouldDisplayDate: boolean;
   getTeamNameFromTeamId: Function;
   shouldDisplayMatchEvents?: boolean;
+  shouldDisplayStage?: boolean;
 };
 
 export default function MatchDetails({
@@ -13,6 +14,7 @@ export default function MatchDetails({
   shouldDisplayDate,
   getTeamNameFromTeamId,
   shouldDisplayMatchEvents = true,
+  shouldDisplayStage = false,
 }: Props) {
   const { state, teams, score, schedule, events } = match;
 
@@ -99,15 +101,24 @@ export default function MatchDetails({
 
   return (
     <div className="max-w-md mx-auto">
+      {shouldDisplayStage && (
+        <p className="text-gray-300 text-center mt-6 mx-auto w-4/5 border-b-2 border-b-slate-300">
+          {match.playOffStage === "QF"
+            ? "Quarter Finals"
+            : match.playOffStage === "SF"
+            ? "Semi finals"
+            : "Final"}
+        </p>
+      )}
       {shouldDisplayDate && (
-        <h3
+        <p
           className="text-gray-300 text-sm mt-6 mb-1"
           style={state === "ps" ? { textDecoration: "line-through" } : {}}
         >
-          {new Date(schedule).toDateString()}
-        </h3>
+          {state === "tba" ? "" : new Date(schedule).toDateString()}
+        </p>
       )}
-      <details className="mb-2">
+      <details className={`mb-2 ${state === "tba" ? "opacity-70" : ""}`}>
         <summary className="list-none bg-gray-100">
           <div className="flex">
             <p className="flex-grow text-center py-2 basis-0">
@@ -177,6 +188,12 @@ function ScoreOrTime({ state, time, score }) {
     return (
       <p className="w-max px-2 py-2 bg-violet-200 text-violet-900 text-md font-bold">
         Postponed
+      </p>
+    );
+  } else if (state === "tba") {
+    return (
+      <p className="w-max px-2 py-2 bg-gray-800 text-slate-200 text-lg font-bold">
+        TBA
       </p>
     );
   } else {

@@ -1,8 +1,12 @@
-import EmptyState from "../emptyState";
+import { ReactComponent as KnockoutBracket } from "../../assets/illustrations/knockout_bracket.svg";
 
 export default function PlayOffs({ conference }: { conference: number }) {
   if (conference === 3) {
-    return <EmptyState />;
+    return (
+      <div className="overflow-x-auto">
+        <KnockoutBracket className="w-[300vw] max-w-5xl" />
+      </div>
+    );
   }
 
   return <></>;

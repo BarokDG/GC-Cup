@@ -23,7 +23,7 @@ export default function MatchesFromToday({ conference }) {
 
   // TODO: Refactor, also declared in matches/index.tsx
   const getTeamNameFromTeamId = (queryTeamId: number): string =>
-    teamsData.find((team) => team.teamID === queryTeamId)?.teamName || "";
+    teamsData.find((team) => team.teamID === queryTeamId)?.teamName || "TBD";
 
   if (filterMatchesData().length) {
     return (

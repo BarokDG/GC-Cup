@@ -641,7 +641,7 @@ export const matches: Match[] = [
     },
   },
   {
-    state: "ps",
+    state: "sc",
     conference: 1,
     matchID: Math.random().toString(36).slice(2),
     teams: {

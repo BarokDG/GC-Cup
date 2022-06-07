@@ -95,3 +95,25 @@ span.l {
 span.d {
   @apply bg-gray-700 text-gray-300;
 }
+
+@media (min-width: 500px) {
+  .custom-scrollbar {
+    --sc-thumb: #1f293f;
+
+    /* Firefox support */
+    scrollbar-width: thin;
+    scrollbar-color: var(--sc-thumb) transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    height: 2px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+
+  .custom-scrollbar:hover::-webkit-scrollbar-thumb {
+    background-color: var(--sc-thumb);
+  }
+}

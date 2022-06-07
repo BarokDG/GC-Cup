@@ -1068,7 +1068,7 @@ export const matches: Match[] = [
    * Play-offs
    */
   {
-    state: "sc",
+    state: "ps",
     playOffStage: "QF",
     conference: 3,
     matchID: Math.random().toString(36).slice(2),
@@ -1087,7 +1087,7 @@ export const matches: Match[] = [
     },
   },
   {
-    state: "sc",
+    state: "ps",
     playOffStage: "QF",
     conference: 3,
     matchID: Math.random().toString(36).slice(2),

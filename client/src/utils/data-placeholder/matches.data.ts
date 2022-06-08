@@ -1068,22 +1068,47 @@ export const matches: Match[] = [
    * Play-offs
    */
   {
-    state: "ps",
+    state: "ft",
     playOffStage: "QF",
     conference: 3,
     matchID: Math.random().toString(36).slice(2),
-    schedule: new Date("June 7, 2022 14:00").toString(),
+    schedule: new Date("June 8, 2022 14:00").toString(),
     teams: {
       team1: 202,
       team2: 103,
     },
     score: {
-      team1: null,
-      team2: null,
+      team1: 0,
+      team2: 5,
     },
     events: {
       team1: [],
-      team2: [],
+      team2: [
+        {
+          name: "Dawit",
+          event: "goal",
+          assist: "Biruk",
+        },
+        {
+          name: "Dawit",
+          event: "goal",
+          assist: "Biniyam",
+        },
+        {
+          name: "Mulugeta",
+          event: "goal",
+          assist: "Girmachew",
+        },
+        {
+          name: "Bultum",
+          event: "goal",
+          assist: "Mulugeta",
+        },
+        {
+          name: "Mikiyas",
+          event: "og",
+        },
+      ],
     },
   },
   {

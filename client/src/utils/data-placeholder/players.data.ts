@@ -712,7 +712,7 @@ export const players: Player[] = [
     fname: "Mengistu",
     position: "DF",
     goals: 2,
-    assists: 3,
+    assists: 4,
   },
   {
     playerID: 1034,
@@ -729,8 +729,8 @@ export const players: Player[] = [
     name: "Mulugeta",
     fname: "Mekuanint",
     position: "DF",
-    goals: 0,
-    assists: 0,
+    goals: 1,
+    assists: 1,
   },
   {
     playerID: 1036,
@@ -748,7 +748,7 @@ export const players: Player[] = [
     fname: "Nigussie",
     position: "MD",
     goals: 0,
-    assists: 0,
+    assists: 1,
   },
   {
     playerID: 1038,
@@ -756,7 +756,7 @@ export const players: Player[] = [
     name: "Bultum",
     fname: "Guluma",
     position: "MD",
-    goals: 4,
+    goals: 5,
     assists: 4,
   },
   {
@@ -794,7 +794,7 @@ export const players: Player[] = [
     fname: "Dagne",
     position: "ST",
     goals: 5,
-    assists: 1,
+    assists: 2,
   },
   {
     playerID: 10313,

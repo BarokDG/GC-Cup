@@ -1187,7 +1187,7 @@ export const matches: Match[] = [
     schedule: new Date("June 9, 2023 14:00").toString(),
     teams: {
       team1: 204,
-      team2: 0,
+      team2: 105,
     },
     score: {
       team1: null,

@@ -214,7 +214,7 @@ export const players: Player[] = [
     fname: "Abay",
     position: "DF",
     goals: 1,
-    assists: 1,
+    assists: 2,
   },
   {
     playerID: 1015,
@@ -240,7 +240,7 @@ export const players: Player[] = [
     name: "Yonatan",
     fname: "Gashaw",
     position: "MD",
-    goals: 0,
+    goals: 1,
     assists: 0,
   },
   {
@@ -286,7 +286,7 @@ export const players: Player[] = [
     fname: "",
     position: "ST",
     goals: 4,
-    assists: 2,
+    assists: 3,
   },
 
   /**
@@ -1133,7 +1133,7 @@ export const players: Player[] = [
     name: "Suraphel",
     fname: "Kindu",
     position: "MD",
-    goals: 0,
+    goals: 1,
     assists: 0,
   },
   {
@@ -1179,7 +1179,7 @@ export const players: Player[] = [
     fname: "",
     position: "DF",
     goals: 0,
-    assists: 0,
+    assists: 1,
   },
   {
     playerID: 1054,
@@ -1214,8 +1214,8 @@ export const players: Player[] = [
     name: "Natnael",
     fname: "Bahiru",
     position: "MD",
-    goals: 1,
-    assists: 0,
+    goals: 2,
+    assists: 1,
   },
   {
     playerID: 1058,
@@ -1250,7 +1250,7 @@ export const players: Player[] = [
     name: "Emnet",
     fname: "Yohannes",
     position: "ST",
-    goals: 1,
+    goals: 2,
     assists: 0,
   },
 ];

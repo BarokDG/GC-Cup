@@ -104,9 +104,9 @@ export default function MatchDetails({
       {shouldDisplayStage && (
         <p className="text-gray-300 text-center mt-6 mx-auto w-4/5 border-b-2 border-b-slate-300">
           {match.playOffStage === "QF"
-            ? "Quarter Finals"
+            ? "Quarter-finals"
             : match.playOffStage === "SF"
-            ? "Semi finals"
+            ? "Semi-finals"
             : "Final"}
         </p>
       )}

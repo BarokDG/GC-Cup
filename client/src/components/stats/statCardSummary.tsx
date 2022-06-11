@@ -35,8 +35,8 @@ export default function StatCardSummary({ data, stat, icon: Icon, sortBy }) {
         </div>
 
         {sortBy === "goalsAgainst" ? (
-          <div className="pb-2 pt-px mb-3 bg-slate-800">
-            <InteractionInfo message="For group stage only" />
+          <div className="mb-3 bg-slate-800 py-2">
+            <InteractionInfo message="Showing for group stage only" />
           </div>
         ) : (
           <></>

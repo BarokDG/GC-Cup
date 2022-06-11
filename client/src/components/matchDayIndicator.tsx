@@ -4,6 +4,8 @@ import {
 } from "../store/centralStoreSlice";
 import { useAppDispatch, useAppSelector } from "../store/storeHooks";
 
+import { useNavigate } from "react-router-dom";
+
 import { isMatchDay } from "../utils/isMatchDay";
 
 export default function MatchDayIndicator() {
@@ -12,13 +14,16 @@ export default function MatchDayIndicator() {
 
   const matchInConference = isMatchDay(matchesData);
 
+  const navigate = useNavigate();
+
   if (matchInConference) {
     return (
       <div
         className="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer"
-        onClick={() =>
-          dispatch(centralStoreActions.setConference(matchInConference))
-        }
+        onClick={() => {
+          navigate("/");
+          dispatch(centralStoreActions.setConference(matchInConference));
+        }}
       >
         <span className="bg-emerald-400 text-slate-900 text-xs font-bold font-mono rounded-full px-1">
           match day

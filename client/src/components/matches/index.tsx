@@ -25,7 +25,9 @@ export default function Matches() {
   return (
     <>
       <ConferenceSwitch />
-      <InteractionInfo message="Click on a match for more details" />
+      <div className="mt-3">
+        <InteractionInfo message="Click on a match for more details" />
+      </div>
       {matchesData
         .filter((match) => match.conference === conference)
         .sort(

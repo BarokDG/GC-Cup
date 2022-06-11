@@ -110,7 +110,7 @@ export const players: Player[] = [
     name: "Abel",
     fname: "",
     position: "MD",
-    goals: 0,
+    goals: 1,
     assists: 0,
   },
   {
@@ -119,7 +119,7 @@ export const players: Player[] = [
     name: "Kena",
     fname: "",
     position: "MD",
-    goals: 0,
+    goals: 1,
     assists: 4,
   },
   {
@@ -137,8 +137,8 @@ export const players: Player[] = [
     name: "Ermisha",
     fname: "",
     position: "ST",
-    goals: 7,
-    assists: 1,
+    goals: 10,
+    assists: 2,
   },
   {
     playerID: 20115,
@@ -155,8 +155,8 @@ export const players: Player[] = [
     name: "Nati",
     fname: "",
     position: "ST",
-    goals: 0,
-    assists: 2,
+    goals: 1,
+    assists: 3,
   },
   {
     playerID: 20117,
@@ -1022,7 +1022,7 @@ export const players: Player[] = [
     fname: "",
     position: "MD",
     goals: 4,
-    assists: 5,
+    assists: 8,
   },
   {
     playerID: 10411,
@@ -1039,7 +1039,7 @@ export const players: Player[] = [
     name: "Chacha",
     fname: "",
     position: "ST",
-    goals: 9,
+    goals: 12,
     assists: 8,
   },
 

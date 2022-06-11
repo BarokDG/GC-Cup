@@ -1,6 +1,8 @@
 // import { useState } from "react";
 // import StatsModal from "./statsModal";
 
+import InteractionInfo from "../matches/InteractionInfo";
+
 export default function StatCardSummary({ data, stat, icon: Icon, sortBy }) {
   // const [isStatsModalOpen, setIsStatsModalOpen] = useState(false);
 
@@ -31,6 +33,14 @@ export default function StatCardSummary({ data, stat, icon: Icon, sortBy }) {
           </h2>
           <Icon className="absolute -right-4 -top-8 w-48 h-48 -z-10" />
         </div>
+
+        {sortBy === "goalsAgainst" ? (
+          <div className="pb-2 pt-px mb-3 bg-slate-800">
+            <InteractionInfo message="For group stage only" />
+          </div>
+        ) : (
+          <></>
+        )}
         <div className="flex flex-col">
           {sortedData()
             .slice(0, 5)
@@ -64,6 +74,7 @@ export default function StatCardSummary({ data, stat, icon: Icon, sortBy }) {
               }
             )}
         </div>
+
         {/* <button
           className="cursor-default mt-4 w-full py-2 bg-slate-900 text-gray-200"
           onClick={() => setIsStatsModalOpen(true)}

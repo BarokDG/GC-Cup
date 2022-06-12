@@ -1224,11 +1224,11 @@ export const matches: Match[] = [
     },
   },
   {
-    state: "tba",
+    state: "sc",
     playOffStage: "QF",
     conference: 3,
     matchID: Math.random().toString(36).slice(2),
-    schedule: new Date("June 9, 2023 14:00").toString(),
+    schedule: new Date("June 13, 2022 16:00").toString(),
     teams: {
       team1: 204,
       team2: 105,

@@ -1259,6 +1259,14 @@ export const matches: Match[] = [
           name: "Nati B.",
           event: "goal",
         },
+        {
+          name: "Nati A.",
+          event: "pm",
+        },
+        {
+          name: "Yididiya",
+          event: "pm",
+        },
       ],
     },
   },

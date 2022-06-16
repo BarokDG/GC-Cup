@@ -1146,7 +1146,7 @@ export const matches: Match[] = [
     playOffStage: "QF",
     conference: 3,
     matchID: Math.random().toString(36).slice(2),
-    schedule: new Date("June 7, 2022 16:00").toString(),
+    schedule: new Date("June 16, 2022 16:00").toString(),
     teams: {
       team1: 102,
       team2: 203,

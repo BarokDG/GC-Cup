@@ -1323,8 +1323,8 @@ export const matches: Match[] = [
     matchID: Math.random().toString(36).slice(2),
     schedule: new Date("June 15, 2023 14:00").toString(),
     teams: {
-      team1: 0,
-      team2: 0,
+      team1: 102,
+      team2: 103,
     },
     score: {
       team1: null,
@@ -1342,8 +1342,8 @@ export const matches: Match[] = [
     matchID: Math.random().toString(36).slice(2),
     schedule: new Date("June 15, 2023 14:00").toString(),
     teams: {
-      team1: 0,
-      team2: 0,
+      team1: 201,
+      team2: 204,
     },
     score: {
       team1: null,

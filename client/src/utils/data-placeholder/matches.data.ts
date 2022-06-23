@@ -1317,11 +1317,11 @@ export const matches: Match[] = [
     },
   },
   {
-    state: "tba",
+    state: "sc",
     playOffStage: "SF",
     conference: 3,
     matchID: Math.random().toString(36).slice(2),
-    schedule: new Date("June 15, 2023 14:00").toString(),
+    schedule: new Date("June 25, 2022 10:00").toString(),
     teams: {
       team1: 102,
       team2: 103,
@@ -1336,11 +1336,11 @@ export const matches: Match[] = [
     },
   },
   {
-    state: "tba",
+    state: "sc",
     playOffStage: "SF",
     conference: 3,
     matchID: Math.random().toString(36).slice(2),
-    schedule: new Date("June 15, 2023 14:00").toString(),
+    schedule: new Date("June 27, 2022 10:00").toString(),
     teams: {
       team1: 201,
       team2: 204,

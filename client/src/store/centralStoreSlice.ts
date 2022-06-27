@@ -1,9 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from ".";
 
-import { teams, Team } from "../utils/data-placeholder/team.data";
-import { players, Player } from "../utils/data-placeholder/players.data";
-import { matches, Match } from "../utils/data-placeholder/matches.data";
+import { teams, Team } from "../utils/data/team.data";
+import { players, Player } from "../utils/data/players.data";
+import { matches, Match } from "../utils/data/matches.data";
 
 type CentralStoreState = {
   conference: number;

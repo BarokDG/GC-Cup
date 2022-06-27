@@ -102,7 +102,7 @@ export const players: Player[] = [
     fname: "",
     position: "DF",
     goals: 0,
-    assists: 0,
+    assists: 1,
   },
   {
     playerID: 20111,
@@ -111,7 +111,7 @@ export const players: Player[] = [
     fname: "",
     position: "MD",
     goals: 1,
-    assists: 0,
+    assists: 2,
   },
   {
     playerID: 20112,
@@ -137,7 +137,7 @@ export const players: Player[] = [
     name: "Ermisha",
     fname: "",
     position: "ST",
-    goals: 10,
+    goals: 13,
     assists: 2,
   },
   {

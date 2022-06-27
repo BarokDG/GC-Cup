@@ -1336,7 +1336,7 @@ export const matches: Match[] = [
     },
   },
   {
-    state: "sc",
+    state: "ft",
     playOffStage: "SF",
     conference: 3,
     matchID: Math.random().toString(36).slice(2),
@@ -1346,11 +1346,27 @@ export const matches: Match[] = [
       team2: 204,
     },
     score: {
-      team1: null,
-      team2: null,
+      team1: 3,
+      team2: 0,
     },
     events: {
-      team1: [],
+      team1: [
+        {
+          name: "Ermisha",
+          event: "goal",
+          assist: "Abel",
+        },
+        {
+          name: "Ermisha",
+          event: "goal",
+          assist: "Yirga",
+        },
+        {
+          name: "Ermisha",
+          event: "goal",
+          assist: "Abel",
+        },
+      ],
       team2: [],
     },
   },

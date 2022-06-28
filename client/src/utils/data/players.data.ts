@@ -316,7 +316,7 @@ export const players: Player[] = [
     name: "Biruk",
     fname: "Ayele",
     position: "DF",
-    goals: 4,
+    goals: 5,
     assists: 7,
   },
   {
@@ -325,7 +325,7 @@ export const players: Player[] = [
     name: "Sewnet",
     fname: "Ayele",
     position: "DF",
-    goals: 2,
+    goals: 3,
     assists: 0,
   },
   {
@@ -336,7 +336,7 @@ export const players: Player[] = [
     fname: "Esubalew",
     position: "DF",
     goals: 2,
-    assists: 5,
+    assists: 6,
   },
   {
     playerID: 1026,
@@ -365,7 +365,7 @@ export const players: Player[] = [
     nickname: "Nati G.",
     fname: "G/mariam",
     position: "MD",
-    goals: 16,
+    goals: 20,
     assists: 14,
   },
   {
@@ -412,7 +412,7 @@ export const players: Player[] = [
     fname: "Yohannes",
     position: "ST",
     goals: 8,
-    assists: 10,
+    assists: 16,
   },
 
   /**
@@ -702,7 +702,7 @@ export const players: Player[] = [
     name: "Fitsum",
     fname: "Getachew",
     position: "DF",
-    goals: 1,
+    goals: 2,
     assists: 2,
   },
   {
@@ -720,8 +720,8 @@ export const players: Player[] = [
     name: "Kassa",
     fname: "Birhanu",
     position: "DF",
-    goals: 1,
-    assists: 2,
+    goals: 2,
+    assists: 3,
   },
   {
     playerID: 1035,
@@ -794,7 +794,7 @@ export const players: Player[] = [
     fname: "Dagne",
     position: "ST",
     goals: 5,
-    assists: 2,
+    assists: 4,
   },
   {
     playerID: 10313,

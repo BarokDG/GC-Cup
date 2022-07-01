@@ -1427,10 +1427,10 @@ export const matches: Match[] = [
     playOffStage: "F",
     conference: 3,
     matchID: Math.random().toString(36).slice(2),
-    schedule: new Date("June 22, 2023 14:00").toString(),
+    schedule: new Date("July 04, 2022 10:00").toString(),
     teams: {
-      team1: 0,
-      team2: 0,
+      team1: 201,
+      team2: 102,
     },
     score: {
       team1: null,

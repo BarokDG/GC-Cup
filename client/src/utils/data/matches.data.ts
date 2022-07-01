@@ -1423,7 +1423,7 @@ export const matches: Match[] = [
     },
   },
   {
-    state: "tba",
+    state: "sc",
     playOffStage: "F",
     conference: 3,
     matchID: Math.random().toString(36).slice(2),

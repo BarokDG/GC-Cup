@@ -316,8 +316,8 @@ export const players: Player[] = [
     name: "Biruk",
     fname: "Ayele",
     position: "DF",
-    goals: 5,
-    assists: 7,
+    goals: 6,
+    assists: 8,
   },
   {
     playerID: 1024,
@@ -365,8 +365,8 @@ export const players: Player[] = [
     nickname: "Nati G.",
     fname: "G/mariam",
     position: "MD",
-    goals: 20,
-    assists: 14,
+    goals: 21,
+    assists: 16,
   },
   {
     playerID: 1029,
@@ -411,8 +411,8 @@ export const players: Player[] = [
     name: "Robel",
     fname: "Yohannes",
     position: "ST",
-    goals: 8,
-    assists: 16,
+    goals: 11,
+    assists: 18,
   },
 
   /**

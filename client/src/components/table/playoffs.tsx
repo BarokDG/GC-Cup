@@ -1,6 +1,10 @@
 import { ReactComponent as KnockoutBracket } from "../../assets/illustrations/knockout_bracket.svg";
 
-export default function PlayOffs({ conference }: { conference: number }) {
+type Props = {
+  conference: number;
+};
+
+export default function PlayOffs({ conference }: Props) {
   if (conference === 3) {
     return (
       <div className="custom-scrollbar overflow-x-auto mt-6">

@@ -6,7 +6,11 @@ import { useAppSelector } from "../../store/storeHooks";
 
 import MatchDetails from "./matchDetails";
 
-export default function MatchesFromToday({ conference }) {
+type Props = {
+  conference: number;
+};
+
+export default function MatchesFromToday({ conference }: Props) {
   const matchesData = useAppSelector(matchesDataState);
   const teamsData = useAppSelector(teamsDataState);
 

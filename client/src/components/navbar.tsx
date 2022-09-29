@@ -6,6 +6,7 @@ import {
   faDiceD6,
   faRankingStar,
 } from "@fortawesome/free-solid-svg-icons";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 export default function Navbar() {
   return (
@@ -17,7 +18,13 @@ export default function Navbar() {
   );
 }
 
-function CustomNavLink({ to, icon, text }) {
+type Props = {
+  to: string;
+  icon: IconProp;
+  text: string;
+};
+
+function CustomNavLink({ to, icon, text }: Props) {
   return (
     <NavLink to={to} className={({ isActive }) => (isActive ? "selected" : "")}>
       <FontAwesomeIcon icon={icon} />

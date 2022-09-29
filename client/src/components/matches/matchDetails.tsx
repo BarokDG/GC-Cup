@@ -1,8 +1,10 @@
 import { useEffect } from "react";
+import { Match } from "../../utils/data/matches.data";
 import MatchEvent from "./matchEvent";
+import ScoreOrTime from "./scoreOrTime";
 
 type Props = {
-  match: any;
+  match: Match;
   shouldDisplayDate: boolean;
   getTeamNameFromTeamId: Function;
   shouldDisplayMatchEvents?: boolean;
@@ -50,17 +52,17 @@ export default function MatchDetails({
     team2: {},
   };
 
-  const assignEventCountForPlayer = (
+  function assignEventCountForPlayer(
     accumulator: Object,
     team: string,
     name: string
-  ) => {
+  ) {
     if (accumulator[team][name]) {
       accumulator[team][name] += 1;
     } else {
       accumulator[team][name] = 1;
     }
-  };
+  }
 
   // Aggregate stats
   for (let team of ["team1", "team2"]) {
@@ -173,40 +175,4 @@ export default function MatchDetails({
       </details>
     </div>
   );
-}
-
-function ScoreOrTime({ state, time, score }) {
-  if (state === "sc") {
-    // Scheduled
-    return (
-      <p className="w-max px-2 py-2 bg-gray-800 text-slate-200 text-lg font-bold">
-        {time}
-      </p>
-    );
-  } else if (state === "ps") {
-    // Postponed
-    return (
-      <p className="w-max px-2 py-2 bg-violet-200 text-violet-900 text-md font-bold">
-        Postponed
-      </p>
-    );
-  } else if (state === "tba") {
-    return (
-      <p className="w-max px-2 py-2 bg-gray-800 text-slate-200 text-lg font-bold">
-        TBA
-      </p>
-    );
-  } else {
-    // Full-time
-    return (
-      <>
-        <p className="w-8 py-2 bg-gray-800 text-center text-gray-200 font-bold border-r border-r-gray-400">
-          {score.team1}
-        </p>
-        <p className="w-8 py-2 bg-gray-800 text-center text-gray-200 font-bold">
-          {score.team2}
-        </p>
-      </>
-    );
-  }
 }

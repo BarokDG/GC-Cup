@@ -1,7 +1,11 @@
 import { useAppSelector } from "../../store/storeHooks";
 import { teamsDataState } from "../../store/centralStoreSlice";
 
-export default function LeagueTable({ conference }) {
+type Props = {
+  conference: number;
+};
+
+export default function LeagueTable({ conference }: Props) {
   const teamData = useAppSelector(teamsDataState);
 
   if (conference !== 3) {

@@ -26,7 +26,11 @@ type Props = {
 
 function CustomNavLink({ to, icon, text }: Props) {
   return (
-    <NavLink to={to} className={({ isActive }) => (isActive ? "selected" : "")}>
+    <NavLink
+      to={to}
+      end
+      className={({ isActive }) => (isActive ? "selected" : "")}
+    >
       <FontAwesomeIcon icon={icon} />
       <p>{text}</p>
     </NavLink>

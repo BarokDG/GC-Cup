@@ -1,11 +1,6 @@
-// import { useState } from "react";
-// import StatsModal from "./statsModal";
-
 import InteractionInfo from "../matches/InteractionInfo";
 
 export default function StatCardSummary({ data, stat, icon: Icon, sortBy }) {
-  // const [isStatsModalOpen, setIsStatsModalOpen] = useState(false);
-
   const sortedData = () => {
     return [...data]
       .sort((a, b) => {
@@ -74,18 +69,7 @@ export default function StatCardSummary({ data, stat, icon: Icon, sortBy }) {
               }
             )}
         </div>
-
-        {/* <button
-          className="cursor-default mt-4 w-full py-2 bg-slate-900 text-gray-200"
-          onClick={() => setIsStatsModalOpen(true)}
-        >
-          More
-        </button> */}
       </div>
-
-      {/* {isStatsModalOpen && (
-        <StatsModal setIsStatsModalOpen={setIsStatsModalOpen} />
-      )} */}
     </>
   );
 }

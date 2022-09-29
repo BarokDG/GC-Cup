@@ -1,12 +1,13 @@
 import { useEffect } from "react";
-import { Match } from "../../utils/data/matches.data";
 import MatchEvent from "./matchEvent";
 import ScoreOrTime from "./scoreOrTime";
+
+import { Match } from "../../utils/data/matches.data";
+import { getTeamNameFromTeamId } from "../../utils/getTeamNameFromTeamId";
 
 type Props = {
   match: Match;
   shouldDisplayDate: boolean;
-  getTeamNameFromTeamId: Function;
   shouldDisplayMatchEvents?: boolean;
   shouldDisplayStage?: boolean;
 };
@@ -14,7 +15,6 @@ type Props = {
 export default function MatchDetails({
   match,
   shouldDisplayDate,
-  getTeamNameFromTeamId,
   shouldDisplayMatchEvents = true,
   shouldDisplayStage = false,
 }: Props) {

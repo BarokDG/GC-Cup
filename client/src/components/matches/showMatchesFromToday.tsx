@@ -1,7 +1,4 @@
-import {
-  matchesDataState,
-  teamsDataState,
-} from "../../store/centralStoreSlice";
+import { matchesDataState } from "../../store/centralStoreSlice";
 import { useAppSelector } from "../../store/storeHooks";
 
 import MatchDetails from "./matchDetails";
@@ -12,7 +9,6 @@ type Props = {
 
 export default function MatchesFromToday({ conference }: Props) {
   const matchesData = useAppSelector(matchesDataState);
-  const teamsData = useAppSelector(teamsDataState);
 
   function filterMatchesData() {
     return matchesData.filter((match) => {
@@ -25,10 +21,6 @@ export default function MatchesFromToday({ conference }: Props) {
     });
   }
 
-  // TODO: Refactor, also declared in matches/index.tsx
-  const getTeamNameFromTeamId = (queryTeamId: number): string =>
-    teamsData.find((team) => team.teamID === queryTeamId)?.teamName || "TBD";
-
   if (filterMatchesData().length) {
     return (
       <div className="mt-3 mb-6 py-2 px-4 border-2 border-b-4 backdrop-blur-sm bg-violet-900/10 border-violet-900/20 max-w-md bg-clip-padding mx-auto">
@@ -39,7 +31,6 @@ export default function MatchesFromToday({ conference }: Props) {
               key={match.matchID}
               match={match}
               shouldDisplayDate={false}
-              getTeamNameFromTeamId={getTeamNameFromTeamId}
               shouldDisplayMatchEvents={false}
             />
           );

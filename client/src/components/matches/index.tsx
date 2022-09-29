@@ -5,22 +5,15 @@ import InteractionInfo from "./InteractionInfo";
 import { useAppSelector } from "../../store/storeHooks";
 import {
   conferenceState,
-  teamsDataState,
   matchesDataState,
-  // playersDataState,
 } from "../../store/centralStoreSlice";
 
 export default function Matches() {
   const conference = useAppSelector(conferenceState);
-  const teamsData = useAppSelector(teamsDataState);
   const matchesData = useAppSelector(matchesDataState);
 
   const matchDates: Object = {};
   const stateTitles: Object = {};
-
-  // TODO: Refactor, also declared in matches/showMatchesFromToday.tsx
-  const getTeamNameFromTeamId = (queryTeamId: number): string =>
-    teamsData.find((team) => team.teamID === queryTeamId)?.teamName || "TBD";
 
   return (
     <>
@@ -60,7 +53,6 @@ export default function Matches() {
               match={match}
               shouldDisplayStage={shouldDisplayStage}
               shouldDisplayDate={shouldDisplayDate}
-              getTeamNameFromTeamId={getTeamNameFromTeamId}
             />
           );
         })}

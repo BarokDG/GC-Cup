@@ -7,14 +7,14 @@ import { matches, Match } from "../utils/data/matches.data";
 
 type CentralStoreState = {
   conference: number;
-  teamData: Team[];
+  teams: Team[];
   players: Player[];
   matches: Match[];
 };
 
 const initialState: CentralStoreState = {
   conference: 3,
-  teamData: teams,
+  teams,
   players,
   matches,
 };
@@ -32,7 +32,7 @@ const CentralStoreSlice = createSlice({
 export const centralStoreActions = CentralStoreSlice.actions;
 
 export const conferenceState = (state: RootState) => state.central.conference;
-export const teamsDataState = (state: RootState) => state.central.teamData;
+export const teamsDataState = (state: RootState) => state.central.teams;
 export const playersDataState = (state: RootState) => state.central.players;
 export const matchesDataState = (state: RootState) => state.central.matches;
 

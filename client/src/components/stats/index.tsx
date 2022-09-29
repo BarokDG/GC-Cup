@@ -1,4 +1,5 @@
-import StatCardSummary from "./statCardSummary";
+import PlayerStatsCard from "./playerStatsCard";
+import TeamStatsCard from "./teamStatsCard";
 
 import { useAppSelector } from "../../store/storeHooks";
 import {
@@ -6,9 +7,17 @@ import {
   playersDataState,
 } from "../../store/centralStoreSlice";
 
+import { FunctionComponent, SVGProps } from "react";
+
 import { ReactComponent as StrikerIcon } from "../../assets/illustrations/striker.svg";
 import { ReactComponent as MidfielderIcon } from "../../assets/illustrations/midfielder.svg";
 import { ReactComponent as GoalKeeperIcon } from "../../assets/illustrations/goalkeeper.svg";
+
+export interface statsCardProps {
+  stat: string;
+  icon: FunctionComponent<SVGProps<SVGSVGElement>>;
+  sortBy: string;
+}
 
 export default function Stats() {
   const teamData = useAppSelector(teamsDataState);
@@ -16,20 +25,20 @@ export default function Stats() {
 
   return (
     <>
-      <StatCardSummary
-        data={playerData}
+      <PlayerStatsCard
+        statSource={playerData}
         stat="Goals"
         icon={StrikerIcon}
         sortBy="goals"
       />
-      <StatCardSummary
-        data={playerData}
+      <PlayerStatsCard
+        statSource={playerData}
         stat="Assists"
         icon={MidfielderIcon}
         sortBy="assists"
       />
-      <StatCardSummary
-        data={teamData}
+      <TeamStatsCard
+        statSource={teamData}
         stat="Goals Conceded"
         icon={GoalKeeperIcon}
         sortBy="goalsAgainst"

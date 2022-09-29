@@ -1,12 +1,10 @@
-import { NavLink } from "react-router-dom";
+import CustomNavLink from "./customNavLink";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faList,
   faDiceD6,
   faRankingStar,
 } from "@fortawesome/free-solid-svg-icons";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 export default function Navbar() {
   return (
@@ -15,24 +13,5 @@ export default function Navbar() {
       <CustomNavLink to="/matches" icon={faDiceD6} text="Matches" />
       <CustomNavLink to="/stats" icon={faRankingStar} text="Stats" />
     </nav>
-  );
-}
-
-type Props = {
-  to: string;
-  icon: IconProp;
-  text: string;
-};
-
-function CustomNavLink({ to, icon, text }: Props) {
-  return (
-    <NavLink
-      to={to}
-      end
-      className={({ isActive }) => (isActive ? "selected" : "")}
-    >
-      <FontAwesomeIcon icon={icon} />
-      <p>{text}</p>
-    </NavLink>
   );
 }

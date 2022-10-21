@@ -8,6 +8,7 @@
 *::before,
 *::after {
   @apply select-none;
+  @apply box-border;
 }
 
 #root {
@@ -104,7 +105,6 @@ span.d {
     scrollbar-width: thin;
     scrollbar-color: var(--sc-thumb) transparent;
   }
-
   .custom-scrollbar::-webkit-scrollbar {
     height: 2px;
   }
@@ -116,4 +116,20 @@ span.d {
   .custom-scrollbar:hover::-webkit-scrollbar-thumb {
     background-color: var(--sc-thumb);
   }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-column-gap: 2rem;
+}
+
+.grid-container > div {
+  overflow: auto;
+  height: 100vh;
+}
+
+.stat-cards > div {
+  min-width: 400px;
+  margin-bottom: 0;
 }

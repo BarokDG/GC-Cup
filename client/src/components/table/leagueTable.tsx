@@ -16,7 +16,7 @@ export default function LeagueTable({ conference }: Props) {
           <table className="border-collapse max-w-md mx-auto">
             <thead>
               <tr>
-                <th className="bg-slate-900 sticky left-0"></th>
+                <th className="bg-slate-900 lg:bg-slate-800 sticky left-0"></th>
                 <th title="Matches Played">MP</th>
                 <th
                   title="Points"

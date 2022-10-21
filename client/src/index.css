@@ -97,39 +97,38 @@ span.d {
   @apply bg-gray-700 text-gray-300;
 }
 
-@media (min-width: 500px) {
-  .custom-scrollbar {
-    --sc-thumb: #1f293f;
+.custom-scrollbar {
+  --scrollbar-color: #1f293f;
+}
 
-    /* Firefox support */
-    scrollbar-width: thin;
-    scrollbar-color: var(--sc-thumb) transparent;
-  }
-  .custom-scrollbar::-webkit-scrollbar {
-    height: 2px;
-  }
+.grid-container > div,
+.custom-scrollbar {
+  /* Firefox support */
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-color, blue) transparent;
+}
 
-  .custom-scrollbar::-webkit-scrollbar-thumb {
-    background-color: transparent;
-  }
+.grid-container > div::-webkit-scrollbar,
+.custom-scrollbar::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
 
-  .custom-scrollbar:hover::-webkit-scrollbar-thumb {
-    background-color: var(--sc-thumb);
-  }
+.grid-container > div::-webkit-scrollbar-thumb,
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color, blue);
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-column-gap: 2rem;
+  grid-template-columns: 25vw 1fr;
 }
 
 .grid-container > div {
+  height: 100%;
   overflow: auto;
-  height: 100vh;
 }
 
-.stat-cards > div {
-  min-width: 400px;
-  margin-bottom: 0;
+.tables h2 {
+  @apply block text-gray-300 font-bold mt-3;
 }

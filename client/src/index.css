@@ -105,7 +105,7 @@ span.d {
 .custom-scrollbar {
   /* Firefox support */
   scrollbar-width: thin;
-  scrollbar-color: var(--scrollbar-color, blue) transparent;
+  scrollbar-color: var(--scrollbar-color, #2f394f) transparent;
 }
 
 .grid-container > div::-webkit-scrollbar,
@@ -116,19 +116,15 @@ span.d {
 
 .grid-container > div::-webkit-scrollbar-thumb,
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: var(--scrollbar-color, blue);
+  background-color: var(--scrollbar-color, #2f394f);
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 25vw 1fr;
+  grid-template-columns: 400px 1fr;
 }
 
 .grid-container > div {
   height: 100%;
   overflow: auto;
-}
-
-.tables h2 {
-  @apply block text-gray-300 font-bold mt-3;
 }

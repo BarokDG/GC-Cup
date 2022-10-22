@@ -10,8 +10,9 @@ export default function DesktopView() {
       <Header isMobile={false} />
       <div className="bg-slate-800 grid-container flex-grow border-t-[1px] border-t-slate-600 overflow-hidden">
         <div className="tables px-8">
-          <LeagueTable conference={1} showLegend={false} />
-          <LeagueTable conference={2} showLegend={true} />
+          {/* <LeagueTable conference={1} showLegend={false} />
+          <LeagueTable conference={2} showLegend={true} /> */}
+          <Matches />
         </div>
         <div
           id="playoffs-and-stats"

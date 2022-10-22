@@ -14,12 +14,12 @@ export default function LeagueTable({ conference, showLegend = true }: Props) {
     // conference 3 is for play-offs
     return (
       <>
-        <div className="table-container max-w-full overflow-auto md:overflow-hidden md:mb-10">
+        <div className="table-container max-w-full overflow-auto">
           <h2 className="hidden">Conference {conference}</h2>
           <table className="border-collapse max-w-md mx-auto">
             <thead>
               <tr>
-                <th className="bg-slate-900 md:bg-slate-800 sticky left-0"></th>
+                <th className="bg-slate-900 lg:bg-gray-900 sticky left-0"></th>
                 <th title="Matches Played">MP</th>
                 <th
                   title="Points"

@@ -40,8 +40,7 @@ nav a {
 }
 
 th {
-  @apply text-gray-400 font-normal text-sm text-center;
-  @apply whitespace-nowrap py-4 pl-2 pr-6;
+  @apply text-gray-400 font-normal text-sm lg:text-xs text-center;
 }
 
 tbody tr:nth-child(-n + 4) {
@@ -49,8 +48,12 @@ tbody tr:nth-child(-n + 4) {
 }
 
 td {
-  @apply text-gray-900 text-lg text-center;
-  @apply whitespace-nowrap py-4 pl-2 pr-6;
+  @apply text-gray-900 text-lg lg:text-sm text-center;
+}
+
+th,
+td {
+  @apply whitespace-nowrap py-4 pl-2 pr-6 lg:pr-2;
 }
 
 tbody tr:nth-child(-n + 4) td:first-child {
@@ -62,7 +65,11 @@ tbody tr:nth-child(-n + 4) td {
 }
 
 .conference-switch button {
-  @apply relative z-10 px-4 border-none cursor-default text-sm md:cursor-pointer focus-visible:outline-none;
+  @apply relative z-10 border-none cursor-default text-sm md:cursor-pointer focus-visible:outline-none;
+}
+
+.conference-switch button a {
+  @apply px-4;
 }
 
 .conference-switch:after {
@@ -127,4 +134,8 @@ span.d {
 .grid-container > div {
   height: 100%;
   overflow: auto;
+}
+
+#tables-and-stats {
+  height: calc(100vh - 50px);
 }

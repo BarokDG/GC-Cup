@@ -1,11 +1,13 @@
 import { useAppSelector } from "../../store/storeHooks";
 import { teamsDataState } from "../../store/centralStoreSlice";
+import TableLegend from "./tableLegend";
 
 type Props = {
   conference: number;
+  showLegend?: boolean;
 };
 
-export default function LeagueTable({ conference }: Props) {
+export default function LeagueTable({ conference, showLegend = true }: Props) {
   const teamData = useAppSelector(teamsDataState);
 
   if (conference !== 3) {
@@ -13,10 +15,11 @@ export default function LeagueTable({ conference }: Props) {
     return (
       <>
         <div className="table-container max-w-full overflow-auto">
+          <h2 className="hidden">Conference {conference}</h2>
           <table className="border-collapse max-w-md mx-auto">
             <thead>
               <tr>
-                <th className="bg-slate-900 sticky left-0"></th>
+                <th className="bg-slate-900 lg:bg-gray-900 sticky left-0"></th>
                 <th title="Matches Played">MP</th>
                 <th
                   title="Points"
@@ -99,10 +102,7 @@ export default function LeagueTable({ conference }: Props) {
             </tbody>
           </table>
         </div>
-        <div className="table-info flex my-6 max-w-md mx-auto">
-          <span className="w-6 h-6 bg-slate-800 border border-slate-400 mr-3"></span>
-          <p className="text-gray-300">Qualifying to play-offs</p>
-        </div>
+        {showLegend && <TableLegend />}
       </>
     );
   } else {

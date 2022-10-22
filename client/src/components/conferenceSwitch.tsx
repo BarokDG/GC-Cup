@@ -34,19 +34,20 @@ export default function ConferenceSwitch() {
         onClick={() => dispatch(centralStoreActions.setConference(1))}
         className={conference === 1 ? "" : "text-gray-200"}
       >
-        Conference 1
+        <a href="#tables-and-stats">Conference 1</a>
       </button>
+
       <button
         onClick={() => dispatch(centralStoreActions.setConference(2))}
         className={conference === 2 ? "" : "text-gray-200"}
       >
-        Conference 2
+        <a href="#tables-and-stats">Conference 2</a>
       </button>
       <button
         className={conference === 3 ? "ml-auto" : "ml-auto text-gray-200"}
         onClick={() => dispatch(centralStoreActions.setConference(3))}
       >
-        Play-offs
+        <a href="#playoffs">Play-offs</a>
       </button>
     </div>
   );

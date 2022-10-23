@@ -2,7 +2,7 @@
 
 ## Table of contents
 - [Introduction](#introduction)
-- [Project Overview](#project-overview)
+- [Folder structure](#folder-structure)
   - [Client](#client)
   - [Screenshots](#screenshots)
   - [Server](#server)
@@ -15,7 +15,7 @@
 ## Introduction
 Gc cup is a web app created with react-typescript that records the results, fixtures, standings, and stats for the 2022 AAiT graduating class football tournament. It's the last of a series of projects I made for football tournaments while in University which include motion graphics with css([walk up video](https://github.com/BarokDG/Walk-Up) and [schedule graphics](https://barokdg.github.io/schedule-graphics)) and a web app similar to gc cup for a different tournament with it's own api and an admin dashboard([source](https://github.com/DL-Cup/website-upgrade)).
 
-## Project Overview
+## Folder structure
 On the top level, there are three folders - "client", "screenshots", and "server". 
 
 ### Client

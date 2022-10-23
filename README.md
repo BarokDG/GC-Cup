@@ -1,5 +1,13 @@
 ![og.png](./client/public/og.png)
 
+## Table of contents
+- [Introudction](#introduction)
+- [Project Overview](#project-overview)
+  - [Client](#client)
+  - [Server](#server)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+
 ## Introduction
 Gc cup is a web app created with react-typescript that records the results, fixtures, standings, and stats for the 2022 AAiT graduating class football tournament. It's the last of a series of projects I made for football tournaments while in University which include motion graphics with css([Walk up video](https://github.com/BarokDG/Walk-Up)) and a web app similar to gc cup for a different tournament with it's own api and an admin dashboard([source](https://github.com/DL-Cup/website-upgrade)).
 
@@ -18,11 +26,11 @@ There isn't much at the moment inside the "server" folder. I originally planned 
 - [NodeJS](https://nodejs.org) version 14+
 
 ## Installation
-Navigate to the client folder and run
+Navigate to the client folder, open the terminal, and run
 ```bash
 npm install
 ```
-Then run
+AFter everything is installed, run
 ```bash
 npm run start
 ```

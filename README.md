@@ -1,7 +1,7 @@
 ![og.png](./client/public/og.png)
 
 ## Table of contents
-- [Introudction](#introduction)
+- [Introduction](#introduction)
 - [Project Overview](#project-overview)
   - [Client](#client)
   - [Server](#server)
